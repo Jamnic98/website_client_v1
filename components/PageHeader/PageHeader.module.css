@@ -1,0 +1,17 @@
+.header {
+  /* margin-bottom: 2em; */
+}
+
+.title {
+}
+
+.description {
+  text-align: left;
+}
+
+.hr {
+  width: 100%;
+  height: 1px;
+  border-style: none;
+  background-color: var(--c-bg-secondary);
+}

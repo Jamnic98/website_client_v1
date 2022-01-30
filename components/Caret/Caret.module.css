@@ -1,0 +1,16 @@
+.caret {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  transform: rotate(0deg);
+  transition: transform 0.2s ease;
+  padding: 0.1em;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.flip {
+  transform: rotate(180deg);
+}

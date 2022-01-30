@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navlink renders Navlink unchanged 1`] = `
+<div
+  className="dropdownNavlink"
+>
+  <a
+    className="navlink"
+    href="/logs"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  >
+    logs
+    <span
+      className="caret "
+      data-testid="caret"
+    >
+      ^
+    </span>
+  </a>
+  <div
+    className="dropdownContainer"
+    data-testid="dropdownContainer"
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  >
+    <div
+      className="dropdown closed"
+      data-testid="dropdown"
+    >
+      <div
+        className="dropdownItem"
+      >
+        <a
+          className="navlink"
+          href="/logs/running"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          running
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

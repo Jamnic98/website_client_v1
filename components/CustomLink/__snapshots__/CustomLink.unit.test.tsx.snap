@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test CustomLink renders CustomLink unchanged 1`] = `
+<a
+  className="customLink"
+  href="/"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+>
+  <div
+    data-testid="childElement"
+  />
+</a>
+`;

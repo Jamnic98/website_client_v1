@@ -1,0 +1,25 @@
+.link {
+  white-space: nowrap;
+  text-decoration: none;
+  margin: 0 auto 0 auto;
+  transition: all 0.2s ease;
+  font-weight: bold;
+  color: var(--c-link);
+}
+
+.projectLink {
+  margin-right: 1em;
+}
+
+.link:hover {
+  /* background-color: var(--c-bg-secondary); */
+  color: var(--c-bg-secondary);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  row-gap: 1em;
+  column-gap: 1em;
+  margin-top: 0.5em;
+}
