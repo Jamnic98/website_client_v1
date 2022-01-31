@@ -32,46 +32,48 @@ const LineGraph = ({ data, xAxisObj, yAxisObj }: Props) => {
     const x = configureXAxis(svgElement, xAxisObj);
     const y = configureYAxis(svgElement, yAxisObj);
 
-    // // extract the x labels for the axis and scale domain
-    // var xLabels = data.map(function (d: any) {
-    //   return new Date(d.x);
-    // });
+    // extract the x labels for the axis and scale domain
+    const xLabels = data
+      .sort((a: any, b: any) => (new Date(a.x) > new Date(b.x) ? 1 : -1))
+      .map(function (d: any) {
+        return new Date(d.x);
+      });
 
-    // // get the x and y values for least squares
-    // var xSeries = d3.range(1, xLabels.length + 1);
-    // var ySeries = data.map(function (d: any) {
-    //   return d.y;
-    // });
+    // get the x and y values for least squares
+    const xSeries = d3.range(1, xLabels.length + 1);
+    const ySeries = data.map(function (d: any) {
+      return d.y;
+    });
 
-    // var leastSquaresCoeff = leastSquares(xSeries, ySeries);
+    const leastSquaresCoeff = leastSquares(xSeries, ySeries);
 
-    // // apply the results of the least squares regression
-    // var x1 = xLabels[0];
-    // var y1 = leastSquaresCoeff[0] + leastSquaresCoeff[1];
-    // var x2 = xLabels[xLabels.length - 1];
-    // var y2 = leastSquaresCoeff[0] * xSeries.length + leastSquaresCoeff[1];
-    // var trendData = [[x1, y1, x2, y2]];
+    // apply the results of the least squares regression
+    const x1 = new Date(xLabels[0]).setDate(0);
+    const y1 = leastSquaresCoeff[0] + leastSquaresCoeff[1];
+    const x2 = xLabels[xLabels.length - 1];
+    const y2 = leastSquaresCoeff[0] * xSeries.length + leastSquaresCoeff[1];
+    const trendData = [[x1, y1, x2, y2]];
 
-    // var trendLine = svgElement.selectAll('.trendLine').data(trendData);
+    const trendLine = svgElement.selectAll('.trendLine').data(trendData);
 
-    // trendLine
-    //   .enter()
-    //   .append('line')
-    //   .attr('class', 'trendLine')
-    //   .attr('x1', function (d) {
-    //     return x(d[0]);
-    //   })
-    //   .attr('y1', function (d) {
-    //     return y(d[1]);
-    //   })
-    //   .attr('x2', function (d) {
-    //     return x(d[2]);
-    //   })
-    //   .attr('y2', function (d) {
-    //     return y(d[3]);
-    //   })
-    //   .attr('stroke', 'black')
-    //   .attr('stroke-width', 1);
+    trendLine
+      .enter()
+      .append('line')
+      .attr('class', 'trendLine')
+      .attr('x1', function (d) {
+        return x(d[0]);
+      })
+      .attr('y1', function (d) {
+        return y(d[1]);
+      })
+      .attr('x2', function (d) {
+        return x(d[2]);
+      })
+      .attr('y2', function (d) {
+        return y(d[3]);
+      })
+      .attr('stroke', 'black')
+      .attr('stroke-width', 0.5);
 
     // add data
     svgElement
@@ -82,7 +84,7 @@ const LineGraph = ({ data, xAxisObj, yAxisObj }: Props) => {
       .append('circle')
       .attr('cx', (d: any) => x(new Date(d.x)))
       .attr('cy', (d: any) => y(d.y))
-      .attr('r', 2)
+      .attr('r', 1.5)
       .style('fill', '#df4a00');
   }, [data, width, height, margin.left, margin.top, xAxisObj, yAxisObj]);
 

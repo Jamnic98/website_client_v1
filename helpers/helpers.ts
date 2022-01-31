@@ -1,39 +1,37 @@
-function getAverageDurationString(averageDurationInSeconds: number) {
-  return `Average run time: ${secondsToDhms(averageDurationInSeconds)}`;
-}
+const getAverageDurationString = (averageDurationInSeconds: number) =>
+  `Average run time: ${secondsToDhms(averageDurationInSeconds)}`;
 
-function getAverageDistanceString(averageDistanceInMeters: number) {
+const getAverageDistanceString = (averageDistanceInMeters: number) => {
   const averageDistanceInKm =
     averageDistanceInMeters === 0 ? 0 : averageDistanceInMeters / 1000;
   return `Average distance: ${averageDistanceInKm.toFixed(2)}km / ${kmToMiles(
     averageDistanceInKm
   ).toFixed(2)}mi`;
-}
+};
 
-function getTotalDistanceString(totalDistanceInMeters: number): string {
+const getTotalDistanceString = (totalDistanceInMeters: number): string => {
   const totalDistanceInKm = totalDistanceInMeters / 1000;
   return `Total distance: ${totalDistanceInKm.toFixed(2)}km / ${kmToMiles(
     totalDistanceInKm
   ).toFixed(2)}mi`;
-}
+};
 
-function getFurthestDistanceString(furthestDistanceInMeters: number): string {
+const getFurthestDistanceString = (
+  furthestDistanceInMeters: number
+): string => {
   const distanceInKm =
     furthestDistanceInMeters === 0 ? 0 : furthestDistanceInMeters / 1000;
   return `Furthest distance: ${distanceInKm.toFixed(2)}km / ${kmToMiles(
     distanceInKm
   ).toFixed(2)}mi`;
-}
+};
 
-function getTotalDurationString(totalDuration: number) {
-  return `Total duration: ${secondsToDhms(totalDuration)}`;
-}
+const getTotalDurationString = (totalDuration: number) =>
+  `Total duration: ${secondsToDhms(totalDuration)}`;
 
-function kmToMiles(distanceInKm: number) {
-  return 0.621371 * distanceInKm;
-}
+const kmToMiles = (distanceInKm: number) => 0.621371 * distanceInKm;
 
-function secondsToDhms(seconds: number): string {
+const secondsToDhms = (seconds: number): string => {
   if (seconds === 0) {
     return '-';
   } else {
@@ -48,9 +46,12 @@ function secondsToDhms(seconds: number): string {
     const sDisplay = s > 0 ? s + 's' : '';
     return `${dDisplay} ${hDisplay} ${mDisplay} ${sDisplay}`;
   }
-}
+};
+
+const reduceSumFunc = (prev: number, cur: number) => prev + cur;
 
 export {
+  reduceSumFunc,
   getAverageDistanceString,
   getAverageDurationString,
   getTotalDistanceString,

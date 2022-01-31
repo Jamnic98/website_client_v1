@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { reduceSumFunc } from '../helpers/helpers';
 import * as d3 from 'd3';
 
 interface Props {
@@ -21,11 +22,7 @@ d3.selection.prototype.moveToFront = function () {
   });
 };
 
-const ScatterGraph = ({
-  data,
-  xAxisObj,
-  yAxisObj,
-}: Props) => {
+const ScatterGraph = ({ data, xAxisObj, yAxisObj }: Props) => {
   const ref = useRef(null);
 
   const margin = { top: 30, right: 30, bottom: 30, left: 30 };
@@ -37,6 +34,49 @@ const ScatterGraph = ({
     const x = configureXAxis(svgElement, xAxisObj);
     const y = configureYAxis(svgElement, yAxisObj);
 
+    // extract the x labels for the axis and scale domain
+    var xLabels = data
+      .sort((a: any, b: any) => (a.x > b.x ? 1 : -1))
+      .map(function (d: any) {
+        return d.x;
+      });
+
+    // get the x and y values for least squares
+    var xSeries = d3.range(1, xLabels.length + 1);
+    var ySeries = data.map(function (d: any) {
+      return d.y;
+    });
+
+    var leastSquaresCoeff = leastSquares(xSeries, ySeries);
+
+    // apply the results of the least squares regression
+    var x1 = xLabels[0] - 0.1;
+    var y1 = leastSquaresCoeff[0] + leastSquaresCoeff[1];
+    var x2 = xLabels[xLabels.length - 1] + 0.1;
+    var y2 = leastSquaresCoeff[0] * xSeries.length + leastSquaresCoeff[1];
+    var trendData = [[x1, y1, x2, y2]];
+
+    var trendLine = svgElement.selectAll('.trendLine').data(trendData);
+
+    trendLine
+      .enter()
+      .append('line')
+      .attr('class', 'trendLine')
+      .attr('x1', function (d) {
+        return x(d[0]);
+      })
+      .attr('y1', function (d) {
+        return y(d[1]);
+      })
+      .attr('x2', function (d) {
+        return x(d[2]);
+      })
+      .attr('y2', function (d) {
+        return y(d[3]);
+      })
+      .attr('stroke', 'black')
+      .attr('stroke-width', 0.5);
+
     // Add points
     svgElement
       .append('g')
@@ -46,8 +86,8 @@ const ScatterGraph = ({
       .append('circle')
       .attr('cx', (d: any) => x(d.x))
       .attr('cy', (d: any) => y(d.y))
-      .attr('r', 2)
-      .style('fill', '#df4a00')
+      .attr('r', 1.5)
+      .style('fill', '#df4a00');
   }, [data, width, height, margin.left, margin.top, xAxisObj, yAxisObj]);
 
   const configureXAxis = (svgElement: any, xAxisObj: any) => {
@@ -118,3 +158,32 @@ const ScatterGraph = ({
 };
 
 export default ScatterGraph;
+
+function leastSquares(xSeries: number[], ySeries: number[]) {
+  const xBar = (xSeries.reduce(reduceSumFunc) * 1.0) / xSeries.length;
+  const yBar = (ySeries.reduce(reduceSumFunc) * 1.0) / ySeries.length;
+
+  const ssXX = xSeries
+    .map(function (d) {
+      return Math.pow(d - xBar, 2);
+    })
+    .reduce(reduceSumFunc);
+
+  const ssYY = ySeries
+    .map(function (d) {
+      return Math.pow(d - yBar, 2);
+    })
+    .reduce(reduceSumFunc);
+
+  const ssXY = xSeries
+    .map(function (d, i) {
+      return (d - xBar) * (ySeries[i] - yBar);
+    })
+    .reduce(reduceSumFunc);
+
+  const slope = ssXY / ssXX;
+  const intercept = yBar - xBar * slope;
+  const rSquare = Math.pow(ssXY, 2) / (ssXX * ssYY);
+  const a = [slope, intercept, rSquare];
+  return a;
+}

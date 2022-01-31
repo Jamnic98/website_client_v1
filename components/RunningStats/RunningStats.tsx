@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  reduceSumFunc,
   getAverageDistanceString,
   getAverageDurationString,
   getFurthestDistanceString,
@@ -22,7 +23,7 @@ const RunningStats = (props: Props) => {
     distanceList.length > 0 ? Math.max(...distanceList) : 0;
   const totalDistanceInMeters =
     distanceList.length > 0
-      ? distanceList.reduce((a: number, b: number) => a + b)
+      ? distanceList.reduce((a, b) => reduceSumFunc(a, b))
       : 0;
 
   // duration
@@ -31,7 +32,7 @@ const RunningStats = (props: Props) => {
   );
   const totalDurationInSeconds =
     durationList.length > 0
-      ? durationList.reduce((a: number, b: number) => a + b)
+      ? durationList.reduce((a, b) => reduceSumFunc(a, b))
       : 0;
 
   return (

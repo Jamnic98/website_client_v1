@@ -24,8 +24,13 @@ const portfolioWebsite: projectObjType = {
   mainLanguage: 'TypeScript',
   links: [
     {
-      URL: 'https://github.com/Jamnic98/portfolio-website',
-      label: 'GitHub link',
+      URL: 'https://github.com/Jamnic98/website-client',
+      label: 'GitHub link (client)',
+      type: 'external'
+    },
+    {
+      URL: 'https://github.com/Jamnic98/website-server',
+      label: 'GitHub link (server)',
       type: 'external'
     }
   ],
