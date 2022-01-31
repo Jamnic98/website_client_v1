@@ -31,8 +31,7 @@ function About(props: Props) {
           <section className={styles.description}>
             <p>
               I am a self-taught developer and technology enthusiast with
-              object-oriented and full stack development experience, currently
-              building voice apps for GeniusLead as a lead A.I. developer.
+              object-oriented and full stack development experience.
             </p>
             <p>
               JavaScript is the language I am most experienced with, having
