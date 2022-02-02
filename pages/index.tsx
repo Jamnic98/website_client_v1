@@ -22,7 +22,7 @@ function Home(props: Props) {
         <PageHeader
           headerObj={{
             title: 'Home',
-            description: 'Welcome'
+            description: 'Welcome.'
           }}
         />
         <article className={styles.homeContent}>
