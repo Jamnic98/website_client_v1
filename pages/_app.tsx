@@ -5,7 +5,7 @@ import Footer from '../components/Footer/Footer';
 import navlinkObjArr from '../data/navlinkObjArr';
 import '../styles/global.css';
 
-function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Navbar navlinkObjArr={navlinkObjArr} />
@@ -13,6 +13,6 @@ function App({ Component, pageProps }: AppProps) {
       <Footer />
     </>
   );
-}
+};
 
 export default App;

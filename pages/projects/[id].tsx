@@ -1,58 +1,26 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import PageHeader from '../../components/PageHeader/PageHeader';
-import { CgExternal, CgInternal } from 'react-icons/cg';
-import { projectObjType, projectLinkObjType } from '../../types/global';
-import styles from '../../styles/project.module.css';
-import projects from '../../data/projects';
 import Head from 'next/head';
+import PageHeader from '../../components/PageHeader/PageHeader';
+import classNames from 'classnames';
+import { CgExternal, CgInternal } from 'react-icons/cg';
+import projects from '../../data/projects';
+import styles from '../../styles/project.module.css';
+import { projectObjType, projectLinkObjType } from '../../types/global';
 
-interface Props {
+interface ProjectProps {
   projectData: projectObjType;
 }
 
-function getAllProjectIds() {
-  return projects.map((project) => {
-    return {
-      params: {
-        id: project.id
-      }
-    };
-  });
-}
-
-function getProjectData(id: string) {
-  return projects.filter((project) => {
-    return project.id === id;
-  })[0];
-}
-
-export async function getStaticPaths() {
-  const paths = getAllProjectIds();
-  return {
-    paths,
-    fallback: false
-  };
-}
-
-export async function getStaticProps({ params }: any) {
-  const projectData = getProjectData(params.id);
-  return {
-    props: {
-      projectData
-    }
-  };
-}
-
-function Project({ projectData }: Props) {
+const Project: FC<ProjectProps> = ({ projectData }) => {
   const setProjectLinks = (links: projectLinkObjType[]) => (
     <nav className={styles.projectLinks}>
       {links.map((link, index) => {
         if (link.type === 'external') {
           return (
             <a
-              className={`${styles.projectLink} ${styles.link}`}
+              className={classNames(styles.projectLink, styles.link)}
               href={link.URL}
               target='_blank'
               rel='noreferrer'
@@ -64,7 +32,7 @@ function Project({ projectData }: Props) {
         } else if (link.type === 'internal') {
           return (
             <Link href={link.URL} key={index}>
-              <a className={`${styles.projectLink} ${styles.link}`}>
+              <a className={classNames(styles.projectLink, styles.link)}>
                 {link.label} <CgInternal />
               </a>
             </Link>
@@ -88,16 +56,14 @@ function Project({ projectData }: Props) {
     </>
   );
 
-  const setProjectDescriptions = (descriptionArray: string[]) => {
-    return (
-      <>
-        {descriptionArray.map((paragraph: string, index) => {
-          return <p key={index}>{paragraph}</p>;
-        })}
-      </>
-    );
-  };
-
+  const setProjectDescriptions = (descriptionArray: string[]) => (
+    <>
+      {descriptionArray.map((paragraph: string, index) => {
+        return <p key={index}>{paragraph}</p>;
+      })}
+    </>
+  );
+  
   return (
     <>
       <Head>
@@ -107,7 +73,7 @@ function Project({ projectData }: Props) {
         <PageHeader
           headerObj={{
             title: projectData.title,
-            description: projectData.shortDescription
+            description: projectData.shortDescription,
           }}
         />
         <article>
@@ -132,6 +98,39 @@ function Project({ projectData }: Props) {
       </main>
     </>
   );
-}
+};
 
 export default Project;
+
+function getAllProjectIds() {
+  return projects.map((project) => {
+    return {
+      params: {
+        id: project.id,
+      },
+    };
+  });
+}
+
+function getProjectData(id: string) {
+  return projects.filter((project) => {
+    return project.id === id;
+  })[0];
+}
+
+export async function getStaticPaths() {
+  const paths = getAllProjectIds();
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }: any) {
+  const projectData = getProjectData(params.id);
+  return {
+    props: {
+      projectData,
+    },
+  };
+}

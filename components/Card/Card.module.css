@@ -3,7 +3,6 @@
   flex-direction: row;
   background-color: white;
   box-shadow: var(--elevated-content);
-  width: 100%;
   max-width: 600px;
 }
 
@@ -28,10 +27,6 @@
 }
 
 .description {
-  color: var(--c-text-dark);
-}
-
-.textContainer.focused > div.title {
   color: var(--c-text-dark);
 }
 

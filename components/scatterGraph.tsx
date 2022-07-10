@@ -1,8 +1,8 @@
-import { useEffect, useRef } from 'react';
-import { reduceSumFunc } from '../helpers/helpers';
+import React, { FC, useEffect, useRef } from 'react';
+import { reduceSumFunc } from '../utils/helpers';
 import * as d3 from 'd3';
 
-interface Props {
+interface ScatterGraphProps {
   data: any;
   xAxisObj: {
     label: string;
@@ -22,7 +22,7 @@ d3.selection.prototype.moveToFront = function () {
   });
 };
 
-const ScatterGraph = ({ data, xAxisObj, yAxisObj }: Props) => {
+const ScatterGraph: FC<ScatterGraphProps> = ({ data, xAxisObj, yAxisObj }) => {
   const ref = useRef(null);
 
   const margin = { top: 30, right: 30, bottom: 30, left: 30 };

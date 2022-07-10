@@ -1,44 +1,43 @@
-import { useState } from 'react';
+import React, { FC, useState } from 'react';
 import Link from 'next/link';
 import Dropdown from '../Dropdown/Dropdown';
 import styles from './Navlink.module.css';
-import useWidth from '../useWidth';
+import useWidth from '../../utils/useWidth';
 import Caret from '../Caret/Caret';
 import { navlinkObjType } from '../../types/global';
 
-interface Props {
+interface NavlinkProps {
   navlinkObj: navlinkObjType;
   onClick: Function;
 }
 
-function Navlink({ navlinkObj, onClick }: Props) {
+const Navlink: FC<NavlinkProps> = ({ navlinkObj, onClick: handleClick }) => {
+  const [isActive, setIsActive] = useState(false);
   const { label, url, children } = navlinkObj;
-  const [active, setActive] = useState(false);
-
   const screenWidth = useWidth() || 800;
   return (
     <>
-      {screenWidth >= 800 && children.length > 0 ? (
+      {screenWidth >= 800 && children.length ? (
         <div className={styles.dropdownNavlink}>
           <Link href={url}>
             <a
               className={styles.navlink}
-              onClick={() => onClick()}
-              onMouseOver={() => setActive(true)}
-              onMouseOut={() => setActive(false)}
+              onClick={() => handleClick()}
+              onMouseOver={() => setIsActive(true)}
+              onMouseOut={() => setIsActive(false)}
             >
               {label}
-              <Caret isUp={active} />
+              <Caret isUp={isActive} />
             </a>
           </Link>
           <div
-            onMouseOver={() => setActive(true)}
-            onMouseOut={() => setActive(false)}
+            onMouseOver={() => setIsActive(true)}
+            onMouseOut={() => setIsActive(false)}
             className={styles.dropdownContainer}
             data-testid='dropdownContainer'
           >
             <Dropdown
-              isOpen={active}
+              isOpen={isActive}
               items={children}
               render={(item: navlinkObjType) => (
                 <Link href={item.url}>
@@ -50,13 +49,13 @@ function Navlink({ navlinkObj, onClick }: Props) {
         </div>
       ) : (
         <Link href={url}>
-          <a onClick={() => onClick()} className={styles.navlink}>
+          <a onClick={() => handleClick()} className={styles.navlink}>
             {label}
           </a>
         </Link>
       )}
     </>
   );
-}
+};
 
 export default Navlink;

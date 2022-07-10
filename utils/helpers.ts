@@ -50,6 +50,9 @@ const secondsToDhms = (seconds: number): string => {
 
 const reduceSumFunc = (prev: number, cur: number) => prev + cur;
 
+const getRandomElement = (array: any[]) =>
+  array[Math.floor(Math.random() * array.length)];
+
 export {
   reduceSumFunc,
   getAverageDistanceString,
@@ -58,5 +61,6 @@ export {
   getFurthestDistanceString,
   getTotalDurationString,
   kmToMiles,
-  secondsToDhms
+  secondsToDhms,
+  getRandomElement,
 };

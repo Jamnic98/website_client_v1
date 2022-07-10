@@ -4,24 +4,19 @@ exports[`Navbar renders navbar unchanged 1`] = `
 <nav
   aria-label="navbar"
   className="navbar"
-  data-testid="navbar"
+  id="navbar"
 >
   <span
     className="container"
   >
-    <span
-      className="logoContainer"
+    <a
+      className="navLogo"
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
     >
-      <a
-        aria-label="home button"
-        className="logo"
-        href="/"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-      >
-        Jamie Stimpson
-      </a>
-    </span>
+      Jamie Stimpson
+    </a>
     <span
       aria-label="navlinks"
       className="navlinks "
@@ -39,7 +34,7 @@ exports[`Navbar renders navbar unchanged 1`] = `
         >
           logs
           <span
-            className="caret "
+            className="caret"
             data-testid="caret"
           >
             ^
@@ -88,7 +83,7 @@ exports[`Navbar renders navbar unchanged 1`] = `
       </a>
     </span>
     <span
-      aria-label="toggle mobile menu"
+      aria-label="mobile menu toggle button"
       className="menuIcon "
       onClick={[Function]}
     >

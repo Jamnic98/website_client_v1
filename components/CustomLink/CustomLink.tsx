@@ -1,17 +1,16 @@
+import React, { FC } from 'react';
 import Link from 'next/link';
 import styles from './CustomLink.module.css';
 
-interface Props {
-  url: string;
-  children?: any;
+interface CustomLinkProps {
+  href: string;
+  children: any;
 }
 
-function CustomLink({ url, children }: Props) {
-  return (
-    <Link href={url}>
-      <a className={styles.customLink}>{children}</a>
-    </Link>
-  );
-}
+const CustomLink: FC<CustomLinkProps> = ({ href, children }) => (
+  <Link href={href}>
+    <a className={styles.customLink}>{children}</a>
+  </Link>
+);
 
 export default CustomLink;

@@ -5,7 +5,7 @@ import CustomLink from './CustomLink';
 
 describe('test CustomLink', () => {
   const testLink = (
-    <CustomLink url='/'>
+    <CustomLink href='/'>
       <div data-testid='childElement'>home</div>
     </CustomLink>
   );
@@ -19,7 +19,7 @@ describe('test CustomLink', () => {
 
   it('renders CustomLink unchanged', () => {
     const testLink = (
-      <CustomLink url='/'>
+      <CustomLink href='/'>
         <div data-testid='childElement'></div>
       </CustomLink>
     );

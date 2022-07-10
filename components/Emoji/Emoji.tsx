@@ -1,13 +1,13 @@
-interface Props {
+import React, { FC } from 'react';
+
+interface EmojiProps {
   symbol: string;
 }
 
-function Emoji(props: Props) {
-  return (
-    <span data-testid='emoji' role='img'>
-      {props.symbol}
-    </span>
-  );
-}
+const Emoji: FC<EmojiProps> = ({ symbol }) => (
+  <span data-testid='emoji' role='img'>
+    {symbol}
+  </span>
+);
 
 export default Emoji;

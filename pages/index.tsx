@@ -22,19 +22,19 @@ function Home(props: Props) {
         <PageHeader
           headerObj={{
             title: 'Home',
-            description: 'Welcome.'
+            description: 'Welcome.',
           }}
         />
         <article className={styles.homeContent}>
           <section className={styles.homeDescription}>
-            This entire website, including the front end user interface
+            {/* This entire website, including the front end user interface
             components and back end architecture, was designed, created and
             styled from scratch, by{' '}
             <Link href='/about'>
               <a className={styles.projectLink}>me</a>
             </Link>
             . I built the site with scalability in mind and plan to integrate
-            more features and expand on existing content in the near future.
+            more features and expand on existing content in the near future. */}
           </section>
           <section className={styles.projectExplorer}>
             <Explorer
@@ -44,9 +44,10 @@ function Home(props: Props) {
                   return {
                     title: project.title,
                     description: project.shortDescription,
-                    URI: project.projectPageURI
+                    URI: project.projectPageURI,
                   };
                 })
+                // randomly select 3 projects
                 .sort(() => 0.5 - Math.random())
                 .slice(0, 3)}
             />
@@ -91,12 +92,12 @@ export async function getServerSideProps({ res }: any) {
 
     const { data } = await axios.get(URL);
     return {
-      props: { data }
+      props: { data },
     };
   } catch (error) {
     console.error(error);
     return {
-      props: { data: null }
+      props: { data: null },
     };
   }
 }

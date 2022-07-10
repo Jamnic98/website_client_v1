@@ -1,54 +1,62 @@
-import React, { useState } from 'react';
-import styles from './Navbar.module.css';
+import React, { FC, useState } from 'react';
 import Navlink from '../Navlink/Navlink';
-import { navlinkObjType } from '../../types/global';
+import NavLogo from '../NavLogo/NavLogo';
 import { FaTimes, FaBars } from 'react-icons/fa';
-import Link from 'next/link';
+import styles from './Navbar.module.css';
+import { navlinkObjType } from '../../types/global';
+import classNames from 'classnames';
 
-interface Props {
+interface NavbarProps {
   navlinkObjArr: navlinkObjType[];
 }
 
-function Navbar({ navlinkObjArr }: Props) {
-  const [isOpen, setIsOpen] = useState(false);
-  const handleClick = () => setIsOpen(!isOpen);
+const Navbar: FC<NavbarProps> = ({ navlinkObjArr }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const handleMenuToggle = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <nav className={styles.navbar} data-testid='navbar' aria-label='navbar'>
+    <nav className={styles.navbar} id='navbar' aria-label='navbar'>
       <span className='container'>
-        <span className={styles.logoContainer}>
-          <Link href='/'>
-            <a
-              onClick={() => setIsOpen(false)}
-              className={styles.logo}
-              aria-label='home button'
-            >
-              Jamie Stimpson
-            </a>
-          </Link>
+        <span className='logoContainer'>
+          <NavLogo handleClick={() => setIsMenuOpen(false)} />
         </span>
         <span
-          className={`${styles.navlinks} ${isOpen ? `${styles.open}` : ''}`}
+          className={classNames(styles.navlinks, { [styles.open]: isMenuOpen })}
           aria-label='navlinks'
         >
           {navlinkObjArr.map((navlinkObj, index) => (
             <Navlink
-              onClick={() => setIsOpen(false)}
+              onClick={() => setIsMenuOpen(false)}
               navlinkObj={navlinkObj}
               key={index}
             />
           ))}
         </span>
-        <span
-          onClick={() => handleClick()}
-          className={`${styles.menuIcon} ${isOpen ? `${styles.open}` : ''}`}
-          aria-label='toggle mobile menu'
-        >
-          {isOpen ? <FaTimes /> : <FaBars />}
-        </span>
+        <MobileMenuToggle
+          handleClick={() => handleMenuToggle()}
+          isOpen={isMenuOpen}
+        />
       </span>
     </nav>
   );
-}
+};
 
 export default Navbar;
+
+interface MobileMenuToggleProps {
+  handleClick: Function;
+  isOpen: boolean;
+}
+
+const MobileMenuToggle: FC<MobileMenuToggleProps> = ({
+  handleClick,
+  isOpen,
+}) => (
+  <span
+    onClick={() => handleClick()}
+    className={styles.menuIcon}
+    aria-label='mobile menu toggle button'
+  >
+    {isOpen ? <FaTimes /> : <FaBars />}
+  </span>
+);

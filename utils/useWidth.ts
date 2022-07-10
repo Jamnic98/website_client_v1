@@ -7,9 +7,9 @@ const useWidth = (): WindowDimensions => {
     useState<WindowDimensions>(undefined);
 
   useEffect(() => {
-    function handleResize(): void {
+    const handleResize = (): void => {
       setWindowDimensions(window.innerWidth);
-    }
+    };
 
     handleResize();
     window.addEventListener('resize', handleResize);

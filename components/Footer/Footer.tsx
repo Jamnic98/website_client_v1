@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import styles from './Footer.module.css';
+import classNames from 'classnames';
 
-interface Props {}
+interface FooterProps {}
 
-function Footer(props: Props) {
+const Footer: FC<FooterProps> = () => {
   return (
-    <div className={styles.footer} data-testid='footer' aria-label='footer'>
-      <div className={`${styles.footerContent} container`}>
+    <div className={styles.footer} id='footer' aria-label='footer'>
+      <div className={classNames('container', styles.footerContent)}>
         <nav className={styles.socialMediaLinks}>
           <a
             href='https://github.com/Jamnic98?tab=repositories'
@@ -15,11 +16,7 @@ function Footer(props: Props) {
             rel='noreferrer'
             className={styles.socialMediaLink}
           >
-            <div>
-              <span>
-                <FaGithub />
-              </span>
-            </div>
+            <FaGithub />
           </a>
           <a
             href='https://www.linkedin.com/in/jamie-stimpson-23ab11203/'
@@ -27,16 +24,12 @@ function Footer(props: Props) {
             rel='noreferrer'
             className={styles.socialMediaLink}
           >
-            <div>
-              <span>
-                <FaLinkedin />
-              </span>
-            </div>
+            <FaLinkedin />
           </a>
         </nav>
       </div>
     </div>
   );
-}
+};
 
 export default Footer;

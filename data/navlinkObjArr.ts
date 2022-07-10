@@ -1,4 +1,4 @@
-import { navlinkObjType } from '../types/global';
+import type { navlinkObjType } from '../types/global';
 
 // const navlinkObjArr: navlinkObj[] = [
 //   { label: 'projects', url: '/projects', children: [] }

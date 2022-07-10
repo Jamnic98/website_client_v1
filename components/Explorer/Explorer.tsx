@@ -1,5 +1,5 @@
+import React, { FC } from 'react';
 import Link from 'next/link';
-import React from 'react';
 import styles from './Explorer.module.css';
 
 type data = {
@@ -8,21 +8,21 @@ type data = {
   URI: string;
 };
 
-interface Props {
+interface ExplorerProps {
   title: string;
   data: data[];
 }
 
-function Explorer(props: Props) {
+const Explorer: FC<ExplorerProps> = (props) => {
   const { title, data } = props;
   return (
     <>
       <h3>{title}</h3>
       <hr className='subRule' />
       <div>
-        {data.map((d, i) => {
+        {data.map((d, index) => {
           return (
-            <Link href={d.URI} key={i}>
+            <Link href={d.URI} key={index}>
               <a className={styles.window}>
                 <h3 className={styles.windowTitle}>{d.title}</h3>
                 {d.description}
@@ -38,6 +38,6 @@ function Explorer(props: Props) {
       </div>
     </>
   );
-}
+};
 
 export default Explorer;

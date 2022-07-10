@@ -9,14 +9,6 @@
   /* box-shadow: 0.2em 0.2em 0.4em grey; */
 }
 
-.dropdownItem {
-  height: 100%;
-  height: 2.4em;
-  text-align: center;
-  background-color: inherit;
-}
-
-
 .dropdown.closed {
   z-index: 0;
 }
@@ -24,4 +16,11 @@
 .dropdown.open {
   z-index: 1;
   max-height: 50vh;
+}
+
+.dropdownItem {
+  height: 100%;
+  height: 2.4em;
+  text-align: center;
+  background-color: inherit;
 }

@@ -6,7 +6,7 @@ import navlinkObjArr from '../../data/navlinkObjArr';
 describe('Navbar', () => {
   it('renders a Navbar', () => {
     render(<Navbar navlinkObjArr={navlinkObjArr} />);
-    const navbar = screen.getByTestId('navbar');
+    const navbar = document.getElementById('navbar')
     expect(navbar).toBeInTheDocument();
   });
 

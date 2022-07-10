@@ -1,20 +1,20 @@
-import React from 'react';
+import React, { FC } from 'react';
 import {
   reduceSumFunc,
   getAverageDistanceString,
   getAverageDurationString,
   getFurthestDistanceString,
   getTotalDistanceString,
-  getTotalDurationString
-} from '../../helpers/helpers';
+  getTotalDurationString,
+} from '../../utils/helpers';
 import { runDataType } from '../../types/global';
 import styles from './RunningStats.module.css';
 
-interface Props {
+interface RunningStatsProps {
   runData: runDataType[];
 }
 
-const RunningStats = (props: Props) => {
+const RunningStats: FC<RunningStatsProps> = (props) => {
   // distance
   const distanceList = props.runData.map(
     (runData: runDataType) => runData.distance

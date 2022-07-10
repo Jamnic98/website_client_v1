@@ -2,7 +2,7 @@
 
 exports[`test Caret renders Caret unchanged 1`] = `
 <span
-  className="caret "
+  className="caret"
   data-testid="caret"
 >
   ^
