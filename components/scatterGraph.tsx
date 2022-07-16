@@ -25,9 +25,9 @@ d3.selection.prototype.moveToFront = function () {
 const ScatterGraph: FC<ScatterGraphProps> = ({ data, xAxisObj, yAxisObj }) => {
   const ref = useRef(null);
 
-  const margin = { top: 30, right: 30, bottom: 30, left: 30 };
-  const width = 400 - margin.left - margin.right;
-  const height = 200 - margin.top - margin.bottom;
+  const margins = { top: 30, right: 30, bottom: 30, left: 30 };
+  const width = 400 - margins.left - margins.right;
+  const height = 200 - margins.top - margins.bottom;
 
   useEffect(() => {
     const svgElement = d3.select(ref.current);
@@ -88,7 +88,7 @@ const ScatterGraph: FC<ScatterGraphProps> = ({ data, xAxisObj, yAxisObj }) => {
       .attr('cy', (d: any) => y(d.y))
       .attr('r', 1.5)
       .style('fill', '#df4a00');
-  }, [data, width, height, margin.left, margin.top, xAxisObj, yAxisObj]);
+  }, [data, width, height, margins.left, margins.top, xAxisObj, yAxisObj]);
 
   const configureXAxis = (svgElement: any, xAxisObj: any) => {
     const xDomain = d3.extent(data, (d: any) => d.x);
@@ -111,7 +111,7 @@ const ScatterGraph: FC<ScatterGraphProps> = ({ data, xAxisObj, yAxisObj }) => {
       .append('text')
       .attr(
         'transform',
-        'translate(' + width / 2 + ' ,' + (height + margin.top) + ')'
+        'translate(' + width / 2 + ' ,' + (height + margins.top) + ')'
       )
       .style('text-anchor', 'middle')
       .style('font', '10px arial')
@@ -140,7 +140,7 @@ const ScatterGraph: FC<ScatterGraphProps> = ({ data, xAxisObj, yAxisObj }) => {
     svgElement
       .append('text')
       .attr('transform', 'rotate(-90)')
-      .attr('y', +yAxisObj.labelOffset - margin.left)
+      .attr('y', +yAxisObj.labelOffset - margins.left)
       .attr('x', 0 - height / 2)
       .attr('dy', '1em')
       .style('text-anchor', 'middle')

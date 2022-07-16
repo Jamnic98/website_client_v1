@@ -8,7 +8,7 @@ describe('Card', () => {
       title: 'Card',
       description: 'Test card',
       imageURI: '/',
-      URI: '/',
+      linkURL: '/',
     };
     render(<Card cardObj={testObj} />);
     const card = screen.getByTestId('card');

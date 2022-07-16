@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import styles from './NavLogo.module.css';
 
@@ -7,7 +7,7 @@ interface NavLogoProps {
   linkURL?: string;
 }
 
-const NavLogo: FC<NavLogoProps> = ({ handleClick, linkURL = '/' }) => (
+const NavLogo: React.FC<NavLogoProps> = ({ handleClick, linkURL = '/' }) => (
   <Link href={linkURL}>
     <a
       className={styles.navLogo}

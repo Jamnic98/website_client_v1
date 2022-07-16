@@ -1,17 +1,16 @@
-import React, { FC } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import styles from './Caret.module.css';
 
 interface CaretProps {
-  isUp: boolean;
+  isFlipped: boolean;
 }
 
-const Caret: FC<CaretProps> = ({ isUp }) => (
+const Caret: React.FC<CaretProps> = ({ isFlipped }) => (
   <span
     className={classNames(styles.caret, {
-      [styles.flip]: isUp,
+      [styles.flip]: isFlipped,
     })}
-    data-testid='caret'
   >
     &#94;
   </span>

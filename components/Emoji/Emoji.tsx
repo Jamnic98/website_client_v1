@@ -1,10 +1,10 @@
-import React, { FC } from 'react';
+import React from 'react';
 
 interface EmojiProps {
   symbol: string;
 }
 
-const Emoji: FC<EmojiProps> = ({ symbol }) => (
+const Emoji: React.FC<EmojiProps> = ({ symbol }) => (
   <span data-testid='emoji' role='img'>
     {symbol}
   </span>

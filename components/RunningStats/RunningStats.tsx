@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import {
   reduceSumFunc,
   getAverageDistanceString,
@@ -14,26 +14,21 @@ interface RunningStatsProps {
   runData: runDataType[];
 }
 
-const RunningStats: FC<RunningStatsProps> = (props) => {
+const RunningStats: React.FC<RunningStatsProps> = ({ runData }) => {
   // distance
-  const distanceList = props.runData.map(
-    (runData: runDataType) => runData.distance
-  );
-  const furthestDistanceInMeters =
-    distanceList.length > 0 ? Math.max(...distanceList) : 0;
-  const totalDistanceInMeters =
-    distanceList.length > 0
-      ? distanceList.reduce((a, b) => reduceSumFunc(a, b))
-      : 0;
+  const distanceList = runData.map((runData: runDataType) => runData.distance);
+  const furthestDistanceInMeters = distanceList.length
+    ? Math.max(...distanceList)
+    : 0;
+  const totalDistanceInMeters = distanceList.length
+    ? distanceList.reduce((a, b) => reduceSumFunc(a, b))
+    : 0;
 
   // duration
-  const durationList = props.runData.map(
-    (runData: runDataType) => runData.duration
-  );
-  const totalDurationInSeconds =
-    durationList.length > 0
-      ? durationList.reduce((a, b) => reduceSumFunc(a, b))
-      : 0;
+  const durationList = runData.map((runData: runDataType) => runData.duration);
+  const totalDurationInSeconds = durationList.length
+    ? durationList.reduce((a, b) => reduceSumFunc(a, b))
+    : 0;
 
   return (
     <div className={styles.allTimeStats}>
@@ -47,7 +42,7 @@ const RunningStats: FC<RunningStatsProps> = (props) => {
         <li>
           <span>
             {getAverageDistanceString(
-              distanceList.length > 0
+              distanceList.length
                 ? totalDistanceInMeters / distanceList.length
                 : 0
             )}
@@ -61,14 +56,14 @@ const RunningStats: FC<RunningStatsProps> = (props) => {
         <li>
           <span>
             {getAverageDurationString(
-              durationList.length > 0
+              durationList.length
                 ? totalDurationInSeconds / durationList.length
                 : 0
             )}
           </span>
         </li>
         <li>
-          <span>Run count: {props.runData.length}</span>
+          <span>Run count: {runData.length}</span>
         </li>
       </ul>
     </div>

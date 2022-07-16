@@ -1,22 +1,13 @@
-import React, { FC } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import styles from './Dropdown.module.css';
 
-interface DropdownItemProps {
-  children: any;
-}
-
-const DropdownItem: FC<DropdownItemProps> = ({ children }) => (
-  <div className={styles.dropdownItem}>{children}</div>
-);
-
 interface DropdownProps {
+  items: object[];
   isOpen: boolean;
   render: Function;
-  items: object[];
 }
-
-const Dropdown: FC<DropdownProps> = ({ isOpen, render, items }) => (
+const Dropdown: React.FC<DropdownProps> = ({ isOpen, render, items }) => (
   <div
     className={classNames(
       styles.dropdown,
@@ -24,9 +15,11 @@ const Dropdown: FC<DropdownProps> = ({ isOpen, render, items }) => (
     )}
     data-testid='dropdown'
   >
-    {items.map((item, index) => {
-      return <DropdownItem key={index}>{render(item)}</DropdownItem>;
-    })}
+    {items.map((item, index) => (
+      <div key={index} className={styles.dropdownItem}>
+        {render(item)}
+      </div>
+    ))}
   </div>
 );
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import projects from '../data/projects';
+import projects from '../data/projects/projects';
 import Head from 'next/head';
 import styles from '../styles/projects.module.css';
 import Card from '../components/Card/Card';
@@ -10,11 +10,9 @@ const languages = [
   '',
   ...Array.from(
     new Set(
-      projects.map((projectData: projectObjType) => {
-        return projectData.mainLanguage;
-      })
+      projects.map((projectData: projectObjType) => projectData.mainLanguage)
     )
-  )
+  ),
 ];
 
 function Projects() {
@@ -32,7 +30,7 @@ function Projects() {
               title: projectData.title,
               description: projectData.shortDescription,
               imageURI: projectData.screenshotURIs[0],
-              URI: projectData.projectPageURI
+              linkURL: projectData.projectPageURI,
             }}
             key={projectData.id}
           />
@@ -49,7 +47,7 @@ function Projects() {
         <PageHeader
           headerObj={{
             title: 'Projects',
-            description: 'Here are the projects I have worked on:'
+            description: 'Here are the projects I have worked on:',
           }}
         />
         <article>

@@ -15,7 +15,6 @@ exports[`Navlink renders Navlink unchanged 1`] = `
     logs
     <span
       className="caret"
-      data-testid="caret"
     >
       ^
     </span>

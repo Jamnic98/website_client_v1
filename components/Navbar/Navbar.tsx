@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { useState } from 'react';
 import Navlink from '../Navlink/Navlink';
 import NavLogo from '../NavLogo/NavLogo';
 import { FaTimes, FaBars } from 'react-icons/fa';
@@ -10,7 +10,7 @@ interface NavbarProps {
   navlinkObjArr: navlinkObjType[];
 }
 
-const Navbar: FC<NavbarProps> = ({ navlinkObjArr }) => {
+const Navbar: React.FC<NavbarProps> = ({ navlinkObjArr }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleMenuToggle = () => setIsMenuOpen(!isMenuOpen);
 
@@ -48,7 +48,7 @@ interface MobileMenuToggleProps {
   isOpen: boolean;
 }
 
-const MobileMenuToggle: FC<MobileMenuToggleProps> = ({
+const MobileMenuToggle: React.FC<MobileMenuToggleProps> = ({
   handleClick,
   isOpen,
 }) => (

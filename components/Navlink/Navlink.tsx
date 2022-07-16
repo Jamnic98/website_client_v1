@@ -27,7 +27,7 @@ const Navlink: FC<NavlinkProps> = ({ navlinkObj, onClick: handleClick }) => {
               onMouseOut={() => setIsActive(false)}
             >
               {label}
-              <Caret isUp={isActive} />
+              <Caret isFlipped={isActive} />
             </a>
           </Link>
           <div
@@ -39,9 +39,9 @@ const Navlink: FC<NavlinkProps> = ({ navlinkObj, onClick: handleClick }) => {
             <Dropdown
               isOpen={isActive}
               items={children}
-              render={(item: navlinkObjType) => (
-                <Link href={item.url}>
-                  <a className={styles.navlink}>{item.label}</a>
+              render={(navlinkObj: navlinkObjType) => (
+                <Link href={navlinkObj.url}>
+                  <a className={styles.navlink}>{navlinkObj.label}</a>
                 </Link>
               )}
             />

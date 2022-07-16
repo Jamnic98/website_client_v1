@@ -6,7 +6,7 @@ import PageHeader from '../components/PageHeader/PageHeader';
 import Explorer from '../components/Explorer/Explorer';
 import RunningStats from '../components/RunningStats/RunningStats';
 import styles from '../styles/index.module.css';
-import projects from '../data/projects';
+import projects from '../data/projects/projects';
 
 interface Props {
   data: any;
@@ -27,14 +27,14 @@ function Home(props: Props) {
         />
         <article className={styles.homeContent}>
           <section className={styles.homeDescription}>
-            {/* This entire website, including the front end user interface
+            This entire website, including the front end user interface
             components and back end architecture, was designed, created and
             styled from scratch, by{' '}
             <Link href='/about'>
               <a className={styles.projectLink}>me</a>
             </Link>
             . I built the site with scalability in mind and plan to integrate
-            more features and expand on existing content in the near future. */}
+            more features and expand on existing content in the near future.
           </section>
           <section className={styles.projectExplorer}>
             <Explorer
