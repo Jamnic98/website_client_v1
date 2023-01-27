@@ -6,7 +6,6 @@
   transition: max-height 0.3s ease;
   overflow: hidden;
   background-color: inherit;
-  /* box-shadow: 0.2em 0.2em 0.4em grey; */
 }
 
 .dropdown.closed {

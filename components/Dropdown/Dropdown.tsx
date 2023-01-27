@@ -7,6 +7,7 @@ interface DropdownProps {
   isOpen: boolean;
   render: Function;
 }
+
 const Dropdown: React.FC<DropdownProps> = ({ isOpen, render, items }) => (
   <div
     className={classNames(

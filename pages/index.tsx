@@ -1,12 +1,12 @@
-import React from 'react';
-import axios from 'axios';
-import Head from 'next/head';
-import Link from 'next/link';
-import PageHeader from '../components/PageHeader/PageHeader';
-import Explorer from '../components/Explorer/Explorer';
-import RunningStats from '../components/RunningStats/RunningStats';
-import styles from '../styles/index.module.css';
-import projects from '../data/projects/projects';
+import React from "react";
+import axios from "axios";
+import Head from "next/head";
+import Link from "next/link";
+import PageHeader from "../components/PageHeader/PageHeader";
+import Explorer from "../components/Explorer/Explorer";
+import RunningStats from "../components/RunningStats/RunningStats";
+import styles from "../styles/index.module.css";
+import projects from "../data/projects";
 
 interface Props {
   data: any;
@@ -18,19 +18,19 @@ function Home(props: Props) {
       <Head>
         <title>Home</title>
       </Head>
-      <main className='container'>
+      <main className="container">
         <PageHeader
           headerObj={{
-            title: 'Home',
-            description: 'Welcome.',
+            title: "Home",
+            description: "Welcome."
           }}
         />
         <article className={styles.homeContent}>
           <section className={styles.homeDescription}>
             This entire website, including the front end user interface
             components and back end architecture, was designed, created and
-            styled from scratch, by{' '}
-            <Link href='/about'>
+            styled from scratch, by{" "}
+            <Link href="/about">
               <a className={styles.projectLink}>me</a>
             </Link>
             . I built the site with scalability in mind and plan to integrate
@@ -38,13 +38,13 @@ function Home(props: Props) {
           </section>
           <section className={styles.projectExplorer}>
             <Explorer
-              title='Project Explorer'
+              title="Project Explorer"
               data={projects
                 .map((project) => {
                   return {
                     title: project.title,
                     description: project.shortDescription,
-                    URI: project.projectPageURI,
+                    URI: project.projectPageURI
                   };
                 })
                 // randomly select 3 projects
@@ -55,14 +55,14 @@ function Home(props: Props) {
           {props.data === null ? null : (
             <section>
               <h3>
-                Running Stats for{' '}
-                {new Date().toLocaleString('default', { month: 'long' })}
+                Running Stats for{" "}
+                {new Date().toLocaleString("default", { month: "long" })}
               </h3>
-              <hr className='subRule' />
+              <hr className="subRule" />
               <div className={styles.runningWeek}>
                 <RunningStats runData={props.data} />
                 <div className={styles.allProjectsLink}>
-                  <Link href='/logs/running'>
+                  <Link href="/logs/running">
                     <a>all stats</a>
                   </Link>
                 </div>
@@ -78,7 +78,7 @@ function Home(props: Props) {
 export default Home;
 
 export async function getServerSideProps({ res }: any) {
-  res.setHeader('Cache-Control', 'public, s-maxage=43200');
+  res.setHeader("Cache-Control", "public, s-maxage=43200");
   try {
     // set get 1st of current month
     const previousDate = new Date();
@@ -86,18 +86,18 @@ export async function getServerSideProps({ res }: any) {
     previousDate.setHours(-1);
 
     let URL = `http://localhost:3000/runs?after=${previousDate}`;
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === "production") {
       URL = `http://portfoliowebsiteserver-env.eba-zrm3ecty.us-east-1.elasticbeanstalk.com/runs?after=${previousDate}`;
     }
 
     const { data } = await axios.get(URL);
     return {
-      props: { data },
+      props: { data }
     };
   } catch (error) {
     console.error(error);
     return {
-      props: { data: null },
+      props: { data: null }
     };
   }
 }

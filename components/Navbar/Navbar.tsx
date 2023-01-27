@@ -33,7 +33,7 @@ const Navbar: React.FC<NavbarProps> = ({ navlinkObjArr }) => {
           ))}
         </span>
         <MobileMenuToggle
-          handleClick={() => handleMenuToggle()}
+          handleClick={handleMenuToggle}
           isOpen={isMenuOpen}
         />
       </span>
