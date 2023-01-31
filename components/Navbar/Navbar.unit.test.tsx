@@ -1,19 +1,19 @@
-import Navbar from './Navbar';
-import { render, screen } from '@testing-library/react';
-import renderer from 'react-test-renderer';
-import navlinkObjArr from '../../data/navlinkObjArr';
+import { Navbar } from './Navbar'
+import { render, screen } from '@testing-library/react'
+import renderer from 'react-test-renderer'
+import { navlinkObjArr } from '../../utils'
 
 describe('Navbar', () => {
   it('renders a Navbar', () => {
-    render(<Navbar navlinkObjArr={navlinkObjArr} />);
-    const navbar = screen.getByTestId('navbar');
-    expect(navbar).toBeInTheDocument();
-  });
+    render(<Navbar navlinkObjArr={navlinkObjArr} />)
+    const navbar = screen.getByTestId('navbar')
+    expect(navbar).toBeInTheDocument()
+  })
 
   it('renders navbar unchanged', () => {
     const tree = renderer
       .create(<Navbar navlinkObjArr={navlinkObjArr} />)
-      .toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-});
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+})

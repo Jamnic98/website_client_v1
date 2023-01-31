@@ -1,6 +1,6 @@
-import { projectObjType } from '../../types/global';
+import { ProjectData } from '../../types/global'
 
-const readingLog: projectObjType = {
+const readingLog: ProjectData = {
   id: 'crypto-viewer',
   title: 'Crypto Viewer',
   shortDescription: 'Displays real-time cryptocurrency price data.',
@@ -19,6 +19,6 @@ const readingLog: projectObjType = {
   mainLanguage: 'C++',
   links: [],
   techStack: ['C++', 'NodeMCU ESP-12', '2.2" TFT', '16x2 LCD']
-};
+}
 
-export default readingLog;
+export default readingLog

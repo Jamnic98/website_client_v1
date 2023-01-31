@@ -1,16 +1,16 @@
 .navbar {
-  position: sticky;
   height: var(--navbar-height);
+  position: sticky;
   top: 0;
-  z-index: 1;
   background-color: var(--c-bg-secondary);
   color: var(--c-text-navbar);
-  /* box-shadow: 0 0.2em 0.4em grey; */
+  z-index: 1;
 }
 
 .navbar > span {
-  height: 100%;
+  height: inherit;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   background-color: var(--c-bg-secondary);
   color: inherit;
@@ -32,39 +32,6 @@
   background-color: var(--c-link);
 }
 
-.logoContainer {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  font-weight: bold;
-}
-
-.logo {
-  font-size: 1.5em;
-  color: var(--c-link);
-  transition: color 0.3s ease;
-  min-width: max-content;
-  letter-spacing: 1px;
-}
-
-.logo:hover {
-  color: var(--c-text-navbar);
-}
-
-.menuIcon {
-  visibility: hidden;
-  font-size: 1.6em;
-  cursor: pointer;
-  position: absolute;
-  left: 0;
-  top: 25%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 0.3em;
-  color: var(--c-text-navbar);
-}
-
 @media screen and (max-width: 800px) {
   .navlinks {
     flex-direction: column;
@@ -82,25 +49,13 @@
     transform: translateX(100%);
   }
 
-  .menuIcon {
-    visibility: unset;
+  .navbar > span {
+    justify-content: center;
   }
 
   .logoContainer {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .navbar {
-    font-size: 1em;
-  }
-}
-
-@media screen and (max-width: 300px) {
-  .navbar {
-    font-size: 0.8em;
   }
 }

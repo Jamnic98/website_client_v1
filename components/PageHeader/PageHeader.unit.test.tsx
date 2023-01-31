@@ -1,28 +1,24 @@
-import Header from './PageHeader';
-import { render, screen, fireEvent } from '@testing-library/react';
-import renderer from 'react-test-renderer';
-import { headerObj } from '../../types/global';
+import { PageHeader } from './PageHeader'
+import { render, screen } from '@testing-library/react'
+import renderer from 'react-test-renderer'
 
-const testHeaderObj: headerObj = {
-  title: 'Title',
-  description: 'This is a test.'
-};
+const testTitle = 'Title'
+const testDescription = 'This is a test.'
 
 describe('Header', () => {
   it('renders correctly', () => {
-    const { title, description } = testHeaderObj;
-    render(<Header headerObj={testHeaderObj} />);
-    const header = screen.getByTestId('header');
-    expect(header).toHaveTextContent(`${title}${description}`);
-  });
-  
-  
+    render(<PageHeader title={testTitle} description={testDescription} />)
+    const header = screen.getByTestId('application-page-header')
+    expect(header.getElementsByTagName('h1')[0]).toHaveTextContent(testTitle)
+    expect(header.getElementsByTagName('p')[0]).toHaveTextContent(
+      testDescription
+    )
+  })
+
   it('renders Header unchanged', () => {
     const tree = renderer
-      .create(
-        <Header headerObj={testHeaderObj} />
-      )
-      .toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-});
+      .create(<PageHeader title={testTitle} description={testDescription} />)
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+})

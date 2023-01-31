@@ -1,44 +1,40 @@
-import React, { useState } from 'react';
-import projects from '../data/projects';
-import Head from 'next/head';
-import styles from '../styles/projects.module.css';
-import Card from '../components/Card/Card';
-import PageHeader from '../components/PageHeader/PageHeader';
-import { projectObjType } from '../types/global';
+import React, { useState } from 'react'
+import projects from '../data/projects'
+import Head from 'next/head'
+import styles from '../styles/projects.module.css'
+import { Card } from '../components/card/Card'
+import { PageHeader } from '../components/pageHeader/PageHeader'
+import type { ProjectData } from '../types/global'
 
 const languages = [
   '',
   ...Array.from(
     new Set(
-      projects.map((projectData: projectObjType) => {
-        return projectData.mainLanguage;
-      })
+      projects.map((projectData: ProjectData) => projectData.mainLanguage)
     )
   )
-];
+]
 
-function Projects() {
-  const [language, setLanguage] = useState('');
+const Projects = () => {
+  const [language, setLanguage] = useState('')
 
   const setProjects = () => {
     return projects
-      .filter((projectData) =>
+      .filter((projectData: any) =>
         language === '' ? true : projectData.mainLanguage === language
       )
-      .map((projectData) => {
+      .map((projectData: any) => {
         return (
           <Card
-            cardObj={{
-              title: projectData.title,
-              description: projectData.shortDescription,
-              imageURI: projectData.screenshotURIs[0],
-              URI: projectData.projectPageURI
-            }}
+            title={projectData.title}
+            description={projectData.shortDescription}
+            imageUri={projectData.screenshotURIs[0]}
+            linkUrl={projectData.projectPageURI}
             key={projectData.id}
           />
-        );
-      });
-  };
+        )
+      })
+  }
 
   return (
     <>
@@ -47,10 +43,8 @@ function Projects() {
       </Head>
       <main className='container'>
         <PageHeader
-          headerObj={{
-            title: 'Projects',
-            description: 'Here are the projects I have worked on:'
-          }}
+          title='Projects'
+          description='Here are the projects I have worked on:'
         />
         <article>
           <section>
@@ -64,7 +58,7 @@ function Projects() {
                   <option className={styles.selectOption} key={i}>
                     {mainLanguage}
                   </option>
-                );
+                )
               })}
             </select>
           </section>
@@ -72,7 +66,7 @@ function Projects() {
         </article>
       </main>
     </>
-  );
+  )
 }
 
-export default Projects;
+export default Projects

@@ -1,46 +1,62 @@
-import Navlink from './Navlink';
-import { render, screen, fireEvent } from '@testing-library/react';
-import renderer from 'react-test-renderer';
+import { Navlink } from '.'
+import { render, screen, fireEvent } from '@testing-library/react'
+import renderer from 'react-test-renderer'
+import { NavlinkData } from '../../types/global'
 
-const testNavlinkObj = {
+const mockOnClick = jest.fn()
+
+const testNavlinkObj: NavlinkData = {
   label: 'logs',
   url: '/logs',
   children: [{ label: 'running', url: '/logs/running', children: [] }]
-};
+}
 
 describe('Navlink', () => {
-  global.innerWidth = 1200;
-  global.dispatchEvent(new Event('resize'));
+  beforeAll(() => {
+    global.innerWidth = 1200
+    global.dispatchEvent(new Event('resize'))
+  })
 
-  const testNavlink = <Navlink navlinkObj={testNavlinkObj} />;
   it('renders Navlink', () => {
-    render(testNavlink);
-    const navlink = screen.getByText('logs');
-    expect(navlink).toBeInTheDocument();
-  });
+    const testNavlink = (
+      <Navlink navlinkObj={testNavlinkObj} onClick={mockOnClick}>
+        test child
+      </Navlink>
+    )
+
+    render(testNavlink)
+    const navlink = screen.getByText('logs')
+    expect(navlink).toBeInTheDocument()
+  })
 
   it('opens and closes dropdown onMouseOver and onMouseOut', () => {
-    render(testNavlink);
-    const navlink = screen.getByText('logs');
-    const dropdown = screen.getByTestId('dropdown');
-    const dropdownContainer = screen.getByTestId('dropdownContainer');
+    const testNavlink = (
+      <Navlink navlinkObj={testNavlinkObj} onClick={mockOnClick}>
+        <div>test children</div>
+      </Navlink>
+    )
 
-    expect(dropdown).toHaveClass('dropdown closed');
-    fireEvent.mouseOver(navlink);
-    expect(dropdown).toHaveClass('dropdown open');
-    fireEvent.mouseOut(navlink);
-    expect(dropdown).toHaveClass('dropdown closed');
+    render(testNavlink)
+    const navlink = screen.getByText('logs')
+    const dropdown = screen.getByTestId('dropdown')
+    const dropdownContainer = screen.getByTestId('dropdownContainer')
 
-    fireEvent.mouseOver(dropdownContainer);
-    expect(dropdown).toHaveClass('dropdown open');
-    fireEvent.mouseOut(dropdownContainer);
-    expect(dropdown).toHaveClass('dropdown closed');
-  });
+    expect(dropdown).toHaveClass('dropdown closed')
+    fireEvent.mouseOver(navlink)
+    expect(dropdown).toHaveClass('dropdown open')
+    fireEvent.mouseOut(navlink)
+    expect(dropdown).toHaveClass('dropdown closed')
+
+    fireEvent.mouseOver(dropdownContainer)
+    expect(dropdown).toHaveClass('dropdown open')
+    fireEvent.mouseOut(dropdownContainer)
+    expect(dropdown).toHaveClass('dropdown closed')
+  })
 
   it('renders Navlink unchanged', () => {
     const tree = renderer
-      .create(<Navlink navlinkObj={testNavlinkObj} />)
-      .toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-});
+      .create(<Navlink navlinkObj={testNavlinkObj} onClick={mockOnClick} />)
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+})

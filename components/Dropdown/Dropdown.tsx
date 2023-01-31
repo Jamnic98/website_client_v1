@@ -1,28 +1,25 @@
-import styles from './Dropdown.module.css';
+import { type FC } from 'react'
+import classNames from 'classnames'
+import styles from './Dropdown.module.css'
 
-interface Props {
-  isOpen: boolean;
-  render: Function;
-  items: object[];
+export interface DropdownProps {
+  items: object[]
+  isOpen: boolean
+  render: Function
 }
 
-function DropdownItem({ children }: any) {
-  return <div className={styles.dropdownItem}>{children}</div>;
-}
-
-function Dropdown({ isOpen, render, items }: Props) {
-  return (
-    <div
-      className={`${styles.dropdown} ${
-        isOpen ? `${styles.open}` : `${styles.closed}`
-      }`}
-      data-testid='dropdown'
-    >
-      {items.map((item, index) => {
-        return <DropdownItem key={index}>{render(item)}</DropdownItem>;
-      })}
-    </div>
-  );
-}
-
-export default Dropdown;
+export const Dropdown: FC<DropdownProps> = ({ isOpen, render, items }) => (
+  <div
+    className={classNames(
+      styles.dropdown,
+      isOpen ? styles.open : styles.closed
+    )}
+    data-testid='dropdown'
+  >
+    {items.map((item, index) => (
+      <div key={index} className={styles.dropdownItem}>
+        {render(item)}
+      </div>
+    ))}
+  </div>
+)

@@ -1,6 +1,6 @@
-import { projectObjType } from '../../types/global';
+import { ProjectData } from '../../types/global'
 
-const looseChangeCalculator: projectObjType =   {
+const looseChangeCalculator: ProjectData = {
   id: 'loose-change-calculator',
   title: 'Loose Change Calculator',
   shortDescription: 'A calculator for summing loose change (GBP).',
@@ -17,7 +17,8 @@ const looseChangeCalculator: projectObjType =   {
       URL: 'https://github.com/Jamnic98/loose-change-calculator',
       type: 'external'
     }
-  ], techStack: ['Python', 'Tkinter']
+  ],
+  techStack: ['Python', 'Tkinter']
 }
 
-export default looseChangeCalculator;
+export default looseChangeCalculator

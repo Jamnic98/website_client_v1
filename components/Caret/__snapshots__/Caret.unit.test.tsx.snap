@@ -2,8 +2,7 @@
 
 exports[`test Caret renders Caret unchanged 1`] = `
 <span
-  className="caret "
-  data-testid="caret"
+  className="caret up"
 >
   ^
 </span>

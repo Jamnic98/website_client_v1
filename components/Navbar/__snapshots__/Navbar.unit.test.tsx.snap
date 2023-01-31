@@ -10,86 +10,8 @@ exports[`Navbar renders navbar unchanged 1`] = `
     className="container"
   >
     <span
-      className="logoContainer"
-    >
-      <a
-        aria-label="home button"
-        className="logo"
-        href="/"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-      >
-        Jamie Stimpson
-      </a>
-    </span>
-    <span
-      aria-label="navlinks"
-      className="navlinks "
-    >
-      <div
-        className="dropdownNavlink"
-      >
-        <a
-          className="navlink"
-          href="/logs/running"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-        >
-          logs
-          <span
-            className="caret "
-            data-testid="caret"
-          >
-            ^
-          </span>
-        </a>
-        <div
-          className="dropdownContainer"
-          data-testid="dropdownContainer"
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-        >
-          <div
-            className="dropdown closed"
-            data-testid="dropdown"
-          >
-            <div
-              className="dropdownItem"
-            >
-              <a
-                className="navlink"
-                href="/logs/running"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-              >
-                running
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a
-        className="navlink"
-        href="/projects"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-      >
-        projects
-      </a>
-      <a
-        className="navlink"
-        href="/about"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-      >
-        about 
-      </a>
-    </span>
-    <span
-      aria-label="toggle mobile menu"
-      className="menuIcon "
+      aria-label="mobile menu toggle button"
+      className="menuIcon"
       onClick={[Function]}
     >
       <svg
@@ -110,6 +32,82 @@ exports[`Navbar renders navbar unchanged 1`] = `
           d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
         />
       </svg>
+    </span>
+    <a
+      className="navLogo"
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      Jamie Stimpson
+    </a>
+    <span
+      aria-label="navlinks"
+      className="navlinks "
+    >
+      <div
+        className="dropdownNavlink"
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+      >
+        <a
+          className="navlink"
+          href="/logs/running"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+        >
+          logs
+          <span
+            className="caret up"
+          >
+            ^
+          </span>
+        </a>
+        <div
+          className="dropdownContainer"
+          data-testid="dropdownContainer"
+        >
+          <div
+            className="dropdown closed"
+            data-testid="dropdown"
+          >
+            <div
+              className="dropdownItem"
+            >
+              <a
+                className="navlink"
+                href="/logs/running"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onTouchStart={[Function]}
+              >
+                running
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a
+        className="navlink"
+        href="/projects"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+      >
+        projects
+      </a>
+      <a
+        className="navlink"
+        href="/about"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+      >
+        about 
+      </a>
     </span>
   </span>
 </nav>

@@ -1,6 +1,6 @@
-import { projectObjType } from '../../types/global';
+import { ProjectData } from '../../types/global'
 
-const inventoryManagementSystem: projectObjType = {
+const inventoryManagementSystem: ProjectData = {
   id: 'inventory-management-system',
   title: 'Inventory Management System',
   shortDescription: 'A M.E.R.N stack app for tracking inventory.',
@@ -55,6 +55,6 @@ const inventoryManagementSystem: projectObjType = {
     'Mongoose',
     'MaterialUI'
   ]
-};
+}
 
-export default inventoryManagementSystem;
+export default inventoryManagementSystem

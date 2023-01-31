@@ -1,17 +1,28 @@
-import React from 'react';
-import styles from './Caret.module.css';
+import { type FC } from 'react'
+import classNames from 'classnames'
+import styles from './Caret.module.css'
 
-interface Props {
-  isUp: boolean;
+export enum CaretDirection {
+  up = 'up',
+  down = 'down',
+  left = 'left',
+  right = 'right'
 }
 
-export default function Caret({ isUp }: Props) {
-  return (
-    <span
-      className={`${styles.caret} ${isUp ? `${styles.flip}` : ''}`}
-      data-testid='caret'
-    >
-      &#94;
-    </span>
-  );
+export interface CaretProps {
+  direction?: CaretDirection
+  isFlipped?: boolean
 }
+
+export const Caret: FC<CaretProps> = ({
+  direction = CaretDirection.up,
+  isFlipped = false
+}) => (
+  <span
+    className={classNames(styles.caret, styles[direction], {
+      [styles.flip]: isFlipped
+    })}
+  >
+    ^
+  </span>
+)
