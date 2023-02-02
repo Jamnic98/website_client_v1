@@ -1,1 +1,1 @@
-export * from './photoGallery'
+export * from './PhotoGallery'

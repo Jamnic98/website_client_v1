@@ -44,7 +44,7 @@ exports[`Navbar renders navbar unchanged 1`] = `
     </a>
     <span
       aria-label="navlinks"
-      className="navlinks "
+      className="navlinks"
     >
       <div
         className="dropdownNavlink"
@@ -85,6 +85,45 @@ exports[`Navbar renders navbar unchanged 1`] = `
                 onTouchStart={[Function]}
               >
                 running
+              </a>
+            </div>
+            <div
+              className="dropdownItem"
+            >
+              <a
+                className="navlink"
+                href="/logs/weight-lifting"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onTouchStart={[Function]}
+              >
+                weight lifting
+              </a>
+            </div>
+            <div
+              className="dropdownItem"
+            >
+              <a
+                className="navlink"
+                href="/logs/habit-tracker"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onTouchStart={[Function]}
+              >
+                habit tracker
+              </a>
+            </div>
+            <div
+              className="dropdownItem"
+            >
+              <a
+                className="navlink"
+                href="/logs/reading"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onTouchStart={[Function]}
+              >
+                reading
               </a>
             </div>
           </div>

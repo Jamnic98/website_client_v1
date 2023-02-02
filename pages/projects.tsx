@@ -28,8 +28,8 @@ const Projects = () => {
           <Card
             title={projectData.title}
             description={projectData.shortDescription}
-            imageUri={projectData.screenshotURIs[0]}
-            linkUrl={projectData.projectPageURI}
+            imageURI={projectData.screenshotURIs[0]}
+            linkURL={projectData.projectPageURI}
             key={projectData.id}
           />
         )

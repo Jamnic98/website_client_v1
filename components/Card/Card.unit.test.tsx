@@ -4,27 +4,37 @@ import renderer from 'react-test-renderer'
 
 const testTitle = 'Card Title'
 const testDescription = 'Test description.'
-const testimageUri = '/'
-const testlinkUrl = '/'
+const testimageURI = '/'
+const testLinkURL = '/'
+
+const getTestCard = (props?: CardProps) => (
+  <Card
+    {...{
+      title: testTitle,
+      description: testDescription,
+      imageURI: testimageURI,
+      linkURL: testLinkURL,
+      ...props
+    }}
+  />
+)
+
+const drawCard = (props?: CardProps) => {
+  render(getTestCard(props))
+}
 
 describe('Card', () => {
-  it('does not render with empty props', () => {
-    render(<Card {...({} as CardProps)} />)
-    expect(screen.queryByTestId('card')).not.toBeInTheDocument()
+  it('renders correctly', () => {
+    drawCard({ ...({} as CardProps) })
+    expect(screen.getByText(testTitle)).toBeInTheDocument()
+    expect(screen.getByText(testTitle)).toBeInTheDocument()
   })
 
   it('has correct classes', () => {
-    render(
-      <Card
-        title={testTitle}
-        description={testDescription}
-        imageUri={testimageUri}
-        linkUrl={testlinkUrl}
-      />
-    )
-
-    const card = screen.getByTestId('card')
+    drawCard()
+    const card = screen.getByRole('link')
     expect(card).toHaveClass('card')
+
     fireEvent.mouseOver(card)
     expect(card).toHaveClass('card focused')
 
@@ -32,18 +42,6 @@ describe('Card', () => {
     expect(card).toHaveClass('card')
   })
 
-  it('renders Card unchanged', () => {
-    expect(
-      renderer
-        .create(
-          <Card
-            title={testTitle}
-            description={testDescription}
-            imageUri={testimageUri}
-            linkUrl={testlinkUrl}
-          />
-        )
-        .toJSON()
-    ).toMatchSnapshot()
-  })
+  it('renders Card unchanged', () =>
+    expect(renderer.create(getTestCard()).toJSON()).toMatchSnapshot())
 })

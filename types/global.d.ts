@@ -1,5 +1,7 @@
 export type NavlinkData = { label: string; url: string; children: navlinkObj[] }
 
+export type ProjectLinkData = { URL: string; label: string; type: string }
+
 export type ProjectData = {
   id: string
   title: string
@@ -8,15 +10,8 @@ export type ProjectData = {
   projectPageURI: string
   screenshotURIs: string[]
   mainLanguage: string
-  links: ProjectLink[]
+  links: ProjectLinkData[]
   techStack: string[]
-}
-
-export type ProjectLink = { URL: string; label: string; type: string }
-
-export type HeaderData = {
-  title: string
-  description?: string
 }
 
 export type RunData = {

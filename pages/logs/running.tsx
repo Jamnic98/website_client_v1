@@ -35,7 +35,6 @@ const Running = ({ data }: RunningProps) => (
           <section>
             <h2>All Time Running Data</h2>
             <hr className='subRule' />
-            <h3>Stats</h3>
             <RunningStats runData={data} />
             <h3>Date / Distance Graph</h3>
             <LineGraph

@@ -1,12 +1,11 @@
 import { FC } from 'react'
-import classNames from 'classnames'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
-import { PageHeader } from '../../components'
+import { PageHeader, ProjectLinks } from '../../components'
 import projects from '../../data/projects'
-import { CgExternal, CgInternal } from 'react-icons/cg'
-import type { ProjectData, ProjectLink } from '../../types/global'
+import type { ProjectData, ProjectLinkData } from '../../types/global'
 import styles from '../../styles/project.module.css'
 
 interface ProjectGalleryProps {
@@ -39,38 +38,6 @@ const ProjectDescriptions: FC<ProjectDescriptionsProps> = ({
       <p key={index}>{paragraph}</p>
     ))}
   </>
-)
-
-interface ProjectLinksProps {
-  links: ProjectLink[]
-}
-
-const ProjectLinks: React.FC<ProjectLinksProps> = ({ links }) => (
-  <nav className={styles.projectLinks}>
-    {links.map((link, index) => {
-      if (link.type === 'external') {
-        return (
-          <a
-            className={classNames(styles.projectLink, styles.link)}
-            href={link.URL}
-            target='_blank'
-            rel='noreferrer'
-            key={index}
-          >
-            {link.label} <CgExternal />
-          </a>
-        )
-      } else if (link.type === 'internal') {
-        return (
-          <Link href={link.URL} key={index}>
-            <a className={classNames(styles.projectLink, styles.link)}>
-              {link.label} <CgInternal />
-            </a>
-          </Link>
-        )
-      }
-    })}
-  </nav>
 )
 
 interface ProjectProps {

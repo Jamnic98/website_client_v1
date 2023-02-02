@@ -7,38 +7,36 @@ import styles from './Card.module.css'
 export interface CardProps {
   title: string
   description: string
-  imageUri: string
-  linkUrl: string
+  imageURI: string
+  linkURL: string
 }
 
 export const Card: FC<CardProps> = ({
   title,
   description,
-  imageUri,
-  linkUrl
+  imageURI,
+  linkURL
 }) => {
   const [isFocused, setIsFocused] = useState(false)
   const toggleFocus = () => setIsFocused(!isFocused)
 
-  return linkUrl ? (
-    <Link href={linkUrl} legacyBehavior>
+  return (
+    <Link href={linkURL || ''} legacyBehavior>
       <a
         onMouseOver={toggleFocus}
         onMouseOut={toggleFocus}
         className={classNames(styles.card, {
           [styles.focused]: isFocused
         })}
-        data-testid='card'
+        data-testid='application-card'
       >
         <span className={styles.imgContainer}>
-          {imageUri && (
-            <Image
-              src={imageUri}
-              alt={title}
-              className={styles.img}
-              layout='fill'
-            />
-          )}
+          <Image
+            src={imageURI}
+            alt={title}
+            className={styles.img}
+            layout='fill'
+          />
         </span>
         <div className={styles.textContainer}>
           <div className={styles.title}>{title}</div>
@@ -46,5 +44,5 @@ export const Card: FC<CardProps> = ({
         </div>
       </a>
     </Link>
-  ) : null
+  )
 }
