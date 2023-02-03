@@ -1,6 +1,7 @@
 import { type FC, useState } from 'react'
 import Link from 'next/link'
-import { Dropdown, Caret } from '../../components'
+import { Dropdown } from '../../components/dropdown'
+import { Caret } from '../../components/caret'
 import { type NavlinkData } from '../../types/global'
 import useWidth from '../../utils/useWidth'
 import styles from './Navlink.module.css'
