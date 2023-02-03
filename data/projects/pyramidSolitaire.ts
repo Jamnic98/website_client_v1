@@ -1,6 +1,6 @@
-import { projectObjType } from '../../types/global'
+import { ProjectData } from '../../types/global'
 
-const pyramidSolitaire: projectObjType = {
+const pyramidSolitaire: ProjectData = {
   id: 'pyramid-solitaire',
   title: 'Pyramid Solitaire',
   shortDescription:
@@ -25,6 +25,6 @@ const pyramidSolitaire: projectObjType = {
     }
   ],
   techStack: ['Python', 'Pygame']
-};
+}
 
-export default pyramidSolitaire;
+export default pyramidSolitaire

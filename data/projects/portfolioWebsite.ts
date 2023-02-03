@@ -1,11 +1,11 @@
-import { projectObjType } from '../../types/global';
+import { ProjectData } from '../../types/global'
 
-const portfolioWebsite: projectObjType = {
+const portfolioWebsite: ProjectData = {
   id: 'portfolio-website',
   title: 'Portfolio Website',
   shortDescription: 'My website.',
   longDescription: [
-    `This is the second rendition of my website. The first version used only React which meant the site could not be accessed from anywhere but the home page.
+    `This is the second version of my website. The first used only React which meant the site could not be accessed from anywhere but the home page.
      Also the site looked amateurish in style so I decided to remake the site to fix the accessibility issue and update the style.`,
     `When designing the website, I prioritised automation and scalability. For the front end I used Next.js and TypeScript. 
      Project pages are created dynamically using a template and a file containing project data. The same technique is used 
@@ -51,6 +51,6 @@ const portfolioWebsite: projectObjType = {
     "Strava's API",
     'D3.js'
   ]
-};
+}
 
-export default portfolioWebsite;
+export default portfolioWebsite

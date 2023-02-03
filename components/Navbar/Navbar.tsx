@@ -1,34 +1,24 @@
-import React, { useState } from 'react';
-import styles from './Navbar.module.css';
-import Navlink from '../Navlink/Navlink';
-import { navlinkObjType } from '../../types/global';
-import { FaTimes, FaBars } from 'react-icons/fa';
-import Link from 'next/link';
+import React, { useState } from 'react'
+import { MobileMenuToggle, Navlink, NavLogo } from '..'
+import { type NavlinkData } from '../../types/global'
+import classNames from 'classnames'
+import styles from './Navbar.module.css'
 
-interface Props {
-  navlinkObjArr: navlinkObjType[];
+export interface NavbarProps {
+  navlinkObjArr: NavlinkData[]
 }
 
-function Navbar({ navlinkObjArr }: Props) {
-  const [isOpen, setIsOpen] = useState(false);
-  const handleClick = () => setIsOpen(!isOpen);
+export const Navbar = ({ navlinkObjArr }: NavbarProps) => {
+  const [isOpen, setIsOpen] = useState(false)
+  const handleClick = () => setIsOpen(!isOpen)
 
   return (
     <nav className={styles.navbar} data-testid='navbar' aria-label='navbar'>
       <span className='container'>
-        <span className={styles.logoContainer}>
-          <Link href='/'>
-            <a
-              onClick={() => setIsOpen(false)}
-              className={styles.logo}
-              aria-label='home button'
-            >
-              Jamie Stimpson
-            </a>
-          </Link>
-        </span>
+        <MobileMenuToggle handleClick={handleClick} isOpen={isOpen} />
+        <NavLogo />
         <span
-          className={`${styles.navlinks} ${isOpen ? `${styles.open}` : ''}`}
+          className={classNames(styles.navlinks, { [styles.open]: isOpen })}
           aria-label='navlinks'
         >
           {navlinkObjArr.map((navlinkObj, index) => (
@@ -39,16 +29,7 @@ function Navbar({ navlinkObjArr }: Props) {
             />
           ))}
         </span>
-        <span
-          onClick={() => handleClick()}
-          className={`${styles.menuIcon} ${isOpen ? `${styles.open}` : ''}`}
-          aria-label='toggle mobile menu'
-        >
-          {isOpen ? <FaTimes /> : <FaBars />}
-        </span>
       </span>
     </nav>
-  );
+  )
 }
-
-export default Navbar;

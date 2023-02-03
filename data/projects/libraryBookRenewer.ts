@@ -1,6 +1,6 @@
-import { projectObjType } from '../../types/global';
+import { ProjectData } from '../../types/global'
 
-const libraryBookRenewer: projectObjType = {
+const libraryBookRenewer: ProjectData = {
   id: 'library-book-renewer',
   title: 'Library Book Renewer',
   shortDescription: 'A web scraper that automatically renews my library books.',
@@ -22,6 +22,6 @@ const libraryBookRenewer: projectObjType = {
     }
   ],
   techStack: ['Python', 'Selenium']
-};
+}
 
-export default libraryBookRenewer;
+export default libraryBookRenewer

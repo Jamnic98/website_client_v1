@@ -1,6 +1,6 @@
-import { projectObjType } from '../../types/global';
+import { ProjectData } from '../../types/global'
 
-const touchTyping: projectObjType = {
+const touchTyping: ProjectData = {
   id: 'touch-typing',
   title: 'Touch Typing',
   shortDescription: 'A program to improve typing speed and accuracy.',
@@ -41,6 +41,6 @@ const touchTyping: projectObjType = {
     'Matplotlib',
     'JSON'
   ]
-};
+}
 
-export default touchTyping;
+export default touchTyping

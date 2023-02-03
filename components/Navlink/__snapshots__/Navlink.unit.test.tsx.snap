@@ -3,19 +3,20 @@
 exports[`Navlink renders Navlink unchanged 1`] = `
 <div
   className="dropdownNavlink"
+  onClick={[Function]}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
 >
   <a
     className="navlink"
     href="/logs"
     onClick={[Function]}
     onMouseEnter={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    onTouchStart={[Function]}
   >
     logs
     <span
-      className="caret "
-      data-testid="caret"
+      className="caret up"
     >
       ^
     </span>
@@ -23,8 +24,6 @@ exports[`Navlink renders Navlink unchanged 1`] = `
   <div
     className="dropdownContainer"
     data-testid="dropdownContainer"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
   >
     <div
       className="dropdown closed"
@@ -38,6 +37,7 @@ exports[`Navlink renders Navlink unchanged 1`] = `
           href="/logs/running"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
           running
         </a>

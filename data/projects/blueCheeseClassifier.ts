@@ -1,6 +1,6 @@
-import { projectObjType } from '../../types/global';
+import { ProjectData } from '../../types/global'
 
-const blueCheeseClassifier: projectObjType = {
+const blueCheeseClassifier: ProjectData = {
   id: 'blue-cheese-classifier',
   title: 'Blue Cheese Classifier',
   shortDescription: 'An image classifier designed to identify blue cheese.',
@@ -42,5 +42,5 @@ const blueCheeseClassifier: projectObjType = {
     'NumPy',
     'scikit-learn'
   ]
-};
-export default blueCheeseClassifier;
+}
+export default blueCheeseClassifier

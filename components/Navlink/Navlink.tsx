@@ -1,62 +1,59 @@
-import { useState } from 'react';
-import Link from 'next/link';
-import Dropdown from '../Dropdown/Dropdown';
-import styles from './Navlink.module.css';
-import useWidth from '../useWidth';
-import Caret from '../Caret/Caret';
-import { navlinkObjType } from '../../types/global';
+import { type FC, useState } from 'react'
+import Link from 'next/link'
+import { Dropdown, Caret } from '..'
+import { type NavlinkData } from '../../types/global'
+import useWidth from '../../utils/useWidth'
+import styles from './Navlink.module.css'
 
-interface Props {
-  navlinkObj: navlinkObjType;
-  onClick: Function;
+interface NavlinkProps {
+  navlinkObj: NavlinkData
+  onClick: Function
 }
 
-function Navlink({ navlinkObj, onClick }: Props) {
-  const { label, url, children } = navlinkObj;
-  const [active, setActive] = useState(false);
-
-  const screenWidth = useWidth() || 800;
+export const Navlink: FC<NavlinkProps> = ({
+  navlinkObj,
+  onClick: handleClick
+}) => {
+  const [isActive, setIsActive] = useState(false)
+  const { label, url, children } = navlinkObj
+  const screenWidth = useWidth() || 800
   return (
     <>
-      {screenWidth >= 800 && children.length > 0 ? (
-        <div className={styles.dropdownNavlink}>
-          <Link href={url}>
-            <a
-              className={styles.navlink}
-              onClick={() => onClick()}
-              onMouseOver={() => setActive(true)}
-              onMouseOut={() => setActive(false)}
-            >
+      {screenWidth >= 800 && children.length ? (
+        <div
+          className={styles.dropdownNavlink}
+          onMouseOver={() => setIsActive(true)}
+          onMouseOut={() => setIsActive(false)}
+          onClick={() => handleClick()}
+        >
+          <Link href={url} legacyBehavior>
+            <a className={styles.navlink}>
               {label}
-              <Caret isUp={active} />
+              <Caret isFlipped={isActive} />
             </a>
           </Link>
           <div
-            onMouseOver={() => setActive(true)}
-            onMouseOut={() => setActive(false)}
             className={styles.dropdownContainer}
             data-testid='dropdownContainer'
           >
             <Dropdown
-              isOpen={active}
+              isOpen={isActive}
               items={children}
-              render={(item: navlinkObjType) => (
-                <Link href={item.url}>
-                  <a className={styles.navlink}>{item.label}</a>
+              render={(navlinkObj: NavlinkData) => (
+                <Link href={navlinkObj.url} legacyBehavior>
+                  <a className={styles.navlink}>{navlinkObj.label}</a>
                 </Link>
               )}
             />
           </div>
         </div>
       ) : (
-        <Link href={url}>
-          <a onClick={() => onClick()} className={styles.navlink}>
+        <Link href={url} legacyBehavior>
+          <a onClick={() => handleClick()} className={styles.navlink}>
             {label}
           </a>
         </Link>
       )}
     </>
-  );
+  )
 }
-
-export default Navlink;

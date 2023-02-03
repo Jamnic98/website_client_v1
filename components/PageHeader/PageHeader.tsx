@@ -1,20 +1,15 @@
-import React from 'react';
-import styles from './PageHeader.module.css';
-import { headerObjType } from '../../types/global';
+import { type FC } from 'react'
+import styles from './PageHeader.module.css'
 
-interface Props {
-  headerObj: headerObjType;
+interface PageHeaderProps {
+  title: string
+  description?: string
 }
 
-const PageHeader = ({ headerObj }: Props) => {
-  const { title, description } = headerObj;
-  return (
-    <header className={styles.header} data-testid='header'>
-      <h1 className={styles.title}>{title}</h1>
-      <p className={styles.description}>{description}</p>
-      <hr className={styles.hr} />
-    </header>
-  );
-};
-
-export default PageHeader;
+export const PageHeader: FC<PageHeaderProps> = ({ title, description }) => (
+  <header className={styles.header} data-testid='application-page-header' >
+    <h1 className={styles.title}>{title}</h1>
+    <p className={styles.description}>{description}</p>
+    <hr className={styles.hr} />
+  </header>
+)

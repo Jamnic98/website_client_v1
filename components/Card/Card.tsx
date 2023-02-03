@@ -1,52 +1,48 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import React, { useState } from 'react';
-import styles from './Card.module.css';
+import { type FC, useState } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
+import classNames from 'classnames'
+import styles from './Card.module.css'
 
-interface Props {
-  cardObj: {
-    title: string;
-    description: string;
-    imageURI: string;
-    URI: string;
-  };
+export interface CardProps {
+  title: string
+  description: string
+  imageURI: string
+  linkURL: string
 }
 
-function Card(props: Props) {
-  const [isFocused, setIsFocused] = useState(false);
-  const setFocus = () => {
-    setIsFocused(!isFocused);
-  };
+export const Card: FC<CardProps> = ({
+  title,
+  description,
+  imageURI,
+  linkURL
+}) => {
+  const [isFocused, setIsFocused] = useState(false)
+  const toggleFocus = () => setIsFocused(!isFocused)
 
-  const { title, description, imageURI, URI } = props.cardObj;
   return (
-    <Link href={URI}>
+    <Link href={linkURL || ''} legacyBehavior>
       <a
-        onMouseOver={() => setFocus()}
-        onMouseOut={() => setFocus()}
-        data-testid='card'
-        className={`${styles.card} ${isFocused ? `${styles.focused}` : ``}`}
+        onMouseOver={toggleFocus}
+        onMouseOut={toggleFocus}
+        className={classNames(styles.card, {
+          [styles.focused]: isFocused
+        })}
+        data-testid='application-card'
       >
         <span className={styles.imgContainer}>
           <Image
             src={imageURI}
-            alt=''
-            className={`${styles.img} ${isFocused ? `${styles.focused}` : ``}`}
+            alt={title}
+            className={styles.img}
             layout='fill'
           />
         </span>
-        <span
-          className={`${styles.textContainer} ${
-            isFocused ? `${styles.focused}` : ``
-          }`}
-          data-testid='textContainer'
-        >
+        <div className={styles.textContainer}>
           <div className={styles.title}>{title}</div>
           <div className={styles.description}>{description}</div>
-        </span>
+        </div>
       </a>
     </Link>
-  );
+  )
 }
-
-export default Card;

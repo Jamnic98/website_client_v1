@@ -1,6 +1,6 @@
-import { projectObjType } from '../../types/global';
+import { ProjectData } from '../../types/global'
 
-const readingLog: projectObjType = {
+const readingLog: ProjectData = {
   id: 'reading-log',
   title: 'Reading Log',
   shortDescription:
@@ -23,6 +23,6 @@ const readingLog: projectObjType = {
     }
   ],
   techStack: ['Java', 'JavaFX', 'SQL', 'MySQL']
-};
+}
 
-export default readingLog;
+export default readingLog

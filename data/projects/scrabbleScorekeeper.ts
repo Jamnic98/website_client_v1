@@ -1,6 +1,6 @@
-import { projectObjType } from '../../types/global';
+import { ProjectData } from '../../types/global'
 
-const scrabbleScorekeeper: projectObjType = {
+const scrabbleScorekeeper: ProjectData = {
   id: 'scrabble-scorekeeper',
   title: 'Scrabble Scorekeeper',
   shortDescription:
@@ -31,6 +31,6 @@ const scrabbleScorekeeper: projectObjType = {
     }
   ],
   techStack: ['JavaScript', 'React', 'HTML', 'CSS']
-};
+}
 
-export default scrabbleScorekeeper;
+export default scrabbleScorekeeper
