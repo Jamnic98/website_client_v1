@@ -1,4 +1,4 @@
-import { Navlink } from '.'
+import { Navlink } from '../navlink'
 import { render, screen, fireEvent } from '@testing-library/react'
 import renderer from 'react-test-renderer'
 import { NavlinkData } from '../../types/global'
@@ -19,9 +19,7 @@ describe('Navlink', () => {
 
   it('renders Navlink', () => {
     const testNavlink = (
-      <Navlink navlinkObj={testNavlinkObj} onClick={mockOnClick}>
-        test child
-      </Navlink>
+      <Navlink navlinkObj={testNavlinkObj} onClick={mockOnClick} />
     )
 
     render(testNavlink)
@@ -31,9 +29,7 @@ describe('Navlink', () => {
 
   it('opens and closes dropdown onMouseOver and onMouseOut', () => {
     const testNavlink = (
-      <Navlink navlinkObj={testNavlinkObj} onClick={mockOnClick}>
-        <div>test children</div>
-      </Navlink>
+      <Navlink navlinkObj={testNavlinkObj} onClick={mockOnClick} />
     )
 
     render(testNavlink)
