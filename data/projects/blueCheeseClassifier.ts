@@ -43,4 +43,5 @@ const blueCheeseClassifier: ProjectData = {
     'scikit-learn'
   ]
 }
+
 export default blueCheeseClassifier
