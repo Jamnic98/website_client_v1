@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
-import projects from '../data/projects'
+import { useState } from 'react'
 import Head from 'next/head'
-import styles from '../styles/projects.module.css'
-import { Card } from '../components/card/Card'
-import { PageHeader } from '../components/pageHeader/PageHeader'
+import { Card, PageHeader } from '../components'
+import projects from '../data/projects'
 import type { ProjectData } from '../types/global'
+import styles from '../styles/projects.module.css'
 
 const languages = [
   '',
@@ -20,10 +19,11 @@ const Projects = () => {
 
   const setProjects = () => {
     return projects
-      .filter((projectData: any) =>
-        language === '' ? true : projectData.mainLanguage === language
+      .filter(
+        (projectData: ProjectData) =>
+          language === '' || projectData.mainLanguage === language
       )
-      .map((projectData: any) => {
+      .map((projectData: ProjectData) => {
         return (
           <Card
             title={projectData.title}

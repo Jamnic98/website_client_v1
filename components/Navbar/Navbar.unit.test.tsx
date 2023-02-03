@@ -1,7 +1,26 @@
-import { Navbar } from './Navbar'
+import { Navbar, type NavbarProps } from './Navbar'
 import { render, screen } from '@testing-library/react'
 import renderer from 'react-test-renderer'
 import { navlinkObjArr } from '../../utils'
+
+/* const testNavlinkObjArr = [
+  {
+    label: 'logs',
+    url: '/logs/running',
+    children: [
+      { label: 'running', url: '/logs/running', children: [] }
+      // { label: 'weight lifting', url: '/logs/weight-lifting', children: [] },
+      // { label: 'habit tracker', url: '/logs/habit-tracker', children: [] },
+      // { label: 'reading', url: '/logs/reading', children: [] }
+    ]
+  },
+  { label: 'projects', url: '/projects', children: [] },
+  { label: 'about ', url: '/about', children: [] }
+]
+
+const getNavbar = (props?: NavbarProps) => (
+  <Navbar navlinkObjArr={testNavlinkObjArr} />
+) */
 
 describe('Navbar', () => {
   it('renders a Navbar', () => {
@@ -10,10 +29,8 @@ describe('Navbar', () => {
     expect(navbar).toBeInTheDocument()
   })
 
-  it('renders navbar unchanged', () => {
-    const tree = renderer
-      .create(<Navbar navlinkObjArr={navlinkObjArr} />)
-      .toJSON()
-    expect(tree).toMatchSnapshot()
-  })
+  it('renders navbar unchanged', () =>
+    expect(
+      renderer.create(<Navbar navlinkObjArr={navlinkObjArr} />).toJSON()
+    ).toMatchSnapshot())
 })

@@ -1,7 +1,7 @@
-import React from 'react'
+import { FC } from 'react'
 import axios from 'axios'
-import { NextApiResponse } from 'next'
 import Head from 'next/head'
+import { type NextApiResponse } from 'next'
 import { RunningStats, PageHeader } from '../../components'
 import { ScatterGraph, LineGraph } from '../../common/graphs'
 import { RunData } from '../../types/global'
@@ -12,7 +12,7 @@ export interface RunningProps {
   data: RunData[]
 }
 
-const Running = ({ data }: RunningProps) => (
+const Running: FC<RunningProps> = ({ data }) => (
   <>
     <Head>
       <title>Running</title>

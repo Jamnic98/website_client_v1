@@ -1,5 +1,4 @@
 import { FC } from 'react'
-
 import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
@@ -18,9 +17,9 @@ const ProjectGallery: FC<ProjectGalleryProps> = ({ screenshotURIs }) => (
       <Image
         src={screenshotURI}
         key={index}
-        width='350'
-        height='350'
         alt='project image'
+        width={275}
+        height={275}
       />
     ))}
   </>

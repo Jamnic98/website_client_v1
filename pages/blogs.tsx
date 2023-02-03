@@ -1,15 +1,12 @@
-import Head from 'next/head';
+import Head from 'next/head'
 
-function Blogs() {
-  return (
-    <>
-      <Head>
-        <title>Blogs</title>
-      </Head>
-      <main className='container'>
-      </main>
-    </>
-  );
-}
+const Blogs = () => (
+  <>
+    <Head>
+      <title>Blogs</title>
+    </Head>
+    <main className='container'></main>
+  </>
+)
 
-export default Blogs;
+export default Blogs

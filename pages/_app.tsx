@@ -1,11 +1,10 @@
+import { type FC } from 'react'
 import type { AppProps } from 'next/app'
-import React from 'react'
-import { Navbar } from '../components/navbar/Navbar'
-import { Footer } from '../components/footer/Footer'
+import { Navbar, Footer } from '../components'
 import { navlinkObjArr } from '../utils'
 import '../styles/global.css'
 
-export const App = ({ Component, pageProps }: AppProps) => (
+export const App: FC<AppProps> = ({ Component, pageProps }) => (
   <>
     <Navbar navlinkObjArr={navlinkObjArr} />
     <Component {...pageProps} />

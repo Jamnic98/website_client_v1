@@ -12,7 +12,7 @@ export const NavLogo: FC<NavLogoProps> = ({ handleClick, linkURL = '/' }) => {
   const width = useWidth() || 800
 
   return (
-    <Link href={linkURL}>
+    <Link href={linkURL} legacyBehavior>
       <a
         className={styles.navLogo}
         onClick={handleClick ? () => handleClick() : undefined}

@@ -35,7 +35,8 @@ export const Card: FC<CardProps> = ({
             src={imageURI}
             alt={title}
             className={styles.img}
-            layout='fill'
+            width={140}
+            height={140}
           />
         </span>
         <div className={styles.textContainer}>

@@ -3,8 +3,7 @@ import { ProjectData } from '../../types/global'
 const scrabbleScorekeeper: ProjectData = {
   id: 'scrabble-scorekeeper',
   title: 'Scrabble Scorekeeper',
-  shortDescription:
-    'A web-based program designed to calculate turn scores in Scrabble.',
+  shortDescription: 'A web program for calculating turn scores in Scrabble.',
   longDescription: [
     `Built with React, this project was created to make playing Scrabble more enjoyable and less time-consuming by 
     offloading the task of calculating player scores to a computer.`,

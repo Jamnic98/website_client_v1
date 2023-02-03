@@ -27,7 +27,7 @@ export const Explorer: FC<ExplorerProps> = ({ title, data }) => (
         </Link>
       ))}
       <div className={styles.allProjectsLink}>
-        <Link href='/projects'>
+        <Link href='/projects' legacyBehavior>
           <a>all projects</a>
         </Link>
       </div>

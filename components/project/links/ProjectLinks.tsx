@@ -1,4 +1,4 @@
-import {type FC} from 'react'
+import { type FC } from 'react'
 import Link from 'next/link'
 import classNames from 'classnames'
 import { CgExternal, CgInternal } from 'react-icons/cg'
@@ -26,7 +26,7 @@ export const ProjectLinks: FC<ProjectLinksProps> = ({ links }) => (
         )
       } else if (link.type === 'internal') {
         return (
-          <Link href={link.URL} key={index}>
+          <Link href={link.URL} key={index} legacyBehavior>
             <a className={classNames(styles.projectLink, styles.link)}>
               {link.label} <CgInternal />
             </a>
