@@ -2,10 +2,9 @@ import { FC } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
-import { PageHeader } from '../../components/pageHeader'
-import { ProjectLinks } from '../../components/project/links'
-import projects from '../../data/projects'
+import { PageHeader, ProjectLinks } from 'components'
 import type { ProjectData, ProjectLinkData } from '../../types/global'
+import projects from '../../data/projects'
 import styles from '../../styles/project.module.css'
 
 interface ProjectGalleryProps {

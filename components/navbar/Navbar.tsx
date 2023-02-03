@@ -1,8 +1,5 @@
 import { type FC, useState } from 'react'
-import { MobileMenuToggle } from '../../components/mobileMenuToggle'
-import { Navlink } from '../../components/navlink'
-import { NavLogo } from '../../components/navLogo'
-
+import { MobileMenuToggle, Navlink, NavLogo } from '..'
 import { type NavlinkData } from '../../types/global'
 import classNames from 'classnames'
 import styles from './Navbar.module.css'

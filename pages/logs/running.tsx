@@ -1,10 +1,10 @@
 import { FC } from 'react'
 import axios from 'axios'
 import Head from 'next/head'
-import { type NextApiResponse } from 'next'
-import { RunningStats } from '../../components/runningStats'
-import { PageHeader } from '../../components/pageHeader'
+import { PageHeader, RunningStats } from 'components'
 import { ScatterGraph, LineGraph } from '../../common/graphs'
+import { type NextApiResponse } from 'next'
+
 import { RunData } from '../../types/global'
 
 import * as d3 from 'd3'
