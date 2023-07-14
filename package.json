@@ -21,9 +21,10 @@
     "react-icons": "^4.3.1"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@types/d3": "^7.1.0",
+    "@types/jest": "^29.5.3",
     "@types/react": "^18.0.27",
     "@types/react-test-renderer": "^18.0.0",
     "eslint": "^8.33.0",

@@ -14,7 +14,7 @@
     "incremental": true,
     "isolatedModules": true,
     "moduleResolution": "node",
-    "types": ["node"]
+    "types": ["node", "jest", "@testing-library/jest-dom"]
   },
   "include": [
     "next-env.d.ts",

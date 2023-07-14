@@ -1,53 +1,64 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
-import styles from '../styles/about.module.css';
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import styles from "../styles/about.module.css";
 
 const About = () => (
   <>
     <Head>
       <title>About</title>
     </Head>
-    <main className='container'>
+    <main className="container">
       <article>
         <section>
           <div className={styles.profilePictureContainer}>
             <Image
               className={styles.profilePicture}
-              src='/images/profile-picture.png'
+              src="/images/profile-picture.jpg"
               width={200}
               height={200}
-              alt='profile picture'
+              alt="profile picture"
             />
           </div>
         </section>
         <hr className={styles.hr} />
         <section className={styles.description}>
           <p>
-            I am a self-taught developer and technology enthusiast with
-            object-oriented and full stack development experience.
-          </p>
-          <p>
-            JavaScript is the language I am most experienced with, having worked
-            extensively with Node.js and React. I also have an in-depth
-            understanding of Python, utilising it in game development, machine
-            learning, image processing and web scraping applications. In
-            addition to JavaScript and Python, I have previously used other
-            languages such as Java, C++ and SQL in personal coding projects,
-            some of which can be found{' '}
-            <Link href='/projects' legacyBehavior>
-              <a className={styles.projectLink}>here</a>
+            I'm a technology enthusiast and self-taught developer with
+            full-stack and DevOps experience. Currently, I'm employed as a
+            software engineer at Qudo, where I primarily work with TypeScript
+            and the React framework. Additionally, I possess a solid
+            understanding of Python, which I have applied in various domains,
+            such as building REST APIs and machine learning models. Throughout
+            my coding journey, I have gained experience with other languages
+            like Java, C++, and SQL for use in{" "}
+            <Link href="/projects" legacyBehavior>
+              <a className={styles.projectLink}>personal projects</a>
             </Link>
             .
           </p>
           <p>
-            Since late 2020, running has become a regular activity. I often run
-            3-4 times each week and it is a goal of mine to one day run an
-            ultramarathon.{' '}
-            <Link href='/logs/running' legacyBehavior>
-              <a className={styles.projectLink}>Here</a>
-            </Link>{' '}
-            is a link to my running stats.
+            Aside from my passion for technology, I have developed a consistent
+            running routine since Septemeber 2020. I typically run &gt;20km per
+            week, and my long-term aspiration is to complete an ultramarathon.
+            On the 22nd of October, I will be participating in a marathon at
+            Battersea Park in memory of my great uncle, Aubry Jackson. This run
+            also serves as an opportunity to raise funds for the Alzheimer's
+            Society charity, which is close to my heart. If you would like to
+            contribute to this cause, please consider visiting my{" "}
+            <a
+              href="https://www.justgiving.com/fundraising/marathon-jamie-stimpson"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.projectLink}
+            >
+              JustGiving page
+            </a>
+            . To explore my running stats, click{" "}
+            <Link href="/logs/running" legacyBehavior>
+              <a className={styles.projectLink}>here</a>
+            </Link>
+            .
           </p>
         </section>
       </article>
@@ -56,3 +67,4 @@ const About = () => (
 );
 
 export default About;
+// https://qudo.ai/
