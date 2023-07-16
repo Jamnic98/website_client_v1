@@ -18,8 +18,8 @@ const touchTyping: ProjectData = {
   ],
   projectPageURI: '/projects/touch-typing',
   screenshotURIs: [
-    '/images/touch-typing.png',
-    '/images/touch-typing-graph.png'
+    '/images/projects/touch-typing.png',
+    '/images/projects/touch-typing-graph.png'
   ],
   mainLanguage: 'JavaScript',
   links: [

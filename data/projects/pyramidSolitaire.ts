@@ -12,9 +12,9 @@ const pyramidSolitaire: ProjectData = {
   ],
   projectPageURI: '/projects/pyramid-solitaire',
   screenshotURIs: [
-    '/images/pyramid-solitaire.png',
-    '/images/pyramid-solitaire-end-game.png',
-    '/images/pyramid-solitaire-start-screen.png'
+    '/images/projects/pyramid-solitaire.png',
+    '/images/projects/pyramid-solitaire-end-game.png',
+    '/images/projects/pyramid-solitaire-start-screen.png'
   ],
   mainLanguage: 'Python',
   links: [

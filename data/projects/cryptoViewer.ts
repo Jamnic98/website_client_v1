@@ -15,7 +15,7 @@ const readingLog: ProjectData = {
     `
   ],
   projectPageURI: '/projects/crypto-viewer',
-  screenshotURIs: ['/images/crypto-viewer-1.0.jpg'],
+  screenshotURIs: ['/images/projects/crypto-viewer.jpg'],
   mainLanguage: 'C++',
   links: [],
   techStack: ['C++', 'NodeMCU ESP-12', '2.2" TFT', '16x2 LCD']

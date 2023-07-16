@@ -29,10 +29,10 @@ const inventoryManagementSystem: ProjectData = {
   ],
   projectPageURI: '/projects/inventory-management-system',
   screenshotURIs: [
-    '/images/ims.png',
-    '/images/edit-item-modal.png',
-    '/images/remove-item-modal.png',
-    '/images/email-settings.png'
+    '/images/projects/ims.png',
+    '/images/projects/edit-item-modal.png',
+    '/images/projects/remove-item-modal.png',
+    '/images/projects/email-settings.png'
   ],
   mainLanguage: 'JavaScript',
   links: [

@@ -12,7 +12,7 @@ const libraryBookRenewer: ProjectData = {
      about which books were renewed.`
   ],
   projectPageURI: '/projects/library-book-renewer',
-  screenshotURIs: ['/images/library-book-renewer-code.png'],
+  screenshotURIs: ['/images/projects/library-book-renewer-code.png'],
   mainLanguage: 'Python',
   links: [
     {

@@ -9,7 +9,7 @@ const looseChangeCalculator: ProjectData = {
     only has to enter the number of coins for each denomination and the calculator will return the total.`
   ],
   projectPageURI: '/projects/loose-change-calculator',
-  screenshotURIs: ['/images/loose-change-calculator.png'],
+  screenshotURIs: ['/images/projects/loose-change-calculator.png'],
   mainLanguage: 'Python',
   links: [
     {

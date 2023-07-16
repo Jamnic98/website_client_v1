@@ -12,9 +12,9 @@ const scrabbleScorekeeper: ProjectData = {
   ],
   projectPageURI: '/projects/scrabble-scorekeeper',
   screenshotURIs: [
-    '/images/scrabble-tiles.png',
-    '/images/scrabble-table.png',
-    '/images/scrabble-board.png'
+    '/images/projects/scrabble-tiles.png',
+    '/images/projects/scrabble-table.png',
+    '/images/projects/scrabble-board.png'
   ],
   mainLanguage: 'JavaScript',
   links: [

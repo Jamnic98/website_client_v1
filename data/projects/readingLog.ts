@@ -13,7 +13,7 @@ const readingLog: ProjectData = {
       a search bar to filter data.`
   ],
   projectPageURI: '/projects/reading-log',
-  screenshotURIs: ['/images/reading-log.jpg', '/images/reading-log-move.png'],
+  screenshotURIs: ['/images/projects/reading-log.jpg', '/images/projects/reading-log-move.png'],
   mainLanguage: 'Java',
   links: [
     {

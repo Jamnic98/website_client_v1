@@ -17,9 +17,9 @@ const portfolioWebsite: ProjectData = {
 
   projectPageURI: '/projects/portfolio-website',
   screenshotURIs: [
-    '/images/portfolio-website.png',
-    '/images/portfolio-website-projects.png',
-    '/images/portfolio-website-about.png'
+    '/images/projects/portfolio-website.png',
+    '/images/projects/portfolio-website-projects.png',
+    '/images/projects/portfolio-website-about.png'
   ],
   mainLanguage: 'TypeScript',
   links: [
