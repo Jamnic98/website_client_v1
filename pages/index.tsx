@@ -80,10 +80,9 @@ export const getServerSideProps = async ({ res }: any) => {
     previousDate.setDate(1);
     previousDate.setHours(-1);
 
-    let URL = `http://localhost:3000/runs?after=${previousDate}`;
-    if (process.env.NODE_ENV === "production") {
-      URL = `http://portfoliowebsiteserver-env.eba-zrm3ecty.us-east-1.elasticbeanstalk.com/runs?after=${previousDate}`;
-    }
+    const URL = process.env.NODE_ENV === "production"
+      ? process.env.SERVER_URL + `/runs?after=${previousDate}`
+      : `http://localhost:3000/runs?after=${previousDate}`;
 
     const { data } = await axios.get(URL);
     return {

@@ -119,7 +119,7 @@ export const getServerSideProps = async ({ res }: { res: NextApiResponse }) => {
   try {
     const URL =
       process.env.NODE_ENV === "production"
-        ? "http://portfoliowebsiteserver-env.eba-zrm3ecty.us-east-1.elasticbeanstalk.com/runs"
+        ? process.env.SERVER_URL + '/runs'
         : "http://localhost:3000/runs";
 
     const { data } = await axios.get(URL);
