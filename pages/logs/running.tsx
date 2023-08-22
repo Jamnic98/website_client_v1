@@ -59,7 +59,7 @@ const Running: FC<RunningProps> = ({ data }) => (
               <RunningStats runData={data} />
               <h3>Date / Distance Graph</h3>
               <LineGraph
-                data={data.map((d: any) => {
+                data={data?.map((d: any) => {
                   const { start_date_local, distance } = d;
                   return {
                     x: start_date_local,
@@ -78,7 +78,7 @@ const Running: FC<RunningProps> = ({ data }) => (
               />
               <h3>Distance / Average Pace Graph</h3>
               <ScatterGraph
-                data={data.map((d: any) => {
+                data={data?.map((d: any) => {
                   const { distance, duration, start_date_local } = d;
                   return {
                     x: distance / 1000,
