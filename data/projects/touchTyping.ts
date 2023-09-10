@@ -1,10 +1,10 @@
-import { ProjectData } from '../../types/global'
+import { ProjectData } from "../../types/global";
 
 const touchTyping: ProjectData = {
-  id: 'touch-typing',
-  title: 'Touch Typing',
-  shortDescription: 'A program to improve typing speed and accuracy.',
-  longDescription: [
+  id: "touch-typing",
+  title: "Touch Typing",
+  summary: "A program to improve typing speed and accuracy.",
+  paragraphs: [
     `The idea behind this project was to make an application that would analyse 
      the user's typing patterns and present them with words that contained combinations 
      of letters that they were having trouble typing, in theory increasing their rate of improvement.
@@ -14,33 +14,33 @@ const touchTyping: ProjectData = {
     `After gathering my typing data by practicing with the app, I wrote a Python script to extract
      the data from the JSON file, then analyse and plot it using Matplotlib. I wanted to make the app
      a fully fledged website but stopped working on the project as I believed the end result would be
-     too similar to another site that I took inspiration from.`
+     too similar to another site that I took inspiration from.`,
   ],
-  projectPageURI: '/projects/touch-typing',
+  projectPageURI: "/projects/touch-typing",
   screenshotURIs: [
-    '/images/projects/touch-typing.png',
-    '/images/projects/touch-typing-graph.png'
+    "/images/projects/touch-typing.png",
+    "/images/projects/touch-typing-graph.png",
   ],
-  mainLanguage: 'JavaScript',
+  mainLanguage: "JavaScript",
   links: [
     {
-      URL: 'https://github.com/Jamnic98/touch-typing',
-      label: 'GitHub link',
-      type: 'external'
-    }
+      URL: "https://github.com/Jamnic98/touch-typing",
+      label: "GitHub link",
+      type: "external",
+    },
   ],
   techStack: [
-    'React',
-    'React Testing Library',
-    'Jest',
-    'HTML',
-    'CSS',
-    'Node.js',
-    'Express.js',
-    'Python',
-    'Matplotlib',
-    'JSON'
-  ]
-}
+    "React",
+    "React Testing Library",
+    "Jest",
+    "HTML",
+    "CSS",
+    "Node.js",
+    "Express.js",
+    "Python",
+    "Matplotlib",
+    "JSON",
+  ],
+};
 
-export default touchTyping
+export default touchTyping;

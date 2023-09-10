@@ -1,7 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../styles/about.module.css";
+
+import styles from "styles/about.module.css";
+
+const profilePicDimensions = { width: 200, height: 200 };
 
 const About = () => (
   <>
@@ -15,8 +18,8 @@ const About = () => (
             <Image
               className={styles.profilePicture}
               src="/images/profile-picture.jpg"
-              width={200}
-              height={200}
+              width={profilePicDimensions.width}
+              height={profilePicDimensions.height}
               alt="profile picture"
             />
           </div>
@@ -39,7 +42,7 @@ const About = () => (
           </p>
           <p>
             Aside from my passion for technology, I have developed a consistent
-            running routine since Septemeber 2020. I typically run &gt;20km per
+            running routine since Septemeber 2020. I typically run &gt;30km per
             week, and my long-term aspiration is to complete an ultramarathon.
             On the 22nd of October, I will be participating in a marathon at
             Battersea Park in memory of my great uncle, Aubry Jackson. This run
@@ -67,4 +70,3 @@ const About = () => (
 );
 
 export default About;
-// https://qudo.ai/

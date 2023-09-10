@@ -1,5 +1,6 @@
 import { type FC } from 'react'
 import Link from 'next/link'
+
 import styles from './Explorer.module.css'
 
 type data = {

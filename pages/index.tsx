@@ -2,16 +2,18 @@ import React from "react";
 import axios from "axios";
 import Head from "next/head";
 import Link from "next/link";
+
 import { PageHeader, Explorer, RunningStats } from "../components";
-import { RunData } from "../types/global";
 import projects from "../data/projects";
-import styles from "../styles/index.module.css";
+import { type NextApiResponse } from "next";
+import { type RunData } from "../types/global";
+import styles from "styles/index.module.css";
 
 interface HomePageProps {
   data: RunData[];
 }
 
-const Home = (props: HomePageProps) => (
+export default (props: HomePageProps) => (
   <>
     <Head>
       <title>Home</title>
@@ -30,7 +32,8 @@ const Home = (props: HomePageProps) => (
             . With scalability as a guiding principle, I have built this website
             to accommodate further expansion. In the near future, I have
             exciting plans to integrate additional features and expand on the
-            existing content. I hope you enjoy exploring the various facets of my work.
+            existing content. I hope you enjoy exploring the various facets of
+            my work.
           </p>
         </section>
         <section className={styles.projectExplorer}>
@@ -40,7 +43,7 @@ const Home = (props: HomePageProps) => (
               .map((project) => {
                 return {
                   title: project.title,
-                  description: project.shortDescription,
+                  description: project.summary,
                   URI: project.projectPageURI,
                 };
               })
@@ -48,10 +51,10 @@ const Home = (props: HomePageProps) => (
               .slice(0, 3)}
           />
         </section>
-        {props.data === null ? null : (
+        {props.data && (
           <section>
             <h3>
-              Running Stats for{" "}
+              Running Stats for {/* current month as full word */}
               {new Date().toLocaleString("default", { month: "long" })}
             </h3>
             <hr className="subRule" />
@@ -70,9 +73,7 @@ const Home = (props: HomePageProps) => (
   </>
 );
 
-export default Home;
-
-export const getServerSideProps = async ({ res }: any) => {
+export const getServerSideProps = async ({ res }: { res: NextApiResponse }) => {
   res.setHeader("Cache-Control", "public, s-maxage=43200");
   try {
     // set get 1st of current month
@@ -80,9 +81,10 @@ export const getServerSideProps = async ({ res }: any) => {
     previousDate.setDate(1);
     previousDate.setHours(-1);
 
-    const URL = process.env.NODE_ENV === "production"
-      ? process.env.SERVER_URL + `/runs?after=${previousDate}`
-      : `http://localhost:3000/runs?after=${previousDate}`;
+    const URL =
+      (process.env.NODE_ENV === "production"
+        ? process.env.SERVER_URL
+        : "http://localhost:3000") + `/runs?after=${previousDate}`;
 
     const { data } = await axios.get(URL);
     return {

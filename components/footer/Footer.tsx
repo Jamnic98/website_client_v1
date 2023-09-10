@@ -1,7 +1,8 @@
 import { type FC } from 'react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import styles from './Footer.module.css'
 import classNames from 'classnames'
+
+import styles from './Footer.module.css'
 
 export const Footer: FC = () => (
   <div className={styles.footer} id='footer' aria-label='footer'>

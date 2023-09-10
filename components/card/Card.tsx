@@ -2,6 +2,7 @@ import { type FC, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import classNames from 'classnames'
+
 import styles from './Card.module.css'
 
 export interface CardProps {

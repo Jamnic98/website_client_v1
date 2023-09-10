@@ -1,5 +1,6 @@
 import { type FC } from 'react'
 import classNames from 'classnames'
+
 import styles from './Caret.module.css'
 
 export enum CaretDirection {

@@ -1,34 +1,35 @@
-import { type FC } from 'react'
+import { type FC } from "react";
+
 import {
   reduceSumFunc,
   getAverageDistanceString,
   getAverageDurationString,
   getFurthestDistanceString,
   getTotalDistanceString,
-  getTotalDurationString
-} from '../../utils'
-import { RunData } from '../../types/global'
-import styles from './RunningStats.module.css'
+  getTotalDurationString,
+} from "../../utils";
+import { type RunData } from "../../types";
+import styles from "./RunningStats.module.css";
 
 interface RunningStatsProps {
-  runData: RunData[]
+  runData: RunData[];
 }
 
 export const RunningStats: FC<RunningStatsProps> = ({ runData }) => {
   // distance
-  const distanceList = runData.map((runData: RunData) => runData.distance)
+  const distanceList = runData.map((runData: RunData) => runData.distance);
   const furthestDistanceInMeters = distanceList.length
     ? Math.max(...distanceList)
-    : 0
+    : 0;
   const totalDistanceInMeters = distanceList.length
     ? distanceList.reduce((a, b) => reduceSumFunc(a, b))
-    : 0
+    : 0;
 
   // duration
-  const durationList = runData.map((runData: RunData) => runData.duration)
+  const durationList = runData.map((runData: RunData) => runData.duration);
   const totalDurationInSeconds = durationList.length
     ? durationList.reduce((a, b) => reduceSumFunc(a, b))
-    : 0
+    : 0;
 
   return (
     <div className={styles.allTimeStats}>
@@ -67,5 +68,5 @@ export const RunningStats: FC<RunningStatsProps> = ({ runData }) => {
         </li>
       </ul>
     </div>
-  )
-}
+  );
+};

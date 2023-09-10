@@ -1,14 +1,14 @@
 import { FC } from "react";
 import axios from "axios";
 import Head from "next/head";
+import * as d3 from "d3";
+
 import { PageHeader, RunningStats } from "../../components";
 import { ScatterGraph, LineGraph } from "../../common/graphs";
 import { type NextApiResponse } from "next";
-import { RunData } from "../../types/global";
+import { type RunData } from "../../types/global";
 import styles from "../../styles/about.module.css";
 
-import * as d3 from "d3";
-import Link from "next/link";
 
 export interface RunningProps {
   data: RunData[];
