@@ -1,4 +1,4 @@
-import { ProjectData } from "../../types/global";
+import { ProjectData } from "../../types";
 
 const looseChangeCalculator: ProjectData = {
   id: "loose-change-calculator",

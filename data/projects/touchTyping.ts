@@ -1,4 +1,4 @@
-import { ProjectData } from "../../types/global";
+import { ProjectData } from "../../types";
 
 const touchTyping: ProjectData = {
   id: "touch-typing",

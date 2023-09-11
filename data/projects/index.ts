@@ -1,4 +1,4 @@
-import { ProjectData } from '../../types/global'
+import { ProjectData } from '../../types'
 
 import blueCheeseClassifier from './blueCheeseClassifier'
 import cryptoViewer from './cryptoViewer'
