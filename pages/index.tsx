@@ -13,7 +13,7 @@ interface HomePageProps {
   data: RunData[];
 }
 
-export default (props: HomePageProps) => (
+export const Home = (props: HomePageProps) => (
   <>
     <Head>
       <title>Home</title>
@@ -97,3 +97,5 @@ export const getServerSideProps = async ({ res }: { res: NextApiResponse }) => {
     };
   }
 };
+
+export default Home;
