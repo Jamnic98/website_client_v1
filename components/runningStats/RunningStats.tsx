@@ -8,7 +8,7 @@ import {
   getTotalDistanceString,
   getTotalDurationString,
 } from "../../utils";
-import { type RunData } from "../../types";
+import { type RunData } from "../../types/runs";
 import styles from "./RunningStats.module.css";
 
 interface RunningStatsProps {

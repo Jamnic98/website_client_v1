@@ -6,7 +6,7 @@ import Link from "next/link";
 import { PageHeader, Explorer, RunningStats } from "../components";
 import projects from "../data/projects";
 import { type NextApiResponse } from "next";
-import { type RunData } from "../types/global";
+import { type RunData } from "../types/runs";
 import styles from "styles/index.module.css";
 
 interface HomePageProps {
