@@ -27,28 +27,22 @@ const About = () => (
         <hr className={styles.hr} />
         <section className={styles.description}>
           <p>
-            I'm a technology enthusiast and self-taught developer with
-            full-stack and DevOps experience. Currently, I'm employed as a
-            software engineer at Qudo, where I primarily work with TypeScript
-            and the React framework. Additionally, I possess a solid
-            understanding of Python, which I have applied in various domains,
-            such as building REST APIs and machine learning models. Throughout
-            my coding journey, I have gained experience with other languages
-            like Java, C++, and SQL for use in{" "}
+            I'm a technology enthusiast and self-taught Software Engineer with
+            full-stack and DevOps experience. Please take a look at some of the{" "}
             <Link href="/projects" legacyBehavior>
               <a className={styles.projectLink}>personal projects</a>
-            </Link>
-            .
+            </Link>{" "}
+            I have worked on.
           </p>
           <p>
-            Aside from my passion for technology, I have developed a consistent
-            running routine since Septemeber 2020. I typically run &gt;30km per
-            week, and my long-term aspiration is to complete an ultramarathon.
-            On the 22nd of October, I will be participating in a marathon at
-            Battersea Park in memory of my great uncle, Aubry Jackson. This run
-            also serves as an opportunity to raise funds for the Alzheimer's
-            Society charity, which is close to my heart. If you would like to
-            contribute to this cause, please consider visiting my{" "}
+            Since late September 2020, I have cultivated a consistent running
+            routine. I typically run over 25km per week, and my long-term
+            aspiration is to complete an ultramarathon (50km+). On the 22nd of
+            October, I will be participating in a marathon at Battersea Park in
+            memory of my great uncle, Aubry Jackson. This run also serves as an
+            opportunity to raise funds for the Alzheimer's Society charity,
+            which is close to my heart. If you would like to contribute to this
+            cause, please consider visiting my{" "}
             <a
               href="https://www.justgiving.com/fundraising/marathon-jamie-stimpson"
               target="_blank"

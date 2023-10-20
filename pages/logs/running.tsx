@@ -6,9 +6,8 @@ import * as d3 from "d3";
 import { PageHeader, RunningStats } from "../../components";
 import { ScatterGraph, LineGraph } from "../../common/graphs";
 import { type NextApiResponse } from "next";
-import { type RunData } from "../../types/global";
+import { type RunData } from "../../types/runs";
 import styles from "../../styles/about.module.css";
-
 
 export interface RunningProps {
   data: RunData[];
@@ -119,7 +118,7 @@ export const getServerSideProps = async ({ res }: { res: NextApiResponse }) => {
   try {
     const URL =
       process.env.NODE_ENV === "production"
-        ? process.env.SERVER_URL + '/runs'
+        ? process.env.SERVER_URL + "/runs"
         : "http://localhost:3000/runs";
 
     const { data } = await axios.get(URL);

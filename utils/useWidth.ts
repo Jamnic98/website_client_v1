@@ -4,7 +4,7 @@ type WindowDimensions = number | undefined;
 
 export const useWidth = (): WindowDimensions => {
   const [windowDimensions, setWindowDimensions] =
-    useState<WindowDimensions>(undefined);
+    useState<WindowDimensions>();
 
   useEffect(() => {
     const handleResize = (): void => {
