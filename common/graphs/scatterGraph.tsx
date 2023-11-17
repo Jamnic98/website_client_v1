@@ -8,12 +8,12 @@ interface ScatterGraphProps {
 	xAxisObj: {
 		label: string
 		labelOffset: number
-		labelFormatter?: () => void
+		labelFormatter?: (d?: any) => string
 	}
 	yAxisObj: {
 		label: string
 		labelOffset: number
-		labelFormatter?: () => void
+		labelFormatter?: (d?: any) => string
 	}
 }
 
