@@ -90,7 +90,7 @@ export const LineGraph: FC<LineGraphProps> = ({
 			.attr('cy', (d: any) => y(d.y))
 			.attr('r', 1.5)
 			.style('fill', '#df4a00')
-	}, [data, width, height, margins.left, margins.top, xAxisObj, yAxisObj])
+	}, [])
 
 	const configureXAxis = (svgElement: any, xAxisObj: any) => {
 		const minDate = Math.min(
