@@ -11,7 +11,7 @@ exports[`Card renders Card unchanged 1`] = `
   onMouseOver={[Function]}
   onTouchStart={[Function]}
 >
-  <span
+  <div
     className="imgContainer"
   >
     <img
@@ -32,7 +32,7 @@ exports[`Card renders Card unchanged 1`] = `
       }
       width={140}
     />
-  </span>
+  </div>
   <div
     className="textContainer"
   >

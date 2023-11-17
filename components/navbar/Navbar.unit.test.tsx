@@ -1,8 +1,10 @@
-import { Navbar, type NavbarProps } from './Navbar'
-import { render, screen } from '@testing-library/react'
+import React from 'react'
+import {Navbar} from './Navbar'
+import {render, screen} from '@testing-library/react'
 import renderer from 'react-test-renderer'
-import { navlinkObjArr } from '../../utils'
+import {navlinkObjArr} from '../../utils'
 
+// TODO: remove
 /* const testNavlinkObjArr = [
   {
     label: 'logs',
@@ -23,14 +25,14 @@ const getNavbar = (props?: NavbarProps) => (
 ) */
 
 describe('Navbar', () => {
-  it('renders a Navbar', () => {
-    render(<Navbar navlinkObjArr={navlinkObjArr} />)
-    const navbar = screen.getByTestId('navbar')
-    expect(navbar).toBeInTheDocument()
-  })
+	it('renders a Navbar', () => {
+		render(<Navbar navlinkObjArr={navlinkObjArr} />)
+		const navbar = screen.getByTestId('navbar')
+		expect(navbar).toBeInTheDocument()
+	})
 
-  it('renders navbar unchanged', () =>
-    expect(
-      renderer.create(<Navbar navlinkObjArr={navlinkObjArr} />).toJSON()
-    ).toMatchSnapshot())
+	it('renders navbar unchanged', () =>
+		expect(
+			renderer.create(<Navbar navlinkObjArr={navlinkObjArr} />).toJSON()
+		).toMatchSnapshot())
 })
