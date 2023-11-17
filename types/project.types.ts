@@ -3,7 +3,7 @@ export enum LinkType {
 	INTERNAL = 'internal',
 }
 
-export type ProjectLinkDataType = {URL: string; label: string; type: LinkType}
+export type ProjectLinkDataType = { URL: string; label: string; type: LinkType }
 
 export type ProjectDataType = {
 	id: string

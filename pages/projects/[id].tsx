@@ -1,20 +1,20 @@
-import {FC} from 'react'
+import { FC } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
 
-import {PageHeader, ProjectLinks} from '../../components'
+import { PageHeader, ProjectLinks } from '../../components'
 import projects from '../../data/projects'
-import type {ProjectDataType} from '../../types'
+import type { ProjectDataType } from '../../types'
 import styles from 'styles/project.module.css'
 
-const IMAGE_DIMENSIONS = {width: 275, height: 275}
+const IMAGE_DIMENSIONS = { width: 275, height: 275 }
 
 interface ProjectGalleryProps {
 	screenshotURIs: string[]
 }
 
-const ProjectGallery: FC<ProjectGalleryProps> = ({screenshotURIs}) => (
+const ProjectGallery: FC<ProjectGalleryProps> = ({ screenshotURIs }) => (
 	<>
 		{screenshotURIs.map((screenshotURI, index) => (
 			<Image
@@ -32,7 +32,7 @@ interface ProjectDescriptionsProps {
 	paragraphs: string[]
 }
 
-const ProjectDescriptions: FC<ProjectDescriptionsProps> = ({paragraphs}) => (
+const ProjectDescriptions: FC<ProjectDescriptionsProps> = ({ paragraphs }) => (
 	<>
 		{paragraphs.map((paragraph: string, index) => (
 			<p key={index}>{paragraph}</p>
@@ -44,7 +44,7 @@ interface ProjectProps {
 	projectData: ProjectDataType
 }
 
-const Project: FC<ProjectProps> = ({projectData}) => (
+const Project: FC<ProjectProps> = ({ projectData }) => (
 	<>
 		<Head>
 			<title>{projectData.title}</title>
@@ -77,7 +77,7 @@ const Project: FC<ProjectProps> = ({projectData}) => (
 
 export default Project
 
-export const getStaticProps = ({params}: {params: {id: string}}) => {
+export const getStaticProps = ({ params }: { params: { id: string } }) => {
 	return {
 		props: {
 			projectData: projects.filter((project) => project.id === params.id)[0],
@@ -87,7 +87,7 @@ export const getStaticProps = ({params}: {params: {id: string}}) => {
 
 export const getStaticPaths = () => {
 	const getAllProjectIds = () =>
-		projects.map(({id}) => {
+		projects.map(({ id }) => {
 			return {
 				params: {
 					id,

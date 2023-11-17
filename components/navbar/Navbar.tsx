@@ -1,7 +1,7 @@
-import React, {type FC, useState} from 'react'
-import {MobileMenuToggle, Navlink, NavLogo} from '..'
+import React, { type FC, useState } from 'react'
+import { MobileMenuToggle, Navlink, NavLogo } from '..'
 
-import {type NavlinkDataType} from '../../types'
+import { type NavlinkDataType } from '../../types'
 import classNames from 'classnames'
 import styles from './Navbar.module.css'
 
@@ -9,7 +9,7 @@ export interface NavbarProps {
 	navlinkObjArr: NavlinkDataType[]
 }
 
-export const Navbar: FC<NavbarProps> = ({navlinkObjArr}) => {
+export const Navbar: FC<NavbarProps> = ({ navlinkObjArr }) => {
 	const [isOpen, setIsOpen] = useState(false)
 	const handleClick = () => setIsOpen(!isOpen)
 
@@ -19,7 +19,7 @@ export const Navbar: FC<NavbarProps> = ({navlinkObjArr}) => {
 				<MobileMenuToggle handleClick={handleClick} isOpen={isOpen} />
 				<NavLogo />
 				<span
-					className={classNames(styles.navlinks, {[styles.open]: isOpen})}
+					className={classNames(styles.navlinks, { [styles.open]: isOpen })}
 					aria-label="navlinks"
 				>
 					{navlinkObjArr.map((navlinkObj, index) => (

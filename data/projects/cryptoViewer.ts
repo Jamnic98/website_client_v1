@@ -1,4 +1,4 @@
-import {ProjectDataType} from '../../types'
+import { ProjectDataType } from '../../types'
 
 const readingLog: ProjectDataType = {
 	id: 'crypto-viewer',

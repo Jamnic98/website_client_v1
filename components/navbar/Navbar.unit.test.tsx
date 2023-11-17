@@ -1,8 +1,8 @@
 import React from 'react'
-import {Navbar} from './Navbar'
-import {render, screen} from '@testing-library/react'
+import { Navbar } from './Navbar'
+import { render, screen } from '@testing-library/react'
 import renderer from 'react-test-renderer'
-import {navlinkObjArr} from '../../utils'
+import { navlinkObjArr } from '../../utils'
 
 // TODO: remove
 /* const testNavlinkObjArr = [

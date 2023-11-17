@@ -1,11 +1,15 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import {render, screen} from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 
-import {Dropdown} from '.'
+import { Dropdown } from '.'
 
-type testObject = {letter: string}
-const testArray: testObject[] = [{letter: 'a'}, {letter: 'b'}, {letter: 'c'}]
+type testObject = { letter: string }
+const testArray: testObject[] = [
+	{ letter: 'a' },
+	{ letter: 'b' },
+	{ letter: 'c' },
+]
 
 describe('Dropdown', () => {
 	render(

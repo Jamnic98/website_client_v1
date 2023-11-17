@@ -1,4 +1,4 @@
-import {LinkType, ProjectDataType} from '../../types'
+import { LinkType, ProjectDataType } from '../../types'
 
 const scrabbleScorekeeper: ProjectDataType = {
 	id: 'scrabble-scorekeeper',

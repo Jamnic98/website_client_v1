@@ -3,10 +3,10 @@ import axios from 'axios'
 import Head from 'next/head'
 import Link from 'next/link'
 
-import {PageHeader, Explorer, RunningStats} from '../components'
+import { PageHeader, Explorer, RunningStats } from '../components'
 import projects from '../data/projects'
-import {type NextApiResponse} from 'next'
-import {type RunData} from '../types/runs.types'
+import { type NextApiResponse } from 'next'
+import { type RunData } from '../types/runs.types'
 import styles from 'styles/index.module.css'
 
 interface HomePageProps {
@@ -55,7 +55,7 @@ export const Home = (props: HomePageProps) => (
 					<section>
 						<h3>
 							Running Stats for {/* current month as full word */}
-							{new Date().toLocaleString('default', {month: 'long'})}
+							{new Date().toLocaleString('default', { month: 'long' })}
 						</h3>
 						<hr className="subRule" />
 						<div className={styles.runningWeek}>
@@ -73,7 +73,7 @@ export const Home = (props: HomePageProps) => (
 	</>
 )
 
-export const getServerSideProps = async ({res}: {res: NextApiResponse}) => {
+export const getServerSideProps = async ({ res }: { res: NextApiResponse }) => {
 	res.setHeader('Cache-Control', 'public, s-maxage=43200')
 	try {
 		// set get 1st of current month
@@ -86,14 +86,14 @@ export const getServerSideProps = async ({res}: {res: NextApiResponse}) => {
 				? process.env.SERVER_URL
 				: 'http://localhost:3000') + `/runs?after=${previousDate}`
 
-		const {data} = await axios.get(URL)
+		const { data } = await axios.get(URL)
 		return {
-			props: {data},
+			props: { data },
 		}
 	} catch (error) {
 		console.error(error)
 		return {
-			props: {data: null},
+			props: { data: null },
 		}
 	}
 }

@@ -1,16 +1,16 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import {render, screen, fireEvent} from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react'
 
-import {Navlink} from '../navlink'
-import {NavlinkDataType} from '../../types/global'
+import { Navlink } from '../navlink'
+import { NavlinkDataType } from '../../types/global'
 
 const mockOnClick = jest.fn()
 
 const testNavlinkObj: NavlinkDataType = {
 	label: 'logs',
 	url: '/logs',
-	children: [{label: 'running', url: '/logs/running', children: []}],
+	children: [{ label: 'running', url: '/logs/running', children: [] }],
 }
 
 describe('Navlink', () => {

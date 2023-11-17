@@ -1,7 +1,7 @@
 import React from 'react'
-import {render, screen} from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import renderer from 'react-test-renderer'
-import {Caret, type CaretProps} from '.'
+import { Caret, type CaretProps } from '.'
 
 const testIsFlipped = false
 
@@ -25,9 +25,9 @@ describe('test Caret', () => {
 	})
 
 	it('rotates 180 degrees when isFlipped = true', () => {
-		const {rerender} = drawTestCaret()
+		const { rerender } = drawTestCaret()
 		const caret = screen.getByText('^')
-		rerender(getTestCaret({isFlipped: true}))
+		rerender(getTestCaret({ isFlipped: true }))
 		expect(caret).toHaveClass('flip')
 	})
 

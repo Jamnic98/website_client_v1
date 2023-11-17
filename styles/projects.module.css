@@ -1,28 +1,28 @@
 .main {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap-reverse;
-  justify-content: space-between;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap-reverse;
+	justify-content: space-between;
 }
 
 .projects {
-  margin: 1em 0;
-  display: grid;
-  row-gap: 1.5em;
-  column-gap: 1.5em;
-  grid-template-columns: 1fr 1fr;
+	margin: 1em 0;
+	display: grid;
+	row-gap: 1.5em;
+	column-gap: 1.5em;
+	grid-template-columns: 1fr 1fr;
 }
 
 .select {
-  outline: none;
+	outline: none;
 }
 
 .projects {
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 @media screen and (max-width: 400px) {
-  .projects {
-    grid-template-columns: auto;
-  }
+	.projects {
+		grid-template-columns: auto;
+	}
 }

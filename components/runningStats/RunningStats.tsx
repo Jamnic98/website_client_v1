@@ -1,4 +1,4 @@
-import {type FC} from 'react'
+import { type FC } from 'react'
 
 import {
 	reduceSumFunc,
@@ -8,14 +8,14 @@ import {
 	getTotalDistanceString,
 	getTotalDurationString,
 } from '../../utils'
-import {type RunData} from '../../types/runs.types'
+import { type RunData } from '../../types/runs.types'
 import styles from './RunningStats.module.css'
 
 interface RunningStatsProps {
 	runData: RunData[]
 }
 
-export const RunningStats: FC<RunningStatsProps> = ({runData}) => {
+export const RunningStats: FC<RunningStatsProps> = ({ runData }) => {
 	// distance
 	const distanceList = runData.map((runData: RunData) => runData.distance)
 	const furthestDistanceInMeters = distanceList.length

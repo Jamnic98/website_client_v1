@@ -1,24 +1,24 @@
 .link {
-  white-space: nowrap;
-  text-decoration: none;
-  margin: 0 auto 0 auto;
-  transition: all 0.2s ease;
-  font-weight: bold;
-  color: var(--c-link);
+	white-space: nowrap;
+	text-decoration: none;
+	margin: 0 auto 0 auto;
+	transition: all 0.2s ease;
+	font-weight: bold;
+	color: var(--c-link);
 }
 
 .projectLink {
-  margin-right: 1em;
+	margin-right: 1em;
 }
 
 .link:hover {
-  /* background-color: var(--c-bg-secondary); */
-  color: var(--c-bg-secondary);
+	/* background-color: var(--c-bg-secondary); */
+	color: var(--c-bg-secondary);
 }
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 275px);
-  row-gap: 25px;
-  column-gap: 25px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 275px);
+	row-gap: 25px;
+	column-gap: 25px;
 }

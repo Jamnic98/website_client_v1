@@ -1,14 +1,14 @@
-import React, {type FC, useState} from 'react'
+import React, { type FC, useState } from 'react'
 import Link from 'next/link'
 
-import {Caret, Dropdown} from '..'
-import {type NavlinkDataType} from '../../types'
-import {useWidth} from '../../utils'
+import { Caret, Dropdown } from '..'
+import { type NavlinkDataType } from '../../types'
+import { useWidth } from '../../utils'
 import styles from './Navlink.module.css'
 
 interface NavlinkProps {
 	navlinkObj: NavlinkDataType
-	onClick: Function
+	onClick: () => void
 }
 
 export const Navlink: FC<NavlinkProps> = ({
@@ -16,7 +16,7 @@ export const Navlink: FC<NavlinkProps> = ({
 	onClick: handleClick,
 }) => {
 	const [isActive, setIsActive] = useState(false)
-	const {label, url, children} = navlinkObj
+	const { label, url, children } = navlinkObj
 	const screenWidth = useWidth() || 800
 	return (
 		<>

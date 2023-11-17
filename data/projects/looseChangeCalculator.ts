@@ -1,4 +1,4 @@
-import {LinkType, ProjectDataType} from '../../types'
+import { LinkType, ProjectDataType } from '../../types'
 
 const looseChangeCalculator: ProjectDataType = {
 	id: 'loose-change-calculator',

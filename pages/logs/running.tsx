@@ -1,19 +1,19 @@
-import {FC} from 'react'
+import { FC } from 'react'
 import axios from 'axios'
 import Head from 'next/head'
 import * as d3 from 'd3'
 
-import {PageHeader, RunningStats} from '../../components'
-import {ScatterGraph, LineGraph} from '../../common/graphs'
-import {type NextApiResponse} from 'next'
-import {type RunData} from '../../types/runs.types'
+import { PageHeader, RunningStats } from '../../components'
+import { ScatterGraph, LineGraph } from '../../common/graphs'
+import { type NextApiResponse } from 'next'
+import { type RunData } from '../../types/runs.types'
 import styles from '../../styles/about.module.css'
 
 export interface RunningProps {
 	data: RunData[]
 }
 
-const Running: FC<RunningProps> = ({data}) => (
+const Running: FC<RunningProps> = ({ data }) => (
 	<>
 		<Head>
 			<title>Running</title>
@@ -59,7 +59,7 @@ const Running: FC<RunningProps> = ({data}) => (
 							<h3>Date / Distance Graph</h3>
 							<LineGraph
 								data={data?.map((d: any) => {
-									const {start_date_local, distance} = d
+									const { start_date_local, distance } = d
 									return {
 										x: start_date_local,
 										y: distance / 1000,
@@ -78,7 +78,7 @@ const Running: FC<RunningProps> = ({data}) => (
 							<h3>Distance / Average Pace Graph</h3>
 							<ScatterGraph
 								data={data?.map((d: any) => {
-									const {distance, duration, start_date_local} = d
+									const { distance, duration, start_date_local } = d
 									return {
 										x: distance / 1000,
 										y: duration / 60 / (distance / 1000),
@@ -113,7 +113,7 @@ const Running: FC<RunningProps> = ({data}) => (
 
 export default Running
 
-export const getServerSideProps = async ({res}: {res: NextApiResponse}) => {
+export const getServerSideProps = async ({ res }: { res: NextApiResponse }) => {
 	res.setHeader('Cache-Control', 'public, s-maxage=43200')
 	try {
 		const URL =
@@ -121,14 +121,14 @@ export const getServerSideProps = async ({res}: {res: NextApiResponse}) => {
 				? process.env.SERVER_URL + '/runs'
 				: 'http://localhost:3000/runs'
 
-		const {data} = await axios.get(URL)
+		const { data } = await axios.get(URL)
 		return {
-			props: {data},
+			props: { data },
 		}
 	} catch (error) {
 		console.error(error)
 		return {
-			props: {data: null},
+			props: { data: null },
 		}
 	}
 }

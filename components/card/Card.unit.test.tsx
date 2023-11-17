@@ -1,8 +1,8 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import {render, screen, fireEvent} from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react'
 
-import {Card, type CardProps} from './Card'
+import { Card, type CardProps } from './Card'
 
 const testTitle = 'Card Title'
 const testDescription = 'Test description.'
@@ -27,7 +27,7 @@ const drawCard = (props?: CardProps) => {
 
 describe('Card', () => {
 	it('renders correctly', () => {
-		drawCard({...({} as CardProps)})
+		drawCard({ ...({} as CardProps) })
 		expect(screen.getByText(testTitle)).toBeInTheDocument()
 		expect(screen.getByText(testTitle)).toBeInTheDocument()
 	})

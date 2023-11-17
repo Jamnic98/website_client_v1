@@ -1,46 +1,30 @@
 {
-  "compilerOptions": {
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "incremental": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ESNext"
-    ],
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "noEmit": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
-    "resolveJsonModule": true,
-    "rootDir": ".",
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "ES5",
-    "types": [
-      "node",
-      "jest",
-      "@testing-library/jest-dom"
-    ]
-  },
-  "compileOnSave": true,
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "paths": {
-    "*": [
-      "types/*"
-    ]
-  }
+	"compilerOptions": {
+		"allowJs": true,
+		"allowSyntheticDefaultImports": true,
+		"baseUrl": ".",
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"incremental": true,
+		"isolatedModules": true,
+		"jsx": "preserve",
+		"lib": ["DOM", "DOM.Iterable", "ESNext"],
+		"module": "ESNext",
+		"moduleResolution": "node",
+		"noEmit": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitAny": true,
+		"resolveJsonModule": true,
+		"rootDir": ".",
+		"skipLibCheck": true,
+		"strict": true,
+		"target": "ES5",
+		"types": ["node", "jest", "@testing-library/jest-dom"]
+	},
+	"compileOnSave": true,
+	"exclude": ["node_modules"],
+	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+	"paths": {
+		"*": ["types/*"]
+	}
 }

@@ -1,42 +1,52 @@
 .caret {
-  display: inline-block;
-  position: relative;
-  transition: transform 0.2s ease;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  width: none;
-  height: none;
-  line-height: 0;
+	display: inline-block;
+	position: relative;
+	transition: transform 0.2s ease;
+	font-family:
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		'Segoe UI',
+		Roboto,
+		Oxygen,
+		Ubuntu,
+		Cantarell,
+		'Open Sans',
+		'Helvetica Neue',
+		sans-serif;
+	width: none;
+	height: none;
+	line-height: 0;
 }
 
 .up {
-  transform: rotate(0deg);
+	transform: rotate(0deg);
 }
 
 .down {
-  transform: rotate(180deg);
+	transform: rotate(180deg);
 }
 
 .left {
-  transform: rotate(-90deg);
+	transform: rotate(-90deg);
 }
 
 .right {
-  transform: rotate(90deg);
+	transform: rotate(90deg);
 }
 
 .up.flip {
-  transform: rotate(180deg);
+	transform: rotate(180deg);
 }
 
 .down.flip {
-  transform: rotate(0deg);
+	transform: rotate(0deg);
 }
 
 .left.flip {
-  transform: rotate(90deg);
+	transform: rotate(90deg);
 }
 
 .right.flip {
-  transform: rotate(270deg);
+	transform: rotate(270deg);
 }

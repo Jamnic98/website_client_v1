@@ -1,15 +1,15 @@
-import React, {type FC} from 'react'
+import React, { type FC } from 'react'
 import Link from 'next/link'
 
-import {useWidth} from '../../utils'
+import { useWidth } from '../../utils'
 import styles from './NavLogo.module.css'
 
 export interface NavLogoProps {
-	handleClick?: Function
+	handleClick?: () => void
 	linkURL?: string
 }
 
-export const NavLogo: FC<NavLogoProps> = ({handleClick, linkURL = '/'}) => {
+export const NavLogo: FC<NavLogoProps> = ({ handleClick, linkURL = '/' }) => {
 	const width = useWidth() || 800
 
 	return (

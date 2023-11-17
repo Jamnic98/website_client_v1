@@ -1,16 +1,16 @@
-import {type FC} from 'react'
+import { type FC } from 'react'
 import Link from 'next/link'
 import classNames from 'classnames'
-import {CgExternal, CgInternal} from 'react-icons/cg'
+import { CgExternal, CgInternal } from 'react-icons/cg'
 
-import {LinkType, ProjectLinkDataType} from '../../../types'
+import { LinkType, ProjectLinkDataType } from '../../../types'
 import styles from './ProjectLinks.module.css'
 
 export interface ProjectLinksProps {
 	links: ProjectLinkDataType[]
 }
 
-export const ProjectLinks: FC<ProjectLinksProps> = ({links}) => (
+export const ProjectLinks: FC<ProjectLinksProps> = ({ links }) => (
 	<nav /* className={styles.projectLinks} */>
 		{links.map((link, index) => {
 			if (link.type === LinkType.EXTERNAL) {

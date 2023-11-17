@@ -1,8 +1,8 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import {render, screen} from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 
-import {PageHeader} from './PageHeader'
+import { PageHeader } from './PageHeader'
 
 const testTitle = 'Title'
 const testDescription = 'This is a test.'
