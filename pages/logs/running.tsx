@@ -4,7 +4,7 @@ import Head from 'next/head'
 import * as d3 from 'd3'
 
 import { PageHeader, RunningStats } from '../../components'
-import { ScatterGraph, LineGraph } from '../../common/graphs'
+import { ScatterGraph, LineGraph } from '../../components/graphs'
 import { type NextApiResponse } from 'next'
 import { type RunData } from '../../types/runs.types'
 import styles from '../../styles/about.module.css'

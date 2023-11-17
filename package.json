@@ -9,8 +9,8 @@
 		"test": "jest -u",
 		"test:watch": "jest --watch",
 		"lint": "next lint --fix",
-		"format:check": "prettier '**/*.ts' --check .",
-		"format:write": "prettier '**/*.ts' --write .",
+		"format:check": "prettier --check .",
+		"format:write": "prettier --write .",
 		"prepare": "husky install"
 	},
 	"dependencies": {
