@@ -20,17 +20,13 @@ export const Explorer: FC<ExplorerProps> = ({ title, data }) => (
 		<hr className="subRule" />
 		<div>
 			{data.map((d, index) => (
-				<Link href={d.URI} key={index} legacyBehavior>
-					<a className={styles.window}>
-						<h3 className={styles.windowTitle}>{d.title}</h3>
-						{d.description}
-					</a>
+				<Link className={styles.window} href={d.URI} key={index}>
+					<h3 className={styles.windowTitle}>{d.title}</h3>
+					{d.description}
 				</Link>
 			))}
 			<div className={styles.allProjectsLink}>
-				<Link href="/projects" legacyBehavior>
-					<a>all projects</a>
-				</Link>
+				<Link href="/projects">all projects</Link>
 			</div>
 		</div>
 	</>

@@ -26,8 +26,8 @@ export const Home = (props: HomePageProps) => (
 						All aspects of this site, from the front-end user interface to the
 						back-end architecture, have been meticulously designed, built and
 						styled by{' '}
-						<Link href="/about" legacyBehavior>
-							<a className={styles.projectLink}>me</a>
+						<Link className={styles.projectLink} href="/about">
+							me
 						</Link>
 						. With scalability as a guiding principle, I have built this website
 						to accommodate further expansion. In the near future, I have
@@ -61,9 +61,7 @@ export const Home = (props: HomePageProps) => (
 						<div className={styles.runningWeek}>
 							<RunningStats runData={props.data} />
 							<div className={styles.allProjectsLink}>
-								<Link href="/logs/running" legacyBehavior>
-									<a>all stats</a>
-								</Link>
+								<Link href="/logs/running">all stats</Link>
 							</div>
 						</div>
 					</section>

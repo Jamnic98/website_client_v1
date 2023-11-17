@@ -27,10 +27,12 @@ export const ProjectLinks: FC<ProjectLinksProps> = ({ links }) => (
 				)
 			} else if (link.type === LinkType.INTERNAL) {
 				return (
-					<Link href={link.URL} key={index} legacyBehavior>
-						<a className={classNames(styles.projectLink, styles.link)}>
-							{link.label} <CgInternal />
-						</a>
+					<Link
+						className={classNames(styles.projectLink, styles.link)}
+						href={link.URL}
+						key={index}
+					>
+						{link.label} <CgInternal />
 					</Link>
 				)
 			}

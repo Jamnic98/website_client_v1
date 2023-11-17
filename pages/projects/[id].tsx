@@ -67,8 +67,8 @@ const Project: FC<ProjectProps> = ({ projectData }) => (
 				<section>
 					<ProjectDescriptions paragraphs={projectData.paragraphs} />
 				</section>
-				<Link href="/projects" legacyBehavior>
-					<a className={styles.link}>&larr; projects</a>
+				<Link className={styles.link} href="/projects">
+					&larr; projects
 				</Link>
 			</article>
 		</main>

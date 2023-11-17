@@ -39,18 +39,20 @@ export const Navlink: FC<NavlinkProps> = ({
 							isOpen={isActive}
 							items={children}
 							render={(navlinkObj: NavlinkDataType) => (
-								<Link href={navlinkObj.url} legacyBehavior>
-									<a className={styles.navlink}>{navlinkObj.label}</a>
+								<Link className={styles.navlink} href={navlinkObj.url}>
+									{navlinkObj.label}
 								</Link>
 							)}
 						/>
 					</div>
 				</div>
 			) : (
-				<Link href={url} legacyBehavior>
-					<a onClick={() => handleClick()} className={styles.navlink}>
-						{label}
-					</a>
+				<Link
+					className={styles.navlink}
+					href={url}
+					onClick={() => handleClick()}
+				>
+					{label}
 				</Link>
 			)}
 		</>
