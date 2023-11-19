@@ -1,3 +1,4 @@
+import React from 'react'
 import {
 	reduceSumFunc,
 	getAverageDistanceString,
@@ -5,17 +6,17 @@ import {
 	getFurthestDistanceString,
 	getTotalDistanceString,
 	getTotalDurationString,
-} from '../../utils'
-import { type RunData } from '../../types/runs.types'
+} from 'utils'
+import { type RunDataType } from 'types'
 import styles from './runningStats.module.css'
 
 interface RunningStatsProps {
-	runData: RunData[]
+	runData: RunDataType[]
 }
 
 export const RunningStats: React.FC<RunningStatsProps> = ({ runData }) => {
 	// distance
-	const distanceList = runData.map((runData: RunData) => runData.distance)
+	const distanceList = runData.map((runData: RunDataType) => runData.distance)
 	const furthestDistanceInMeters = distanceList.length
 		? Math.max(...distanceList)
 		: 0
@@ -24,7 +25,7 @@ export const RunningStats: React.FC<RunningStatsProps> = ({ runData }) => {
 		: 0
 
 	// duration
-	const durationList = runData.map((runData: RunData) => runData.duration)
+	const durationList = runData.map((runData: RunDataType) => runData.duration)
 	const totalDurationInSeconds = durationList.length
 		? durationList.reduce((a, b) => reduceSumFunc(a, b))
 		: 0

@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import { Emoji } from './Emoji'
+import { Emoji } from 'components'
 
 test('displays correct emoji', () => {
 	render(<Emoji symbol="👋" />)

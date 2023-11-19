@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import classNames from 'classnames'
 
-import { MobileMenuToggle, Navlink, NavLogo } from '..'
-import { type NavlinkDataType } from '../../types'
+import { MobileMenuToggle, Navlink, NavLogo } from 'components'
+import { type NavlinkDataType } from 'types'
 import styles from './navbar.module.css'
 
 export interface NavbarProps {

@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 
-import { Caret, Dropdown } from '..'
-import { useWidth } from '../../utils'
-import { type NavlinkDataType } from '../../types'
+import { Caret, Dropdown } from 'components'
+import { useWidth } from 'utils'
+import { type NavlinkDataType } from 'types'
 import styles from './navlink.module.css'
 
 interface NavlinkProps {

@@ -18,11 +18,11 @@ export const Caret: React.FC<CaretProps> = ({
 	direction = CaretDirection.UP,
 	isFlipped = false,
 }: CaretProps) => (
-	<span
+	<div
 		className={classNames(styles.caret, styles[direction], {
 			[styles.flip]: isFlipped,
 		})}
 	>
 		^
-	</span>
+	</div>
 )

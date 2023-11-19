@@ -11,6 +11,7 @@ export * from './NavLogo'
 export * from './PageHeader'
 export * from './Project'
 export * from './RunningStats'
+export * from './RunningDataView'
 
 export * from './lineGraph'
 export * from './scatterGraph'

@@ -6,10 +6,12 @@ import styles from 'styles/about.module.css'
 
 const profilePicDimensions = { width: 200, height: 200 }
 
+const pageTitle = 'About'
+
 const About = () => (
 	<>
 		<Head>
-			<title>About</title>
+			<title>{pageTitle}</title>
 		</Head>
 		<main className="container">
 			<article>

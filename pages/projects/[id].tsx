@@ -1,11 +1,11 @@
-import { FC } from 'react'
+import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
 
-import { PageHeader, ProjectLinks } from '../../components'
-import projects from '../../data/projects'
-import type { ProjectDataType } from '../../types'
+import { PageHeader, ProjectLinks } from 'components'
+import type { ProjectDataType } from 'types'
+import projects from 'data/projects'
 import styles from 'styles/project.module.css'
 
 const IMAGE_DIMENSIONS = { width: 275, height: 275 }
@@ -14,7 +14,7 @@ interface ProjectGalleryProps {
 	screenshotURIs: string[]
 }
 
-const ProjectGallery: FC<ProjectGalleryProps> = ({ screenshotURIs }) => (
+const ProjectGallery: React.FC<ProjectGalleryProps> = ({ screenshotURIs }) => (
 	<>
 		{screenshotURIs.map((screenshotURI, index) => (
 			<Image
@@ -32,7 +32,9 @@ interface ProjectDescriptionsProps {
 	paragraphs: string[]
 }
 
-const ProjectDescriptions: FC<ProjectDescriptionsProps> = ({ paragraphs }) => (
+const ProjectDescriptions: React.FC<ProjectDescriptionsProps> = ({
+	paragraphs,
+}) => (
 	<>
 		{paragraphs.map((paragraph: string, index) => (
 			<p key={index}>{paragraph}</p>
@@ -44,7 +46,7 @@ interface ProjectProps {
 	projectData: ProjectDataType
 }
 
-const Project: FC<ProjectProps> = ({ projectData }) => (
+const Project: React.FC<ProjectProps> = ({ projectData }) => (
 	<>
 		<Head>
 			<title>{projectData.title}</title>

@@ -60,11 +60,11 @@ exports[`Navbar renders Navbar unchanged 1`] = `
           onTouchStart={[Function]}
         >
           logs
-          <span
+          <div
             className="caret up"
           >
             ^
-          </span>
+          </div>
         </a>
         <div
           className="dropdownContainer"

@@ -1,8 +1,9 @@
+import React from 'react'
 import Link from 'next/link'
 import classNames from 'classnames'
 import { CgExternal, CgInternal } from 'react-icons/cg'
 
-import { LinkType, ProjectLinkDataType } from '../../../types/project.types'
+import { LinkType, ProjectLinkDataType } from 'types'
 import styles from './projectLinks.module.css'
 
 export interface ProjectLinksProps {

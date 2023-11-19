@@ -1,3 +1,4 @@
+import React from 'react'
 import { FaTimes, FaBars } from 'react-icons/fa'
 
 import styles from './mobileMenuToggle.module.css'

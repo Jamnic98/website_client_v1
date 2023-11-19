@@ -2,7 +2,7 @@ import renderer from 'react-test-renderer'
 import { render, screen, fireEvent } from '@testing-library/react'
 
 import { Navlink } from '.'
-import { NavlinkDataType } from '../../types'
+import { NavlinkDataType } from 'types'
 
 const mockOnClick = jest.fn()
 

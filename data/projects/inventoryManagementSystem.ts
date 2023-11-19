@@ -1,4 +1,4 @@
-import { ProjectDataType, LinkType } from '../../types'
+import { ProjectDataType, LinkType } from 'types'
 
 const inventoryManagementSystem: ProjectDataType = {
 	id: 'inventory-management-system',

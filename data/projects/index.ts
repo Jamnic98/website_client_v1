@@ -1,4 +1,4 @@
-import { ProjectDataType } from '../../types'
+import { ProjectDataType } from 'types'
 
 import blueCheeseClassifier from './blueCheeseClassifier'
 import cryptoViewer from './cryptoViewer'

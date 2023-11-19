@@ -2,15 +2,15 @@ import React from 'react'
 import axios from 'axios'
 import Head from 'next/head'
 import Link from 'next/link'
-
-import { PageHeader, Explorer, RunningStats } from '../components'
-import projects from '../data/projects'
 import { type NextApiResponse } from 'next'
-import { type RunData } from '../types/runs.types'
+
+import { PageHeader, Explorer, RunningStats } from 'components'
+import { type RunDataType } from 'types'
+import projects from 'data/projects'
 import styles from 'styles/index.module.css'
 
 interface HomePageProps {
-	data: RunData[]
+	data: RunDataType[]
 }
 
 export const Home = (props: HomePageProps) => (

@@ -1,6 +1,7 @@
+import React from 'react'
 import Link from 'next/link'
 
-import { useWidth } from '../../utils'
+import { useWidth } from 'utils'
 import styles from './navLogo.module.css'
 
 export interface NavLogoProps {

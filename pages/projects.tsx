@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import Head from 'next/head'
 
-import { Card, PageHeader } from '../components'
-import projects from '../data/projects'
-import type { ProjectDataType } from '../types'
+import { Card, PageHeader } from 'components'
+import type { ProjectDataType } from 'types'
+import projects from 'data/projects'
 import styles from 'styles/projects.module.css'
 
 const languages = [
