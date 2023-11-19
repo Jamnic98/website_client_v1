@@ -31,4 +31,4 @@ npm-debug.log*
 .husky
 .swc
 
-tsconfig.*
+tsconfig.tsbuildinfo

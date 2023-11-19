@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test PageHeader component renders PageHeader unchanged 1`] = `
+<header
+  className="header"
+  data-testid="application-pageHeader"
+>
+  <h1
+    className="title"
+  >
+    Title
+  </h1>
+  <p
+    className="description"
+  >
+    This is a test.
+  </p>
+  <hr
+    className="hr"
+  />
+</header>
+`;
