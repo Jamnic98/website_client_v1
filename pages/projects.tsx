@@ -43,7 +43,7 @@ const Projects = () => {
 			<main className="container">
 				<PageHeader
 					title="Projects"
-					description="Here are the projects I have worked on:"
+					description="Here are some of the personal projects I have worked on:"
 				/>
 				<article>
 					<section>
@@ -52,13 +52,11 @@ const Projects = () => {
 							className={styles.select}
 							onChange={(e) => setLanguage(e.target.value)}
 						>
-							{languages.map((mainLanguage, index) => {
-								return (
-									<option className={styles.selectOption} key={index}>
-										{mainLanguage}
-									</option>
-								)
-							})}
+							{languages.map((mainLanguage, index) => (
+								<option className={styles.selectOption} key={index}>
+									{mainLanguage}
+								</option>
+							))}
 						</select>
 					</section>
 					<section className={styles.projects}>{setProjects()}</section>

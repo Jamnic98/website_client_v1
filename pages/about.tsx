@@ -28,17 +28,16 @@ const About = () => (
 				<section className={styles.description}>
 					<p>
 						I'm a technology enthusiast and self-taught Software Engineer with
-						full-stack and DevOps experience. Please take a look at some of the{' '}
+						Full Stack and DevOps experience. Please take a look at some of the{' '}
 						<Link className={styles.projectLink} href="/projects">
 							personal projects
 						</Link>{' '}
 						I have worked on.
 					</p>
 					<p>
-						Since late September 2020, I have developed a consistent running
-						routine. I typically run over 25km per week, and my long-term
-						aspiration is to complete an ultramarathon (50km+). To explore my
-						running stats, click{' '}
+						Since September 2020, I have developed a regular running routing and
+						it is an aspiration of mine to one day complete an ultramarathon
+						(50km). To explore my running stats, click{' '}
 						<Link className={styles.projectLink} href="/logs/running">
 							here
 						</Link>
