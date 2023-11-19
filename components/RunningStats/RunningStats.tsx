@@ -34,10 +34,10 @@ export const RunningStats: React.FC<RunningStatsProps> = ({ runData }) => {
 		<div className={styles.allTimeStats}>
 			<ul className={styles.statGroup}>
 				<li>
-					<span>{getFurthestDistanceString(furthestDistanceInMeters)}</span>
+					<span>{getTotalDistanceString(totalDistanceInMeters)}</span>
 				</li>
 				<li>
-					<span>{getTotalDistanceString(totalDistanceInMeters)}</span>
+					<span>{getFurthestDistanceString(furthestDistanceInMeters)}</span>
 				</li>
 				<li>
 					<span>
