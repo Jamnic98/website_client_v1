@@ -8,6 +8,7 @@ import {
 	getTotalDurationString,
 } from 'utils'
 import { type RunDataType } from 'types'
+
 import styles from './runningStats.module.css'
 
 interface RunningStatsProps {
