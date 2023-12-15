@@ -1,6 +1,7 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import classNames from 'classnames'
 
+import { personalGithubReposURL, personalLinkedInURL } from 'constants/'
 import styles from './footer.module.css'
 
 export const Footer: React.FC = () => (
@@ -8,7 +9,7 @@ export const Footer: React.FC = () => (
 		<div className={classNames('container', styles.footerContent)}>
 			<nav className={styles.socialMediaLinks}>
 				<a
-					href="https://github.com/Jamnic98?tab=repositories"
+					href={personalGithubReposURL}
 					target="_blank"
 					rel="noreferrer"
 					className={styles.socialMediaLink}
@@ -16,7 +17,7 @@ export const Footer: React.FC = () => (
 					<FaGithub />
 				</a>
 				<a
-					href="https://www.linkedin.com/in/jamie-stimpson-23ab11203/"
+					href={personalLinkedInURL}
 					target="_blank"
 					rel="noreferrer"
 					className={styles.socialMediaLink}

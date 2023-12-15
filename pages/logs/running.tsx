@@ -11,10 +11,7 @@ export interface RunningProps {
 }
 
 const pageTitle = 'Running'
-const pageHeaderTitle = 'Running'
 const pageHeaderDescription = 'Here I detail my running stats and progression:'
-const pageDescription =
-	"Runs are recorded using the Strava app. The backend of this website utilises Strava's API to pull my running data and store it in a database. When the page loads, the database is queried and the data is fetched."
 const errorMsg = '*error retrieving running data*'
 
 const Running: React.FC<RunningProps> = ({ data }) => (
@@ -23,9 +20,22 @@ const Running: React.FC<RunningProps> = ({ data }) => (
 			<title>{pageTitle}</title>
 		</Head>
 		<main className="container">
-			<PageHeader title={pageHeaderTitle} description={pageHeaderDescription} />
+			<PageHeader title={pageTitle} description={pageHeaderDescription} />
 			<article>
-				<p>{pageDescription}</p>
+				<section>
+					<p>
+						Runs are recorded using the Strava app. The backend of this website
+						utilises Strava's API to pull my running data and store it in a
+						database. When the page loads, the database is queried and the data
+						is fetched.
+					</p>
+					<p>
+						Since 2020, I have developed a regular running routine, aspiring to
+						one day complete an ultramarathon (&#8805;50km). On the 22nd of
+						October 2023, I ran the Battersea Park Marathon and raised £275 for
+						The Alzheimer's Society!
+					</p>
+				</section>
 				<section>
 					{data ? <RunningDataView data={data} /> : <div>{errorMsg}</div>}
 				</section>

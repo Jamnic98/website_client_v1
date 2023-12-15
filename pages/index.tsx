@@ -27,13 +27,12 @@ export const Home = (props: HomePageProps) => (
 						back-end architecture, have been meticulously designed, built and
 						styled by{' '}
 						<Link className={styles.projectLink} href="/about">
-							me
+							myself
 						</Link>
-						. With scalability as a guiding principle, I have built this website
-						to accommodate further expansion. In the near future, I have
-						exciting plans to integrate additional features and expand on the
-						existing content. I hope you enjoy exploring the various facets of
-						my work.
+						. With scalability as a guiding principle, I built this website to
+						accommodate further expansion. In the near future, I have exciting
+						plans to integrate additional features and expand on the existing
+						content. I hope you enjoy exploring the various facets of my work.
 					</p>
 				</section>
 				<section className={styles.projectExplorer}>
