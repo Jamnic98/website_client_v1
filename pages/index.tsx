@@ -24,15 +24,14 @@ export const Home = (props: HomePageProps) => (
 				<section className={styles.homeDescription}>
 					<p>
 						All aspects of this site, from the front-end user interface to the
-						back-end architecture, have been meticulously designed, built and
-						styled by{' '}
+						back-end architecture, have been designed and built by{' '}
 						<Link className={styles.projectLink} href="/about">
 							myself
 						</Link>
-						. With scalability as a guiding principle, I built this website to
-						accommodate further expansion. In the near future, I have exciting
-						plans to integrate additional features and expand on the existing
-						content. I hope you enjoy exploring the various facets of my work.
+						. I built this website to accommodate further expansion. In the near
+						future, I have exciting plans to integrate additional features and
+						expand on the existing content. I hope you enjoy exploring the
+						various facets of my work.
 					</p>
 				</section>
 				<section className={styles.projectExplorer}>

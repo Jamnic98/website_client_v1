@@ -30,9 +30,8 @@ const About = () => (
 				<hr className={styles.hr} />
 				<section className={styles.description}>
 					<p>
-						Hi, I'm Jamie Stimpson, a technology enthusiast and self-taught
-						Software Engineer with Full Stack and DevOps experience based in
-						London. Connect with me on{' '}
+						Hi, I'm Jamie, a self-taught Software Engineer with Full Stack and
+						DevOps experience based in London. Connect with me on{' '}
 						<a
 							href={personalLinkedInURL}
 							target="_blank"
@@ -50,26 +49,26 @@ const About = () => (
 						>
 							GitHub
 						</a>
-						!
+						.
 					</p>
 					<p>
 						My experience covers various programming languages and frameworks,
-						including TypeScript, React, Python, and AWS technologies. My
-						expertise extends to web development tools like React, Flask,
-						Next.js, and more. I also have experience in Data Science and A.I
-						tools such as NumPy, pandas, scikit-learn, and TensorFlow, as well
-						as DevOps tools like Docker, Ansible, and GitLab CI/CD pipelines.
-						Please take a look at some of the{' '}
+						including TypeScript, React, Python, and AWS technologies, in
+						addtion to web development tools like React, Flask and Node.js. I
+						also have experience in Data Science and A.I tools such as NumPy,
+						pandas and Scikit-Learn, as well as DevOps tools like Docker,
+						Ansible, and GitLab CI/CD pipelines. Please take a look at some of
+						the{' '}
 						<Link className={styles.projectLink} href="/projects">
 							personal projects
 						</Link>{' '}
 						I have worked on.
 					</p>
 					<p>
-						Since 2020, I have developed a regular running routine, aspiring to
-						one day complete an ultramarathon (&#8805;50km). On the 22nd of
-						October 2023, I ran the Battersea Park Marathon and raised £275 for
-						The Alzheimer's Society! To explore my running stats, click{' '}
+						Since 2020, I have been running regularly, aspiring to one day
+						complete an ultramarathon (&#8805;50km). On the 22nd of October
+						2023, I ran the Battersea Park Marathon and raised £275 for The
+						Alzheimer's Society! To explore my running stats, click{' '}
 						<Link className={styles.projectLink} href="/logs/running">
 							here
 						</Link>
