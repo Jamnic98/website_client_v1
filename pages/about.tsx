@@ -30,8 +30,8 @@ const About = () => (
 				<hr className={styles.hr} />
 				<section className={styles.description}>
 					<p>
-						Hi, I'm Jamie, a self-taught Software Engineer with Full Stack and
-						DevOps experience based in London. Connect with me on{' '}
+						Hello, I'm Jamie, a (mostly) self-taught Software Engineer with Full
+						Stack and DevOps experience based in London. Connect with me on{' '}
 						<a
 							href={personalLinkedInURL}
 							target="_blank"
@@ -73,6 +73,14 @@ const About = () => (
 							here
 						</Link>
 						.
+					</p>
+					<p>
+						On the 8th of March 2024 I participated in Encode Club's 3 day AI
+						Hackathon event, as the first hackathon I've taken part in. With the
+						help of my two teammates, we won the bounty for "Most promising AI x
+						Crypto Build" with a AI generated, text-based game generator called
+						AI Adventure World. It was a lot of fun and will be looking for more
+						hackathons to join in the future.
 					</p>
 				</section>
 			</article>

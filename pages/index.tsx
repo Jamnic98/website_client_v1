@@ -23,18 +23,13 @@ export const Home = (props: HomePageProps) => (
 			<article className={styles.homeContent}>
 				<section className={styles.homeDescription}>
 					<p>
-						All aspects of this site, from the front-end user interface to the
-						back-end architecture, have been designed and built by{' '}
-						<Link className={styles.projectLink} href="/about">
-							myself
-						</Link>
-						. I built this website to accommodate further expansion. In the near
-						future, I have exciting plans to integrate additional features and
-						expand on the existing content. I hope you enjoy exploring the
-						various facets of my work.
+						This website was built with scalability in mind, and, I have
+						exciting plans to integrate additional features and expand upon the
+						existing content. I hope you enjoy exploring the various facets of
+						my work.
 					</p>
 				</section>
-				<section className={styles.projectExplorer}>
+				<section>
 					<Explorer
 						title="Project Explorer"
 						data={projects
@@ -52,7 +47,8 @@ export const Home = (props: HomePageProps) => (
 				{props.data && (
 					<section>
 						<h3>
-							Running Stats for {/* current month as full word */}
+							Running Stats for
+							{/* current month as full word */}
 							{new Date().toLocaleString('default', { month: 'long' })}
 						</h3>
 						<hr className="subRule" />
