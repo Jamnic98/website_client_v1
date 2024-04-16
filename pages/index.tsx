@@ -47,7 +47,7 @@ export const Home = (props: HomePageProps) => (
 				{props.data && (
 					<section>
 						<h3>
-							Running Stats for
+							Running Stats for{' '}
 							{/* current month as full word */}
 							{new Date().toLocaleString('default', { month: 'long' })}
 						</h3>
