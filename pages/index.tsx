@@ -47,8 +47,7 @@ export const Home = (props: HomePageProps) => (
 				{props.data && (
 					<section>
 						<h3>
-							Running Stats for{' '}
-							{/* current month as full word */}
+							Running Stats for {/* current month as full word */}
 							{new Date().toLocaleString('default', { month: 'long' })}
 						</h3>
 						<hr className="subRule" />
