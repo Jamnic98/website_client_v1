@@ -68,14 +68,15 @@ export const getServerSideProps = async ({ res }: { res: NextApiResponse }) => {
 	res.setHeader('Cache-Control', 'public, s-maxage=43200')
 	try {
 		// set get 1st of current month
-		const previousDate = new Date()
-		previousDate.setDate(1)
-		previousDate.setHours(-1)
+		const date = new Date()
+		date.setUTCDate(1)
+		date.setUTCHours(0, 0, 0, 0)
+		const timestamp = date.getTime()
 
 		const URL =
 			(process.env.NODE_ENV === 'production'
 				? process.env.SERVER_URL
-				: 'http://localhost:3000') + `/runs?after=${previousDate}`
+				: 'http://localhost:3000') + `/runs?after=${timestamp}`
 
 		const { data } = await axios.get(URL)
 		return {
