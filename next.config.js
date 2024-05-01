@@ -5,7 +5,7 @@ module.exports = {
 		return [
 			{
 				source: '/runs',
-				destination: 'http://localhost:5000/runs',
+				destination: 'http://localhost:8080/runs',
 			},
 		]
 	},
