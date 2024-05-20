@@ -30,8 +30,8 @@ const About = () => (
 				<hr className={styles.hr} />
 				<section className={styles.description}>
 					<p>
-						I work as a Software Engineer based in London and have Full Stack
-						and DevOps. Connect with me on{' '}
+						I am a Software Engineer with full-stack and DevOps experience,
+						based in London. Connect with me on{' '}
 						<a
 							href={personalLinkedInURL}
 							target="_blank"
@@ -39,7 +39,7 @@ const About = () => (
 							className={styles.projectLink}
 						>
 							LinkedIn
-						</a>
+						</a>{' '}
 						and check out my repositories on{' '}
 						<a
 							href={personalGithubReposURL}
@@ -65,7 +65,7 @@ const About = () => (
 						I have worked on.
 					</p>
 					<p>
-						During lockdown in 2020, developed a regular running routine,
+						During lockdown in 2020, I developed a regular running routine,
 						aspiring to one day complete an ultramarathon (&#8805;50km). On the
 						22nd of October 2023, I ran the Battersea Park Marathon and raised
 						£275 for The Alzheimer's Society! To explore my running stats, click{' '}
