@@ -1,7 +1,7 @@
 import renderer from 'react-test-renderer'
 import { render, screen } from '@testing-library/react'
 
-import { Dropdown } from 'components'
+import { Dropdown } from './Dropdown'
 
 type testObject = { letter: string }
 const testArray: testObject[] = [

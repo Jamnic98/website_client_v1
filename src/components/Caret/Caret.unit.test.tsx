@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import renderer from 'react-test-renderer'
 
-import { Caret, type CaretProps } from 'components'
+import { Caret, type CaretProps } from './Caret'
 
 const testData = { isFlipped: false }
 

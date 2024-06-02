@@ -2,7 +2,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { personalLinkedInURL, personalGithubReposURL } from 'constants/'
+import {
+	PERSONAL_LINKEDIN_URL,
+	PERSONAL_GITHUB_REPO_URL,
+} from 'settings/constants'
 import styles from 'styles/about.module.css'
 
 const profilePicDimensions = { width: 200, height: 200 }
@@ -33,7 +36,7 @@ const About = () => (
 						I am a Software Engineer with full-stack and DevOps experience,
 						based in London. Connect with me on{' '}
 						<a
-							href={personalLinkedInURL}
+							href={PERSONAL_LINKEDIN_URL}
 							target="_blank"
 							rel="noreferrer"
 							className={styles.projectLink}
@@ -42,7 +45,7 @@ const About = () => (
 						</a>{' '}
 						and check out my repositories on{' '}
 						<a
-							href={personalGithubReposURL}
+							href={PERSONAL_GITHUB_REPO_URL}
 							target="_blank"
 							rel="noreferrer"
 							className={styles.projectLink}

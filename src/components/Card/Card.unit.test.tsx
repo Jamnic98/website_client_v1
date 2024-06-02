@@ -1,7 +1,7 @@
 import renderer from 'react-test-renderer'
 import { render, screen, fireEvent } from '@testing-library/react'
 
-import { Card, type CardProps } from 'components'
+import { Card, type CardProps } from './Card'
 
 const testTitle = 'Card Title'
 const testDescription = 'Test description.'

@@ -9,8 +9,8 @@ const customJestConfig = {
 	moduleNameMapper: {
 		'^d3$': '<rootDir>/node_modules/d3/dist/d3.min.js',
 	},
-	setupFilesAfterEnv: ['./support/jest.setup.ts'],
-	setupFiles: ['./support/environment.ts'],
+	setupFilesAfterEnv: ['./src/support/jest.setup.ts'],
+	setupFiles: ['./src/support/environment.ts'],
 	testEnvironment: 'jest-environment-jsdom',
 }
 
