@@ -1,1 +1,3 @@
-export default {}
+const environment = {}
+
+export default environment

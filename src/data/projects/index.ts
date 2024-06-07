@@ -12,16 +12,16 @@ import scrabbleScorekeeper from './scrabbleScorekeeper'
 import touchTyping from './touchTyping'
 
 const projects: ProjectDataType[] = [
-	portfolioWebsite,
-	scrabbleScorekeeper,
+	blueCheeseClassifier,
 	cryptoViewer,
 	inventoryManagementSystem,
-	pyramidSolitaire,
 	libraryBookRenewer,
-	blueCheeseClassifier,
-	readingLog,
-	touchTyping,
 	looseChangeCalculator,
+	portfolioWebsite,
+	pyramidSolitaire,
+	readingLog,
+	scrabbleScorekeeper,
+	touchTyping,
 ]
 
 export default projects

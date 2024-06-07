@@ -30,6 +30,7 @@
 	},
 	"plugins": ["@typescript-eslint", "react"],
 	"rules": {
+		"react/prop-types": 0,
 		"react/no-unescaped-entities": 0,
 		"react/react-in-jsx-scope": 0,
 		"@typescript-eslint/no-explicit-any": 0

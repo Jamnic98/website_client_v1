@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Navbar } from 'components'
+import { Navbar } from 'app/components'
 import { navlinkObjArr } from 'utils'
 
 //👇 This default export determines where your story goes in the story list

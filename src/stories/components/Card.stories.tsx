@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Card } from 'components'
+import { Card } from 'app/components'
 import imageFile from 'public/images/profile-picture.jpg'
 
 const meta: Meta<typeof Card> = {
@@ -10,7 +10,6 @@ const meta: Meta<typeof Card> = {
 		title: 'Card Title',
 		description: 'Card Description',
 		imageURI: imageFile.src,
-		linkURL: '/',
 	},
 }
 export default meta

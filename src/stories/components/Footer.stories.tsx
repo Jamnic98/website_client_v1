@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Footer } from 'components'
+import { Footer } from 'app/components'
 import { navlinkObjArr } from 'utils'
 
 //👇 This default export determines where your story goes in the story list
