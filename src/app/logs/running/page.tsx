@@ -6,16 +6,12 @@ const pageTitle = 'Running'
 const pageHeaderDescription = 'Here I detail my running stats and progression:'
 const errorMsg = '*error retrieving running data*'
 
-// export interface RunningProps {
-// 	data: RunDataType[]
-// }
-
 export const metadata: Metadata = {
 	title: 'Running',
 }
 
-const Running: React.FC = async () => {
-	const data = await getData()
+export default async function Page() {
+	const runs = await getData()
 	return (
 		<>
 			<main className="container">
@@ -36,7 +32,7 @@ const Running: React.FC = async () => {
 						</p>
 					</section>
 					<section>
-						{data ? <RunningDataView runData={data} /> : <div>{errorMsg}</div>}
+						{runs ? <RunningDataView runData={runs} /> : <div>{errorMsg}</div>}
 					</section>
 				</article>
 			</main>
@@ -45,13 +41,17 @@ const Running: React.FC = async () => {
 }
 
 const getData = async () => {
-	const URL = (process.env.NEXT_PUBLIC_SERVER_URL as string) + '/runs'
-	const response = await fetch(URL)
-	if (!response.ok) {
-		// This will activate the closest `error.js` Error Boundary
-		throw new Error('Failed to fetch data')
+	try {
+		const URL = (process.env.NEXT_PUBLIC_SERVER_URL as string) + '/runs'
+		const response = await fetch(URL, { next: { revalidate: 43200 } })
+		if (!response.ok) {
+			// This will activate the closest `error.js` Error Boundary
+			throw new Error('Failed to fetch data')
+		}
+		const { runs } = await response.json()
+		return runs
+	} catch (error) {
+		console.error(error)
+		return null
 	}
-	return await response.json()
 }
-
-export default Running
