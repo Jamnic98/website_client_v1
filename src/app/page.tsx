@@ -22,7 +22,7 @@ const getData = async () => {
 		const URL =
 			(process.env.NEXT_PUBLIC_SERVER_URL as string) +
 			`/runs?after=${timestamp}`
-		const response = await fetch(URL)
+		const response = await fetch(URL, { next: { revalidate: 43200 } })
 		if (!response.ok) {
 			// This will activate the closest `error.js` Error Boundary
 			throw new Error('Failed to fetch data')
