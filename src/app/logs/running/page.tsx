@@ -43,7 +43,7 @@ export default async function Page() {
 const getData = async () => {
 	try {
 		const URL = (process.env.NEXT_PUBLIC_SERVER_URL as string) + '/runs'
-		const response = await fetch(URL, { next: { revalidate: 43200 } })
+		const response = await fetch(URL, { next: { revalidate: 3600 } })
 		if (!response.ok) {
 			// This will activate the closest `error.js` Error Boundary
 			throw new Error('Failed to fetch data')
