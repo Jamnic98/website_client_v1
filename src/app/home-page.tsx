@@ -16,11 +16,9 @@ export default function Page({ runData }: HomePageProps) {
 			<PageHeader title="Home" description="Welcome to my website." />
 			<article className={styles.homeContent}>
 				<section className={styles.homeDescription}>
-					<p>
-						This website was built with scalability in mind, and, I plan to
-						integrate additional features and expand upon the existing content.
-						I hope you enjoy exploring the various facets of my work.
-					</p>
+					{/* <p>
+						This website was built with scalability in mind.
+					</p> */}
 				</section>
 				<section>
 					<Explorer
