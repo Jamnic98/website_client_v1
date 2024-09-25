@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 
-import { PageHeader, Explorer, RunningStats } from 'app/components'
+import { PageHeader, Explorer, RunningStats } from 'components'
 import { RunDataType } from 'types'
 import projects from 'data/projects'
 import styles from 'styles/index.module.css'

@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 
-import { Card, PageHeader } from 'app/components'
+import { Card, PageHeader } from 'components'
 import projects from 'data/projects'
 import { ProjectDataType } from 'types'
 import styles from 'styles/projects.module.css'

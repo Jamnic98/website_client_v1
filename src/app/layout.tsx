@@ -1,4 +1,4 @@
-import { Navbar, Footer } from 'app/components'
+import { Navbar, Footer } from 'components'
 import { navlinkObjArr } from 'utils'
 
 import 'styles/global.css'

@@ -69,19 +69,20 @@ const About = () => (
 					During lockdown in 2020, I developed a regular running routine,
 					aspiring to one day complete an ultramarathon (&#8805;50km). On the
 					22nd of October 2023, I ran the Battersea Park Marathon and raised
-					£275 for The Alzheimer's Society! To explore my running stats, click{' '}
+					£275 for The Alzheimer&apos;s Society! To explore my running stats,
+					click{' '}
 					<Link className={styles.projectLink} href="/logs/running">
 						here
 					</Link>
 					.
 				</p>
 				<p>
-					On the 8th of March 2024 I participated in Encode Club's 3 day AI
-					Hackathon event, as the first hackathon I've taken part in. With the
-					help of my two teammates, we won the bounty for "Most promising AI x
-					Crypto Build" with a AI generated, text-based game generator called AI
-					Adventure World. It was a lot of fun and will be looking for more
-					hackathons to join in the future.
+					On the 8th of March 2024 I participated in Encode Club&apos;s 3 day AI
+					Hackathon event, as the first hackathon I&apos;ve taken part in. With
+					the help of my two teammates, we won the bounty for &quot;Most
+					promising AI x Crypto Build&quot; with a AI generated, text-based game
+					generator called AI Adventure World. It was a lot of fun and will be
+					looking for more hackathons to join in the future.
 				</p>
 			</section>
 		</article>
