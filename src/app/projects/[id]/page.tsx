@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import { PageHeader, ProjectLinks } from 'app/components'
+import { PageHeader, ProjectLinks } from 'components'
 import projects_data from 'data/projects'
 import styles from 'styles/project.module.css'
 

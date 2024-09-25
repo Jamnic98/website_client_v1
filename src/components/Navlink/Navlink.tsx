@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 
-import { Caret, Dropdown } from 'app/components'
+import { Caret, Dropdown } from 'components'
 import { useWidth } from 'utils'
 import { type NavlinkDataType } from 'types'
 import styles from './navlink.module.css'

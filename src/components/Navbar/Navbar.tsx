@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import classNames from 'classnames'
 
-import { MobileMenuToggle, Navlink, NavLogo } from 'app/components'
+import { MobileMenuToggle, Navlink, NavLogo } from 'components'
 import { type NavlinkDataType } from 'types'
 import styles from './navbar.module.css'
 

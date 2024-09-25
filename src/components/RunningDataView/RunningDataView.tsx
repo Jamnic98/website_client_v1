@@ -1,7 +1,7 @@
 'use client'
 import * as d3 from 'd3'
 
-import { LineGraph, RunningStats, ScatterGraph } from 'app/components'
+import { LineGraph, RunningStats, ScatterGraph } from 'components'
 import { RunDataType } from 'types'
 
 interface RunningDataViewProps {
