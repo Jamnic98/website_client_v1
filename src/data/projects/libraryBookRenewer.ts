@@ -5,11 +5,9 @@ const libraryBookRenewer: ProjectDataType = {
 	title: 'Library Book Renewer',
 	summary: 'A web scraper that automatically renews my library books.',
 	paragraphs: [
-		`This project was written in Python and uses the Selenium web scraping library to log into my library account and
-     renew all the books which are due. The idea came to me when I made a joke/bet with my sister that I could write
-     a program to renew the books I had loaned from the library. Currently, I have a Raspberry Pi running the program daily with
-     cron to check if there are any books due. The program also sends a confirmation email relaying information
-     about which books were renewed.`,
+		`Written in Python this , automates the renewal of library books using the Selenium web scraping library. The idea originated as a bet with my sister, where I joked that I could write a program to renew my library loans automatically. I turned that challenge into a functional solution by creating a script that logs into my library account and renews any books due for return.`,
+		`The program is currently deployed on a Raspberry Pi, running daily via a cron job to check for any upcoming due dates. When books are renewed, the program sends a confirmation email with details about the renewals. This system ensures that no books are missed for return, and eliminates the need for manual tracking.`,
+		` demonstrates my ability to automate repetitive tasks using Python, while also leveraging tools like Selenium and Raspberry Pi for practical, real-world applications.`,
 	],
 	projectPageURI: '/projects/library-book-renewer',
 	screenshotURIs: ['/images/projects/library-book-renewer-code.png'],

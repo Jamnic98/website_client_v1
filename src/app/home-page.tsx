@@ -13,7 +13,7 @@ interface HomePageProps {
 export default function Page({ runData }: HomePageProps) {
 	return (
 		<main className="container">
-			<PageHeader title="Home" description="Welcome to my website." />
+			<PageHeader title="Home" description="" />
 			<article className={styles.homeContent}>
 				<section className={styles.homeDescription}>
 					{/* <p>
@@ -39,7 +39,8 @@ export default function Page({ runData }: HomePageProps) {
 					{runData ? (
 						<>
 							<h3>
-								Running Stats for {/* current month as full word */}
+								Running Stats for
+								{/* current month as full word */}
 								{new Date().toLocaleString('default', { month: 'long' })}
 							</h3>
 							<hr className="subRule" />

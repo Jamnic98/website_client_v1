@@ -5,14 +5,9 @@ const readingLog: ProjectDataType = {
 	title: 'Crypto Viewer',
 	summary: 'Displays real-time cryptocurrency price data.',
 	paragraphs: [
-		`Around the start of August 2021, I became interested in cryptocurrency investing and wanted to monitor the price of Bitcoin and Ethereum
-     without having to continually check online, so I built a circuit with some electronic components and programmed a NodeMCU ESP-12 wifi 
-     enabled micro-controller using C++ to request cryptocurrency prices in GBP from Coinbase. To display the prices, I initially connected
-     a 2.2 inch TFT display, which worked well, as multiple prices could be displayed at once. Unfortunately, after about a month of use, one
-     of the components on the board which controlled the display blew, so I replaced it with the only other screen I had at the time, which was
-     a 16x2 LCD screen. To display more than two cryptocurrencies at a time, I coded the ESP-12 to cycle through the price strings, giving them
-     the appearance of being shifted upwards incrementally.
-    `,
+		`In August 2021, I developed a strong interest in cryptocurrency investing and wanted a more efficient way to monitor Bitcoin and Ethereum prices without having to rely on constant online checks. To address this, I designed and built a custom monitoring system using a NodeMCU ESP-12 microcontroller, programmed in C++, and integrated with Coinbase's API to fetch real-time cryptocurrency prices in GBP.
+		I initially implemented a 2.2-inch TFT display, which allowed multiple prices to be shown simultaneously, improving the user experience. When a component controlling the display failed after a month, I quickly adapted the project by switching to a 16x2 LCD screen. Despite the smaller display size, I optimised the code to cycle through the price data, giving the appearance of smooth scrolling and ensuring the system remained functional without compromising usability.
+		This project not only showcased my proficiency in hardware and software integration but also demonstrated my ability to troubleshoot and innovate under constraints, turning setbacks into opportunities for creative problem-solving.`,
 	],
 	projectPageURI: '/projects/crypto-viewer',
 	screenshotURIs: ['/images/projects/crypto-viewer.jpg'],

@@ -5,14 +5,9 @@ const portfolioWebsite: ProjectDataType = {
 	title: 'Portfolio Website',
 	summary: 'My website.',
 	paragraphs: [
-		`This is the second version of my website. The first used only React which meant the site could not be accessed from anywhere but the home page.
-     Also the site looked amateurish in style so I decided to remake the site to fix the accessibility issue and update the style.`,
-		`When designing the website, I prioritised automation and scalability. For the front end I used Next.js and TypeScript. 
-     Project pages are created dynamically using a template and a file containing project data. The same technique is used 
-     to create the 'cards' which can be found on the main projects page.`,
-		`For the running page, I set up a server using Node.js to load my running data from a MongoDB database. Once the data is loaded,
-     D3.js creates a scatter graph of all data points. The same server checks twice daily for new running data then adds it to the database.
-     I deployed the server to the cloud using AWS Elastic Beanstalk.`,
+		`This is the second version of my personal website, created to address issues from the initial build. The original version was built solely with React, which limited access to the home page only and lacked the professional look I wanted. To improve both accessibility and aesthetics, I decided to redesign the site.`,
+		`In this version, I prioritised automation and scalability. The front end was built using Next.js and TypeScript. Project pages are generated dynamically from a template and a data file containing project information, streamlining the process of adding new content. I used the same method to create project "cards" displayed on the main projects page.`,
+		`For the running section, I set up a Node.js server to load my running data from a MongoDB database. The data is visualised using D3.js, which generates a scatter plot of all the data points. The server checks twice daily for new data and updates the database accordingly. I deployed the server using AWS Elastic Beanstalk, ensuring it runs smoothly in the cloud.`,
 	],
 
 	projectPageURI: '/projects/portfolio-website',

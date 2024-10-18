@@ -5,16 +5,10 @@ const touchTyping: ProjectDataType = {
 	title: 'Touch Typing',
 	summary: 'A program to improve typing speed and accuracy.',
 	paragraphs: [
-		`The idea behind this project was to make an application that would analyse 
-     the user's typing patterns and present them with words that contained combinations 
-     of letters that they were having trouble typing, in theory increasing their rate of improvement.
-     To test my hypothesis, I created a typing interface with React and Node.js that would randomly 
-     select words for the user to type, then save the hits and misses of individual letters and letter
-     combinations to a JSON file which I would later use for analysis.`,
-		`After gathering my typing data by practicing with the app, I wrote a Python script to extract
-     the data from the JSON file, then analyse and plot it using Matplotlib. I wanted to make the app
-     a fully fledged website but stopped working on the project as I believed the end result would be
-     too similar to another site that I took inspiration from.`,
+		`The idea behind this project was to create an application that would analyse a user's typing patterns and provide targeted words containing letter combinations they struggled with, aiming to accelerate their typing improvement.`,
+		`To test this hypothesis, I developed a typing interface using React and Node.js that randomly selected words for the user to type. The application tracked hits and misses for individual letters and letter combinations, storing the data in a JSON file for later analysis.`,
+		`After gathering my own typing data through practice sessions, I wrote a Python script to extract and analyse the data from the JSON file, visualising the results with Matplotlib. While I initially planned to develop the app into a fully-fledged website, I paused the project as I felt the final concept was too similar to an existing site I had drawn inspiration from.`,
+		`This project demonstrates my ability to design experimental applications, work with data collection and analysis, and combine front-end development with back-end data processing.`,
 	],
 	projectPageURI: '/projects/touch-typing',
 	screenshotURIs: [

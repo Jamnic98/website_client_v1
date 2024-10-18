@@ -5,9 +5,8 @@ const pyramidSolitaire: ProjectDataType = {
 	title: 'Pyramid Solitaire',
 	summary: 'A program based on a variation of the card game, solitaire.',
 	paragraphs: [
-		`
-    This program was written in Python using the Pygame library. It features sprite animations, programmed with
-    vector maths, and can detect when there are no further moves playable.`,
+		`This program, written in Python using the Pygame library, features sprite animations programmed with vector mathematics. It also includes functionality to detect when no further moves are available, providing a smooth and responsive gameplay experience.`,
+		`This project demonstrates my ability to integrate graphics and physics-based calculations, as well as my focus on creating engaging, interactive applications. It showcases my early experience with game development and problem-solving using Python.`,
 	],
 	projectPageURI: '/projects/pyramid-solitaire',
 	screenshotURIs: [
