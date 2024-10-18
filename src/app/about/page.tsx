@@ -32,7 +32,7 @@ const About = () => (
 			<section className={styles.description}>
 				<h2>About Me</h2>
 				<p>
-					I am a Software Engineer with full-stack and DevOps experience, based
+					A Full Stack Software Engineer, based
 					in London. Connect with me on{' '}
 					<a
 						href={PERSONAL_LINKEDIN_URL}
@@ -42,28 +42,21 @@ const About = () => (
 					>
 						LinkedIn
 					</a>{' '}
-					and check out my repositories on{' '}
-					<a
+					and take a look at my <a
 						href={PERSONAL_GITHUB_REPO_URL}
 						target="_blank"
 						rel="noreferrer"
 						className={styles.projectLink}
 					>
 						GitHub
-					</a>
-					.
+					</a>{' '}
+					repositories.
 				</p>
 				<h2>Coding Experience</h2>
 				<p>
-					TypeScript and Python are the languages I am most experienced with, 
-					having used them both perofessionally and personally to build
-					performant and scalable web applications. 
-					Building full-stack applications with React, Node.js and
-					Flask. I also have experience with data science and machine learning
-					technologies like NumPy, pandas and Scikit-Learn, as well as DevOps
-					tools like Docker, Ansible, and Git CI/CD pipelines. 
-					These skills I aquired through a combination of self-study, 
-					online courses and working commercially as a Software Developer.
+					TypeScript and Python are the langauges I excell with, having used them both perofessionally and personally to build
+					performant and scalable full-stack web applications, with React, Node.js and Flask. Whilst working at Qudo, I gained exposure to
+					DevOps tools such as Docker, Ansible, and Git CI/CD pipelines.
 				</p>
 				<p>
 					Please take a look at some of the{' '}
@@ -74,13 +67,12 @@ const About = () => (
 				</p>
 				<h2>Hackathon Win</h2>
 				<p>
-					{/* TODO: FIX! */}
 					On the 8th of March 2024 I participated in the largest A.I Hackathon event in London.
-					It was a a 3 day event, held by Encode Club and hundreds of applicants. 
-					As the first hackathon I&apos;ve taken part in. 
-					With the help of my two teammates, we won the bounty for &quot;Most promising AI x Crypto Build&quot;
+					It was a a 3 day event, held by Encode Club and hundreds of applicants participated. 
+					As the first hackathon I&apos;ve taken part in but with the help of my two teammates, 
+					we won the bounty for &quot;Most promising AI x Crypto Build&quot;
 					with a AI generated, text-based game generator called AI Adventure World. 
-					It was a lot of fun and will be looking for more hackathons to join in the future.
+					It was a lot of fun and will be looking for more hackathons to join in the future!
 				</p>
 				<h2>Running and Marathon</h2>
 				<p>
