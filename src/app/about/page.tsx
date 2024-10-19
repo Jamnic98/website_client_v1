@@ -63,6 +63,8 @@ const About = () => (
 					</>
 					repositories.
 				</p>
+			</ section>
+			<section>
 				<h2>Coding Experience</h2>
 				<p>
 					TypeScript and Python are the langauges I excell with, having used them both commercially and personally to build
@@ -70,16 +72,25 @@ const About = () => (
 					During my 2.5 years at Qudo, I gained exposure to DevOps tools such as Docker, Ansible, and Git CI/CD pipelines.
 				</p>
 				<p>
-					Please take a look at some of the
+					As Lead AI developer at GeniusLead, I led a small team of junior team members to build bespoke voice applications for Alexa and Google Hub devices.
+					I was also responisble for my building my own projects, deploying them to AWS Lambda, the Alexa Store and Google Cloud Platform.
+				</p>
+				<p>
+					I have also completed a number of online courses, including an Advanced Python course,
+					an Intermediate Machine Learning course and a Python for Data Science course. 
+					I enjoy coding in my free time and have completed a number of projects in various languages. 
+					Take a look at some of the personal
 					<>
 						{' '}
 							<Link className={styles.projectLink} href="/projects">
-								personal projects
+								projects
 							</Link>
 						{' '}I have worked on.
 					</>
 				</p>
-				<h2>Hackathon Win</h2>
+			</section>
+			<section>
+			<h2>Hackathon Win</h2>
 				<p>
 					On the 8th of March 2024 I participated in the largest
 					<>
@@ -90,7 +101,7 @@ const About = () => (
 								rel="noreferrer"
 								className={styles.projectLink}
 							>
-								A.I Hackathon
+								AI Hackathon
 							</a>
 						{' '}
 					</>
@@ -99,7 +110,7 @@ const About = () => (
 				</p>
 				<p>
 					Alongside two other developers, we secured 1st place for the &quot;Most promising AI x Crypto Build&quot; bounty,
-					with a AI generated, text-based game generator called
+					with an AI generated, text-based game generator called
 					<>
 						{' '}
 							<a
@@ -114,6 +125,8 @@ const About = () => (
 					</>
 					It was a lot of fun and will be looking for more hackathons to join in the future!
 				</p>
+			</section>
+			<section>
 				<h2>Running and Marathon</h2>
 				<p>
 					Since 2020, I have cultivated a regular running routine,
