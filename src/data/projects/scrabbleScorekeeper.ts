@@ -7,7 +7,7 @@ const scrabbleScorekeeper: ProjectDataType = {
 	paragraphs: [
 		`This React-based project was designed to enhance the Scrabble playing experience by automating the score calculation, making the game more enjoyable and less time-consuming.`,
 		`It features an intuitive graphical user interface that includes a virtual Scrabble board and a table to display player scores. A built-in dictionary validates each word formed on the board. The board, table, and tiles are styled using CSS, providing a clean and user-friendly experience.`,
-		`This project demonstrates my ability to build interactive web applications with a focus on user experience, front-end development, and problem-solving using React and CSS.`
+		`This project demonstrates my ability to build interactive web applications with a focus on user experience, front-end development, and problem-solving using React and CSS.`,
 	],
 	projectPageURI: '/projects/scrabble-scorekeeper',
 	screenshotURIs: [

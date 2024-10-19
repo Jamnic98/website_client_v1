@@ -21,8 +21,8 @@ export default async function Page() {
 						<p>
 							Runs are recorded using the Strava app. The backend of this
 							website makes requests to Strava&apos;s API to pull my activity
-							data and store it in a MongoDB database. When this page loads, 
-							the database is queried and the data fetched.
+							data and store it in a MongoDB database. When this page loads, the
+							database is queried and the data fetched.
 						</p>
 						<p>
 							Since 2020, I have developed a regular running routine, aspiring
