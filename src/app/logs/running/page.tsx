@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import { PageHeader, RunningDataView } from 'components'
 
 const pageTitle = 'Running'
-const pageHeaderDescription = 'Here I detail my running stats and progression:'
+const pageHeaderDescription = 'Here are my running statistics:'
 const errorMsg = '*error retrieving running data*'
 
 export const metadata: Metadata = {
@@ -20,9 +20,9 @@ export default async function Page() {
 					<section>
 						<p>
 							Runs are recorded using the Strava app. The backend of this
-							website utilises Strava&apos;s API to pull my running data and
-							store it in a database. When the page loads, the database is
-							queried and the data is fetched.
+							website makes requests to Strava&apos;s API to pull my activity
+							data and store it in a MongoDB database. When this page loads, 
+							the database is queried and the data fetched.
 						</p>
 						<p>
 							Since 2020, I have developed a regular running routine, aspiring
