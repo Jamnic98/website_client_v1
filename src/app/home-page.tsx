@@ -39,7 +39,7 @@ export default function Page({ runData }: HomePageProps) {
 					{runData ? (
 						<>
 							<h3>
-								Running Stats for
+								Running Stats for{' '}
 								{/* current month as full word */}
 								{new Date().toLocaleString('default', { month: 'long' })}
 							</h3>
