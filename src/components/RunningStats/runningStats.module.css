@@ -1,6 +1,7 @@
 .allTimeStats {
-	display: flex;
+	/* display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	text-align: start;
+	width: fit-content; */
 }

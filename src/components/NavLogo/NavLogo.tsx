@@ -13,15 +13,14 @@ export const NavLogo: React.FC<NavLogoProps> = ({
 	handleClick,
 	linkURL = '/',
 }) => {
-	const width = useWidth() || 800
-
+	const width = useWidth()
 	return (
 		<Link
 			className={styles.navLogo}
 			href={linkURL}
 			onClick={handleClick ? () => handleClick() : undefined}
 		>
-			{width >= 800 ? 'Jamie Stimpson' : 'JS'}
+			{width ? (width < 800 ? 'JS' : 'Jamie Stimpson') : null}
 		</Link>
 	)
 }

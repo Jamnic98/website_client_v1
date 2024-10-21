@@ -1,18 +1,12 @@
 .homeContent {
 	display: grid;
-	grid-template-columns: 3fr 2fr;
-	row-gap: 0em;
+	grid-template-columns: 1fr 1fr;
 	column-gap: 2em;
 }
 
 .homeDescription {
 	grid-column-start: 1;
 	grid-column-end: 4;
-}
-
-.runningWeek {
-	display: grid;
-	row-gap: 1em;
 }
 
 .projectLink {
