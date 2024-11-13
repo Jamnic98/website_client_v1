@@ -52,18 +52,20 @@ export default function Page({ runData }: HomePageProps) {
 						{new Date().toLocaleString('default', { month: 'long' })}
 					</h3>
 					<hr className="subRule" />
-					{runData ? (
-						<>
-							<div className={styles.runningWeek}>
-								<RunningStats runData={runData} />
-								<div className={styles.allProjectsLink}>
-									<Link href="/logs/running">all stats</Link>
+					<div style={{ width: 'max-content' }}>
+						{runData ? (
+							<>
+								<div className={styles.runningWeek}>
+									<RunningStats runData={runData} />
+									<div className={styles.allProjectsLink}>
+										<Link href="/logs/running">all stats</Link>
+									</div>
 								</div>
-							</div>
-						</>
-					) : (
-						<div>*Error fetching run data</div>
-					)}
+							</>
+						) : (
+							<div>*Error fetching run data</div>
+						)}
+					</div>
 				</section>
 			</article>
 		</main>

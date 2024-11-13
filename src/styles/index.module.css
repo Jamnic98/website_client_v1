@@ -1,7 +1,7 @@
 .homeContent {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	column-gap: 2em;
+	grid-template-columns: 3fr 1fr;
+	column-gap: 4em;
 }
 
 .homeDescription {
@@ -20,7 +20,7 @@
 .allProjectsLink {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	text-align: center;
 }
 
 .allProjectsLink > a {
