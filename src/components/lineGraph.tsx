@@ -89,7 +89,7 @@ export const LineGraph: React.FC<LineGraphProps> = ({
 			.append('circle')
 			.attr('cx', (d: any) => x(new Date(d.x)))
 			.attr('cy', (d: any) => y(d.y))
-			.attr('r', 1.5)
+			.attr('r', 1)
 			.style('fill', '#df4a00')
 	})
 
@@ -132,7 +132,7 @@ export const LineGraph: React.FC<LineGraphProps> = ({
 					')'
 			)
 			.style('text-anchor', 'middle')
-			.style('font', '10px arial')
+			.style('font', '8px arial')
 			.text(xAxisObj.label)
 		return x
 	}
@@ -160,7 +160,7 @@ export const LineGraph: React.FC<LineGraphProps> = ({
 			.attr('y', +yAxisObj.labelOffset - margins.left)
 			.attr('dy', '1em')
 			.style('text-anchor', 'middle')
-			.style('font', '10px arial')
+			.style('font', '8px arial')
 			.text(yAxisObj.label)
 		return y
 	}

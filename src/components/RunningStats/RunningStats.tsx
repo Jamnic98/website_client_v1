@@ -8,8 +8,6 @@ import {
 } from 'utils'
 import { type RunDataType } from 'types'
 
-import styles from './runningStats.module.css'
-
 interface RunningStatsProps {
 	runData: RunDataType[]
 }
@@ -31,8 +29,8 @@ export const RunningStats: React.FC<RunningStatsProps> = ({ runData }) => {
 		: 0
 
 	return (
-		<div className={styles.allTimeStats}>
-			<ul className={styles.statGroup}>
+		<div>
+			<ul>
 				<li>
 					<span>{getTotalDistanceString(totalDistanceInMeters)}</span>
 				</li>
@@ -48,8 +46,6 @@ export const RunningStats: React.FC<RunningStatsProps> = ({ runData }) => {
 						)}
 					</span>
 				</li>
-			</ul>
-			<ul className={styles.statGroup}>
 				<li>
 					<span>{getTotalDurationString(totalDurationInSeconds)}</span>
 				</li>
