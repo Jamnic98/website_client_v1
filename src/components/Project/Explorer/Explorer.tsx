@@ -16,12 +16,12 @@ interface ExplorerProps {
 
 export const Explorer: React.FC<ExplorerProps> = ({ title, data }) => (
 	<>
-		<h3>{title}</h3>
+		<h3 style={{ marginBottom: 0 }}>{title}</h3>
 		<hr className="subRule" />
 		<div>
 			{data.map((d, index) => (
 				<Link className={styles.window} href={d.URI} key={index}>
-					<h3 className={styles.windowTitle}>{d.title}</h3>
+					<h4 className={styles.windowTitle}>{d.title}</h4>
 					{d.description}
 				</Link>
 			))}

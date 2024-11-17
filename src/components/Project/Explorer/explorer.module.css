@@ -1,8 +1,8 @@
 .window {
 	color: var(--c-text-dark);
 	background-color: rgba(10, 31, 44, 0.03);
-	padding: 1em;
-	margin: 1em 0 1em 0;
+	padding: 0.5em;
+	margin: 0.5em 0 0.5em 0;
 	display: block;
 }
 

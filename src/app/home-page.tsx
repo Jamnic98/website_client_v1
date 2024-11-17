@@ -47,19 +47,17 @@ export default function Page({ runData }: HomePageProps) {
 					/>
 				</section>
 				<section>
-					<h3>
-						Running Stats for {/* current month as full word */}
-						{new Date().toLocaleString('default', { month: 'long' })}
+					<h3 style={{ marginBottom: 0 }}>
+						{new Date().toLocaleString('default', { month: 'long' })} Running
+						Stats
 					</h3>
 					<hr className="subRule" />
 					<div style={{ width: 'max-content' }}>
 						{runData ? (
 							<>
-								<div className={styles.runningWeek}>
-									<RunningStats runData={runData} />
-									<div className={styles.allProjectsLink}>
-										<Link href="/logs/running">all stats</Link>
-									</div>
+								<RunningStats runData={runData} />
+								<div className={styles.allProjectsLink}>
+									<Link href="/logs/running">all stats</Link>
 								</div>
 							</>
 						) : (

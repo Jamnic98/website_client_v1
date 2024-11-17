@@ -32,9 +32,10 @@
 	color: var(--c-text-dark);
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
 	.homeContent {
 		display: flex;
 		flex-direction: column;
+		flex-wrap: wrap;
 	}
 }
