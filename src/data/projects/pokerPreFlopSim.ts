@@ -11,7 +11,10 @@ const pokerPreFlopSim: ProjectDataType = {
 		`This project is a valuable resource for poker enthusiasts, players, and analysts looking to better understand the probabilities and dynamics of poker hands. It allows users to experiment with different player counts and simulation runs to gather a wide range of data, making it a flexible tool for anyone interested in exploring poker strategies. By visualising win rates and grouping data based on starting hands, the tool empowers users to make more informed decisions when playing poker.`,
 	],
 	projectPageURI: '/projects/poker-pre-flop-sim',
-	screenshotURIs: ['/images/projects/poker-pre-flop-sim-results-graph.png'],
+	screenshotURIs: [
+		'/images/projects/poker-sim.png',
+		'/images/projects/poker-pre-flop-sim-results-graph.png',
+	],
 	mainLanguage: 'Python',
 	links: [
 		{

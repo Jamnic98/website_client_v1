@@ -15,7 +15,7 @@ const scrabbleScorekeeper: ProjectDataType = {
 		'/images/projects/scrabble-table.png',
 		'/images/projects/scrabble-board.png',
 	],
-	mainLanguage: 'JavaScript',
+	mainLanguage: 'TypeScript',
 	links: [
 		{
 			label: 'project link',
@@ -28,7 +28,7 @@ const scrabbleScorekeeper: ProjectDataType = {
 			type: LinkType.EXTERNAL,
 		},
 	],
-	techStack: ['JavaScript', 'React', 'HTML', 'CSS'],
+	techStack: ['TypeScript', 'React', 'HTML', 'CSS'],
 }
 
 export default scrabbleScorekeeper

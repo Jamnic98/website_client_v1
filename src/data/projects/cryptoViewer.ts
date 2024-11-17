@@ -10,7 +10,10 @@ const readingLog: ProjectDataType = {
 		This project not only showcased my proficiency in hardware and software integration but also demonstrated my ability to troubleshoot and innovate under constraints, turning setbacks into opportunities for creative problem-solving.`,
 	],
 	projectPageURI: '/projects/crypto-viewer',
-	screenshotURIs: ['/images/projects/crypto-viewer.jpg'],
+	screenshotURIs: [
+		'/images/projects/crypto-viewer.png',
+		'/images/projects/crypto-viewer-pcb.png',
+	],
 	mainLanguage: 'C++',
 	links: [],
 	techStack: ['C++', 'NodeMCU ESP-12', '2.2" TFT', '16x2 LCD'],
