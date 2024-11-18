@@ -23,7 +23,7 @@ const pokerPreFlopSim: ProjectDataType = {
 			type: LinkType.EXTERNAL,
 		},
 	],
-	techStack: ['Python', 'Matplotlib', 'Pandas'],
+	techStack: ['Python', 'Matplotlib', 'NumPy', 'Pandas'],
 }
 
 export default pokerPreFlopSim
