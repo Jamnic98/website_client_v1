@@ -8,6 +8,8 @@ import {
 } from 'utils'
 import { type RunDataType } from 'types'
 
+import styles from './running-stats.module.css'
+
 interface RunningStatsProps {
 	runData: RunDataType[]
 }
@@ -29,39 +31,37 @@ export const RunningStats: React.FC<RunningStatsProps> = ({ runData }) => {
 		: 0
 
 	return (
-		<div>
-			<ul>
-				<li>
-					<span>{getTotalDistanceString(totalDistanceInMeters)}</span>
-				</li>
-				<li>
-					<span>{getFurthestDistanceString(furthestDistanceInMeters)}</span>
-				</li>
-				<li>
-					<span>
-						{getAverageDistanceString(
-							distanceList.length
-								? totalDistanceInMeters / distanceList.length
-								: 0
-						)}
-					</span>
-				</li>
-				<li>
-					<span>{getTotalDurationString(totalDurationInSeconds)}</span>
-				</li>
-				<li>
-					<span>
-						{getAverageDurationString(
-							durationList.length
-								? totalDurationInSeconds / durationList.length
-								: 0
-						)}
-					</span>
-				</li>
-				<li>
-					<span>Run count: {runData.length}</span>
-				</li>
-			</ul>
-		</div>
+		<ul className={styles.splitList}>
+			<li>
+				<span>{getTotalDistanceString(totalDistanceInMeters)}</span>
+			</li>
+			<li>
+				<span>{getFurthestDistanceString(furthestDistanceInMeters)}</span>
+			</li>
+			<li>
+				<span>
+					{getAverageDistanceString(
+						distanceList.length
+							? totalDistanceInMeters / distanceList.length
+							: 0
+					)}
+				</span>
+			</li>
+			<li>
+				<span>{getTotalDurationString(totalDurationInSeconds)}</span>
+			</li>
+			<li>
+				<span>
+					{getAverageDurationString(
+						durationList.length
+							? totalDurationInSeconds / durationList.length
+							: 0
+					)}
+				</span>
+			</li>
+			<li>
+				<span>Run count: {runData.length}</span>
+			</li>
+		</ul>
 	)
 }

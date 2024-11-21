@@ -3,7 +3,6 @@
 	flex-direction: row;
 	background-color: rgb(250, 250, 250);
 	box-shadow: var(--elevated-content);
-	/* max-width: ; */
 	height: 140px;
 }
 

@@ -1,16 +1,8 @@
-.main {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap-reverse;
-	justify-content: space-between;
-}
-
 .projects {
 	margin: 1em 0;
 	display: grid;
 	row-gap: 1.5em;
 	column-gap: 1.5em;
-	grid-template-columns: 1fr 1fr;
 }
 
 .select {
