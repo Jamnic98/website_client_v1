@@ -38,27 +38,29 @@ export default function Page() {
 						))}
 					</select>
 				</section>
-				<section className={styles.projects}>
-					{projects
-						.filter(
-							(projectData: ProjectDataType) =>
-								language === '' || projectData.mainLanguage === language
-						)
-						.map((projectData: ProjectDataType) => (
-							<Link
-								href={`/projects/${projectData.id}`}
-								// prefetch={true}
-								data-testid="application-card"
-								key={projectData.id}
-							>
-								<Card
-									title={projectData.title}
-									description={projectData.summary}
-									imageURI={projectData.screenshotURIs[0]}
+				<section>
+					<div className={styles.projects}>
+						{projects
+							.filter(
+								(projectData: ProjectDataType) =>
+									language === '' || projectData.mainLanguage === language
+							)
+							.map((projectData: ProjectDataType) => (
+								<Link
+									href={`/projects/${projectData.id}`}
+									// prefetch={true}
+									data-testid="application-card"
 									key={projectData.id}
-								/>
-							</Link>
-						))}
+								>
+									<Card
+										title={projectData.title}
+										description={projectData.summary}
+										imageURI={projectData.screenshotURIs[0]}
+										key={projectData.id}
+									/>
+								</Link>
+							))}
+					</div>
 				</section>
 			</article>
 		</main>

@@ -14,7 +14,8 @@ export const RunningDataView = ({ runData }: RunningDataViewProps) => {
 			<h2>Running Data</h2>
 			<hr className="subRule" />
 			<RunningStats runData={runData} />
-			<h3>Date / Distance Graph</h3>
+			<br />
+			<h3 style={{ fontSize: '1em' }}>Date / Distance:</h3>
 			<LineGraph
 				data={runData?.map((d: any) => {
 					const { start_date_local, distance } = d
@@ -33,7 +34,7 @@ export const RunningDataView = ({ runData }: RunningDataViewProps) => {
 					labelOffset: -10,
 				}}
 			/>
-			<h3>Distance / Average Pace Graph</h3>
+			<h3 style={{ fontSize: '1em' }}>Distance / Average Pace:</h3>
 			<ScatterGraph
 				data={runData?.map((d: any) => {
 					const { distance, duration, start_date_local } = d
@@ -48,7 +49,7 @@ export const RunningDataView = ({ runData }: RunningDataViewProps) => {
 					labelOffset: 0,
 				}}
 				yAxisObj={{
-					label: 'pace (minutes / km)',
+					label: 'ave. pace (min / km)',
 					labelOffset: -15,
 					labelFormatter: (d: any) => {
 						const minutes = Math.floor(d)

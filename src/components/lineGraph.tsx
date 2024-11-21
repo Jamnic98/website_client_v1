@@ -132,7 +132,7 @@ export const LineGraph: React.FC<LineGraphProps> = ({
 					')'
 			)
 			.style('text-anchor', 'middle')
-			.style('font', '8px arial')
+			.style('font', '0.4em arial')
 			.text(xAxisObj.label)
 		return x
 	}
@@ -160,7 +160,7 @@ export const LineGraph: React.FC<LineGraphProps> = ({
 			.attr('y', +yAxisObj.labelOffset - margins.left)
 			.attr('dy', '1em')
 			.style('text-anchor', 'middle')
-			.style('font', '8px arial')
+			.style('font', '0.4em arial')
 			.text(yAxisObj.label)
 		return y
 	}

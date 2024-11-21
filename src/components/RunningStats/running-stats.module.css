@@ -1,0 +1,12 @@
+.splitList {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	column-gap: 2em;
+	/* padding: 0; */
+	/* margin: 0; */
+	list-style-position: outside;
+}
+
+/* .splitList li {
+  max-width: fit-content;
+} */
