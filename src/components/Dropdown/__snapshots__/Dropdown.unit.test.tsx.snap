@@ -2,21 +2,21 @@
 
 exports[`Dropdown renders Dropdown unchanged 1`] = `
 <div
-  className='dropdown closed'
-  data-testid='application-dropdown'
+  className="dropdown closed"
+  data-testid="application-dropdown"
 >
   <div
-    className='dropdownItem'
+    className="dropdownItem"
   >
     <div />
   </div>
   <div
-    className='dropdownItem'
+    className="dropdownItem"
   >
     <div />
   </div>
   <div
-    className='dropdownItem'
+    className="dropdownItem"
   >
     <div />
   </div>

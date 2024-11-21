@@ -2,7 +2,7 @@
 
 exports[`test Caret renders Caret unchanged 1`] = `
 <div
-  className='caret up'
+  className="caret up"
 >
   ^
 </div>
