@@ -132,8 +132,8 @@ const About = () => (
 			<section>
 				<h2>Running and Marathon</h2>
 				<p>
-					Since 2020, I have cultivated a regular running routine, aspiring to
-					one day complete an ultramarathon (&#8805;50km).
+					Since late 2020, I have developed a regular running routine, aspiring
+					to one day complete an ultramarathon (&#8805;50km).
 				</p>
 				<p>
 					On the 22nd of October 2023, I ran the Battersea Park Marathon and
