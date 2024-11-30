@@ -3,7 +3,7 @@
 	position: sticky;
 	top: 0;
 	background-color: var(--c-bg-secondary);
-	color: var(--c-text-navbar);
+	color: var(--c-text-light);
 	z-index: 1;
 }
 

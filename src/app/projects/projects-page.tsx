@@ -18,6 +18,12 @@ export default function Page() {
 	]
 	const [language, setLanguage] = useState(languages[0])
 
+	// Filter the projects based on the selected language
+	const filteredProjects = projects.filter(
+		(projectData: ProjectDataType) =>
+			language === '' || projectData.mainLanguage === language
+	)
+
 	return (
 		<main className="container">
 			<PageHeader
@@ -40,26 +46,19 @@ export default function Page() {
 				</section>
 				<section>
 					<div className={styles.projects}>
-						{projects
-							.filter(
-								(projectData: ProjectDataType) =>
-									language === '' || projectData.mainLanguage === language
-							)
-							.map((projectData: ProjectDataType) => (
-								<Link
-									href={`/projects/${projectData.id}`}
-									// prefetch={true}
-									data-testid="application-card"
-									key={projectData.id}
-								>
-									<Card
-										title={projectData.title}
-										description={projectData.summary}
-										imageURI={projectData.screenshotURIs[0]}
-										key={projectData.id}
-									/>
-								</Link>
-							))}
+						{filteredProjects.map((projectData: ProjectDataType) => (
+							<Link
+								href={`/projects/${projectData.id}`}
+								data-testid="application-card"
+								key={projectData.id}
+							>
+								<Card
+									title={projectData.title}
+									description={projectData.summary}
+									imageURI={projectData.screenshotURIs[0]}
+								/>
+							</Link>
+						))}
 					</div>
 				</section>
 			</article>

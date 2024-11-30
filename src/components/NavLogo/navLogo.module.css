@@ -9,5 +9,5 @@
 }
 
 .navLogo:hover {
-	color: var(--c-text-navbar);
+	color: var(--c-text-light);
 }

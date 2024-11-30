@@ -1,10 +1,10 @@
 :root {
-	--c-bg-primary: #fdfdfd;
+	--c-bg-primary: #f7fbfc;
 	--c-bg-secondary: #01051a;
-	--c-text-dark: #1b1d29;
-	--c-text-light: white;
-	--c-link: #df4a00;
-	--c-text-navbar: white;
+	--c-text-dark: #141416;
+	--c-text-light: #f7fbfc;
+	--c-link: #ff5500;
+	--c-text-light: #f7fbfc;
 	--navbar-height: 3em;
 	--footer-height: 3em;
 	--elevated-content: 4px 4px 10px -2px gray;

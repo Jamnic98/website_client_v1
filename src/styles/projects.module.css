@@ -1,20 +1,21 @@
 .projects {
-	margin: 1em 0;
 	display: grid;
-	row-gap: 1.5em;
-	column-gap: 1.5em;
+	grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
+	gap: 1.5em; /* Spacing between rows and columns */
 }
 
-.select {
-	outline: none;
-}
-
-.projects {
-	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-}
-
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 1024px) {
 	.projects {
-		grid-template-columns: auto;
+		grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
 	}
+}
+
+@media screen and (max-width: 640px) {
+	.projects {
+		grid-template-columns: 1fr; /* Single column for smaller screens */
+	}
+}
+
+.projects > a {
+	width: 100%; /* Cards take full column width */
 }
