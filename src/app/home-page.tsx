@@ -1,8 +1,9 @@
 'use client'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 import { PageHeader, Explorer, RunningStats } from 'components'
-import { RunDataType } from 'types'
+import { Project, RunDataType } from 'types'
 import projects from 'data/projects'
 import styles from 'styles/index.module.css'
 
@@ -11,6 +12,22 @@ interface HomePageProps {
 }
 
 export default function Page({ runData }: HomePageProps) {
+	const [randomProjects, setRandomProjects] = useState<Partial<Project>[]>([])
+
+	useEffect(() => {
+		// Randomly shuffle the projects only on the client
+		const shuffledProjects = projects
+			.map((project) => ({
+				title: project.title,
+				summary: project.summary,
+				projectPageURI: project.projectPageURI,
+			}))
+			.sort(() => Math.random() - 0.5) // Shuffle the array
+			.slice(0, 3) // Get the first 3 projects
+
+		setRandomProjects(shuffledProjects)
+	}, [])
+
 	return (
 		<main className="container">
 			<PageHeader title="Home" description="" />
@@ -34,16 +51,7 @@ export default function Page({ runData }: HomePageProps) {
 				<section>
 					<Explorer
 						title="Project Explorer"
-						data={projects
-							.map((project) => {
-								return {
-									title: project.title,
-									description: project.summary,
-									URI: project.projectPageURI,
-								}
-							})
-							// randomly select 3 projects
-							.slice(0, 3)}
+						data={randomProjects} // Use the state for random projects
 					/>
 				</section>
 				<section>

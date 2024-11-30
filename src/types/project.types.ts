@@ -5,7 +5,7 @@ export enum LinkType {
 
 export type ProjectLinkDataType = { URL: string; label: string; type: LinkType }
 
-export type ProjectDataType = {
+export type Project = {
 	id: string
 	title: string
 	summary: string

@@ -1,6 +1,6 @@
-import { LinkType, ProjectDataType } from 'types'
+import { LinkType, Project } from 'types'
 
-const portfolioWebsite: ProjectDataType = {
+const portfolioWebsite: Project = {
 	id: 'portfolio-website',
 	title: 'Portfolio Website',
 	summary: 'A website.',

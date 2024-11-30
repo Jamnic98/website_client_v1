@@ -1,6 +1,6 @@
-import { ProjectDataType, LinkType } from 'types'
+import { Project, LinkType } from 'types'
 
-const inventoryManagementSystem: ProjectDataType = {
+const inventoryManagementSystem: Project = {
 	id: 'inventory-management-system',
 	title: 'Inventory Management System',
 	summary: 'A M.E.R.N stack app for tracking inventory.',

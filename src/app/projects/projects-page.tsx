@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 import { Card, PageHeader } from 'components'
 import projects from 'data/projects'
-import { ProjectDataType } from 'types'
+import { Project } from 'types'
 import styles from 'styles/projects.module.css'
 import Link from 'next/link'
 
@@ -11,16 +11,14 @@ export default function Page() {
 	const languages = [
 		'',
 		...(Array.from(
-			new Set(
-				projects.map((projectData: ProjectDataType) => projectData.mainLanguage)
-			)
+			new Set(projects.map((projectData: Project) => projectData.mainLanguage))
 		) as string[]),
 	]
 	const [language, setLanguage] = useState(languages[0])
 
 	// Filter the projects based on the selected language
 	const filteredProjects = projects.filter(
-		(projectData: ProjectDataType) =>
+		(projectData: Project) =>
 			language === '' || projectData.mainLanguage === language
 	)
 
@@ -46,7 +44,7 @@ export default function Page() {
 				</section>
 				<section>
 					<div className={styles.projects}>
-						{filteredProjects.map((projectData: ProjectDataType) => (
+						{filteredProjects.map((projectData: Project) => (
 							<Link
 								href={`/projects/${projectData.id}`}
 								data-testid="application-card"

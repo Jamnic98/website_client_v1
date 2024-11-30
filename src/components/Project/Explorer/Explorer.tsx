@@ -1,17 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
 
+import { Project } from 'types'
 import styles from './explorer.module.css'
-
-type ExplorerDataType = {
-	title: string
-	description: string
-	URI: string
-}
 
 interface ExplorerProps {
 	title: string
-	data: ExplorerDataType[]
+	data: Partial<Project>[]
 }
 
 export const Explorer: React.FC<ExplorerProps> = ({ title, data }) => (
@@ -20,9 +15,13 @@ export const Explorer: React.FC<ExplorerProps> = ({ title, data }) => (
 		<hr className="subRule" />
 		<div>
 			{data.map((d, index) => (
-				<Link className={styles.window} href={d.URI} key={index}>
+				<Link
+					className={styles.window}
+					href={d.projectPageURI || ''}
+					key={index}
+				>
 					<h4 className={styles.windowTitle}>{d.title}</h4>
-					{d.description}
+					{d.summary}
 				</Link>
 			))}
 			<div className={styles.allProjectsLink}>

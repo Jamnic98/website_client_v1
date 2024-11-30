@@ -1,6 +1,6 @@
-import { LinkType, ProjectDataType } from 'types'
+import { LinkType, Project } from 'types'
 
-const blueCheeseClassifier: ProjectDataType = {
+const blueCheeseClassifier: Project = {
 	id: 'blue-cheese-classifier',
 	title: 'Blue Cheese Classifier',
 	summary: 'An image classifier designed to identify blue cheese.',

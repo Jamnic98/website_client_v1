@@ -1,6 +1,6 @@
-import { LinkType, ProjectDataType } from 'types'
+import { LinkType, Project } from 'types'
 
-const pokerPreFlopSim: ProjectDataType = {
+const pokerPreFlopSim: Project = {
 	id: 'poker-pre-flop-sim',
 	title: 'Poker Pre-flop Simulator',
 	summary:
