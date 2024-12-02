@@ -3,14 +3,13 @@ import { LinkType, Project } from 'types'
 const portfolioWebsite: Project = {
 	id: 'portfolio-website',
 	title: 'Portfolio Website',
-	summary: 'A website.',
+	summary: 'My portfolio website.',
 	paragraphs: [
-		`This is the second version of my portfolio website. The original version I used React to build a Single Page Application.`,
-		`Since I wanted a way of displaying my running activity and statistics I`,
-		`The front end was built using Next.js and TypeScript. Project pages are generated dynamically from a template and a data file containing project information, streamlining the process of adding new content. I used the same method to create project 'cards' displayed on the main projects page.`,
-		`For the running section, I set up a Node.js server to load my running data from a MongoDB database. The data is visualised using D3.js, which generates a scatter plot of all the data points. The server checks twice daily for new data and updates the database accordingly. I deployed the server using AWS Elastic Beanstalk, ensuring it runs smoothly in the cloud.`,
+		`This is the second version of my portfolio website. The original version was a Single Page Application built with React and JavaScript.`,
+		`Since I wanted a way of displaying my running activity and statistics I decided to implement a backend to create a full stack application which I originally implemented using Node.JS but recoded it in Python to simplify maintainance and integrating new features.`,
+		`I also redesigned the front end to instead use Next.js and TypeScript. Project pages are generated dynamically from a template and a data file containing project information, streamlining the process of adding new content. I used the same method to create project 'cards' displayed on the main projects page.`,
+		`For the running section, I set up a FastAPI server to load my running data from a MongoDB database. The data is visualised using D3.js, which generates a scatter plot of all the data points. The server checks twice daily for new data and updates the database accordingly. I deployed the server using AWS Elastic Beanstalk, ensuring it runs smoothly in the cloud.`,
 	],
-
 	projectPageURI: '/projects/portfolio-website',
 	screenshotURIs: [
 		'/images/projects/portfolio-website.png',
