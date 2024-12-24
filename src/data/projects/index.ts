@@ -13,17 +13,17 @@ import scrabbleScorekeeper from './scrabbleScorekeeper'
 import touchTyping from './touchTyping'
 
 const projects: Project[] = [
-	blueCheeseClassifier,
-	cryptoViewer,
-	inventoryManagementSystem,
-	libraryBookRenewer,
-	looseChangeCalculator,
-	pokerPreFlopSim,
-	portfolioWebsite,
-	pyramidSolitaire,
-	readingLog,
-	scrabbleScorekeeper,
-	touchTyping,
+  blueCheeseClassifier,
+  cryptoViewer,
+  inventoryManagementSystem,
+  libraryBookRenewer,
+  looseChangeCalculator,
+  pokerPreFlopSim,
+  portfolioWebsite,
+  pyramidSolitaire,
+  readingLog,
+  scrabbleScorekeeper,
+  touchTyping,
 ]
 
 export default projects

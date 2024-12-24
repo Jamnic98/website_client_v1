@@ -3,9 +3,9 @@ import { Metadata } from 'next'
 import Layout from './projects-page'
 
 export const metadata: Metadata = {
-	title: 'Projects',
+  title: 'Projects',
 }
 
 export default function Projects() {
-	return <Layout />
+  return <Layout />
 }

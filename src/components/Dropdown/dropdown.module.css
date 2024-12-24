@@ -1,26 +1,26 @@
 .dropdown {
-	z-index: 1;
-	width: 120%;
-	position: absolute;
-	top: 0;
-	max-height: 0;
-	transition: max-height 0.3s ease;
-	overflow: hidden;
-	background-color: inherit;
+  z-index: 1;
+  width: 120%;
+  position: absolute;
+  top: 0;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+  background-color: inherit;
 }
 
 .dropdown.open {
-	max-height: 50vh;
+  max-height: 50vh;
 }
 
 .dropdown.closed {
-	z-index: 0;
+  z-index: 0;
 }
 
 .dropdownItem {
-	position: relative;
-	height: 100%;
-	height: 2.4em;
-	text-align: center;
-	background-color: inherit;
+  position: relative;
+  height: 100%;
+  height: 2.4em;
+  text-align: center;
+  background-color: inherit;
 }

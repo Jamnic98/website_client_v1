@@ -1,43 +1,43 @@
 .card {
-	display: flex;
-	flex-direction: row;
-	background-color: rgb(250, 250, 250);
-	box-shadow: var(--elevated-content);
-	height: 140px;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(250, 250, 250);
+  box-shadow: var(--elevated-content);
+  height: 140px;
 }
 
 .card:hover .img {
-	transform: scale(1.15);
+  transform: scale(1.15);
 }
 
 .card:hover .title {
-	color: var(--c-text-dark);
+  color: var(--c-text-dark);
 }
 
 .title {
-	font-size: 1em;
-	font-weight: bold;
-	margin-bottom: 0.5em;
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
 }
 
 .imgContainer {
-	min-width: 140px;
-	min-height: 140px;
-	overflow: hidden;
-	position: relative;
+  min-width: 140px;
+  min-height: 140px;
+  overflow: hidden;
+  position: relative;
 }
 
 .textContainer {
-	box-sizing: border-box;
-	text-align: left;
-	color: var(--c-link);
-	padding: 0.5em;
-	line-height: 1em;
-	overflow: hidden;
-	text-overflow: ellipsis;
+  box-sizing: border-box;
+  text-align: left;
+  color: var(--c-link);
+  padding: 0.5em;
+  line-height: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .description {
-	color: var(--c-text-dark);
-	font-size: 80%;
+  color: var(--c-text-dark);
+  font-size: 80%;
 }
