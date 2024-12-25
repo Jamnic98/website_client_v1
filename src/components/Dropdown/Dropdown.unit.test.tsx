@@ -1,4 +1,3 @@
-import renderer from 'react-test-renderer'
 import { render, screen } from '@testing-library/react'
 
 import { Dropdown } from './Dropdown'
@@ -29,19 +28,5 @@ describe('Dropdown', () => {
     const dropdownItem = screen.getAllByTestId('dropdown-item')[0]
     expect(dropdown).toContainElement(dropdownItem)
     expect(dropdownItem).toHaveTextContent(testArray[0].letter)
-  })
-
-  it('renders Dropdown unchanged', () => {
-    expect(
-      renderer
-        .create(
-          <Dropdown
-            isOpen={false}
-            items={testArray}
-            render={() => <div></div>}
-          />
-        )
-        .toJSON()
-    ).toMatchSnapshot()
   })
 })

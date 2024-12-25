@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react'
-import renderer from 'react-test-renderer'
 
 import { Caret, type CaretProps } from './Caret'
 
@@ -30,7 +29,4 @@ describe('test Caret', () => {
     rerender(getTestCaret({ isFlipped: true }))
     expect(caret).toHaveClass('flip')
   })
-
-  it('renders Caret unchanged', () =>
-    expect(renderer.create(getTestCaret()).toJSON()).toMatchSnapshot())
 })

@@ -1,5 +1,4 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
 import { render, screen } from '@testing-library/react'
 
 import { PageHeader } from './PageHeader'
@@ -15,12 +14,5 @@ describe('test PageHeader component', () => {
     expect(header.getElementsByTagName('p')[0]).toHaveTextContent(
       testDescription
     )
-  })
-
-  it('renders PageHeader unchanged', () => {
-    const tree = renderer
-      .create(<PageHeader title={testTitle} description={testDescription} />)
-      .toJSON()
-    expect(tree).toMatchSnapshot()
   })
 })

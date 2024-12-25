@@ -1,53 +1,41 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import Image from 'next/image'
 
-import { PageHeader, ProjectLinks } from 'components'
+import {
+  PageHeader,
+  ProjectDescriptions,
+  ProjectLinks,
+  ProjectGallery,
+} from 'components'
 import projects_data from 'data/projects'
 import styles from 'styles/project.module.css'
 
-const IMAGE_DIMENSIONS = { width: 275, height: 275 }
-
 export const dynamicParams = false
 
-interface ProjectGalleryProps {
-  screenshotURIs: string[]
+export const generateStaticParams = () => {
+  return projects_data.map((project) => ({
+    id: project.id,
+  }))
 }
 
-interface ProjectDescriptionsProps {
-  paragraphs: string[]
+const getProject = (params: { id: string }) =>
+  projects_data.filter((project) => project.id === params.id)[0]
+
+export async function generateMetadata(props: ProjectProps): Promise<Metadata> {
+  const params = await props.params
+  const projectData = getProject({ id: params.id })
+  return {
+    title: projectData.title,
+  }
 }
 
 interface ProjectProps {
-  params: { id: string }
+  params: Promise<{ id: string }>
 }
 
-const ProjectGallery: React.FC<ProjectGalleryProps> = ({ screenshotURIs }) => (
-  <>
-    {screenshotURIs.map((screenshotURI, index) => (
-      <Image
-        src={screenshotURI}
-        key={index}
-        alt="project image"
-        width={IMAGE_DIMENSIONS.width}
-        height={IMAGE_DIMENSIONS.height}
-      />
-    ))}
-  </>
-)
-
-const ProjectDescriptions: React.FC<ProjectDescriptionsProps> = ({
-  paragraphs,
-}) => (
-  <>
-    {paragraphs.map((paragraph: string, index) => (
-      <p key={index}>{paragraph}</p>
-    ))}
-  </>
-)
-
-export default async function Page({ params }: ProjectProps) {
-  const projectData = await getProject({ id: params.id })
+export default async function Page(props: ProjectProps) {
+  const params = await props.params
+  const projectData = getProject({ id: params.id })
 
   return (
     <main className="container">
@@ -57,11 +45,15 @@ export default async function Page({ params }: ProjectProps) {
           <b>Tech stack: </b>
           {projectData.techStack.map((tech: string) => tech).join(', ')}
         </section>
+
+        {/* Project Links */}
         {projectData.links.length ? (
           <section>
             <ProjectLinks links={projectData.links} />
           </section>
         ) : null}
+
+        {/* Gallery */}
         <section className={styles.gallery}>
           <ProjectGallery screenshotURIs={projectData.screenshotURIs} />
         </section>
@@ -74,22 +66,4 @@ export default async function Page({ params }: ProjectProps) {
       </article>
     </main>
   )
-}
-
-const getProject = async (params: { id: string }) =>
-  projects_data.filter((project) => project.id === params.id)[0]
-
-export async function generateMetadata({
-  params,
-}: ProjectProps): Promise<Metadata> {
-  const projectData = await getProject({ id: params.id })
-  return {
-    title: projectData.title,
-  }
-}
-
-export async function generateStaticParams() {
-  return projects_data.map((project) => ({
-    id: project.id,
-  }))
 }

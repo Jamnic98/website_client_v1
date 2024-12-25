@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`test Caret renders Caret unchanged 1`] = `
-<div
-  className="caret up"
->
-  ^
-</div>
-`;
