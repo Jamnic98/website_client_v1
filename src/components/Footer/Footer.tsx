@@ -1,7 +1,10 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import classNames from 'classnames'
 
-import { PERSONAL_GITHUB_REPO_URL, PERSONAL_LINKEDIN_URL } from 'settings'
+import {
+  PERSONAL_GITHUB_REPO_URL,
+  PERSONAL_LINKEDIN_URL,
+} from 'utils/constants'
 import styles from './footer.module.css'
 
 export const Footer: React.FC = () => (

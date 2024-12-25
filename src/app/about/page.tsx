@@ -7,7 +7,7 @@ import {
   AI_HACKATHON_LINK,
   PERSONAL_LINKEDIN_URL,
   PERSONAL_GITHUB_REPO_URL,
-} from 'settings/constants'
+} from 'utils/constants'
 import styles from 'styles/about.module.css'
 
 const aboutMePhotoDimensions = { width: 220, height: 220 }
