@@ -3,11 +3,11 @@ import { useState } from 'react'
 import classNames from 'classnames'
 
 import { MobileMenuToggle, Navlink, NavLogo } from 'components'
-import { type NavlinkDataType } from 'types'
+import { type NavlinkData } from 'types'
 import styles from './navbar.module.css'
 
 export interface NavbarProps {
-  navlinkObjArr: NavlinkDataType[]
+  navlinkObjArr: NavlinkData[]
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ navlinkObjArr }) => {

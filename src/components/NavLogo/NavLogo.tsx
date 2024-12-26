@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 import { useWidth } from 'utils'
+import { MOBILE_SCREEN_WIDTH } from 'utils/constants'
 import styles from './navLogo.module.css'
 
 export interface NavLogoProps {
@@ -20,7 +21,7 @@ export const NavLogo: React.FC<NavLogoProps> = ({
       href={linkURL}
       onClick={handleClick ? () => handleClick() : undefined}
     >
-      {width ? (width < 800 ? 'JS' : 'Jamie Stimpson') : null}
+      {width && (width < MOBILE_SCREEN_WIDTH ? 'JS' : 'Jamie Stimpson')}
     </Link>
   )
 }

@@ -3,12 +3,12 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 import { PageHeader, Explorer, RunningStats } from 'components'
-import { Project, RunDataType } from 'types'
+import { Project, RunData } from 'types'
 import projects from 'data/projects'
 import styles from 'styles/index.module.css'
 
 interface HomePageProps {
-  runData: RunDataType[] | null
+  runData: RunData[] | null
 }
 
 export default function Page({ runData }: HomePageProps) {

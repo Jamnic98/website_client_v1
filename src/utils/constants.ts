@@ -1,6 +1,6 @@
-import type { NavlinkDataType } from 'types'
+import type { NavlinkData } from 'types'
 
-export const navlinkObjArr: NavlinkDataType[] = [
+export const navlinkObjArr: NavlinkData[] = [
   {
     label: 'logs',
     url: '/logs/running',
@@ -15,13 +15,15 @@ export const navlinkObjArr: NavlinkDataType[] = [
   { label: 'about ', url: '/about', children: [] },
 ]
 
-export const PERSONAL_GITHUB_REPO_URL =
+export const MOBILE_SCREEN_WIDTH = 800
+
+export const PERSONAL_GITHUB_URL =
   'https://github.com/Jamnic98?tab=repositories'
 
 export const PERSONAL_LINKEDIN_URL = 'https://linkedin.com/in/jamie-p-stimpson/'
 
-export const AI_HACKATHON_LINK =
+export const AI_HACKATHON_URL =
   'https://www.encode.club/ai-hackathon#:~:text=London%2C%20March%208%2D10th%202024,Pl%2C%20London%2C%20E14%205RE.'
 
-export const AI_ADVENTURE_WRLD_GITHUB_LINK =
+export const AI_ADVENTURE_WRLD_GITHUB_URL =
   'https://github.com/duybuile/ai-text-game'

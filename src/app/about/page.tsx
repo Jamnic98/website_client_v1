@@ -3,10 +3,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import {
-  AI_ADVENTURE_WRLD_GITHUB_LINK,
-  AI_HACKATHON_LINK,
+  AI_ADVENTURE_WRLD_GITHUB_URL,
+  AI_HACKATHON_URL,
   PERSONAL_LINKEDIN_URL,
-  PERSONAL_GITHUB_REPO_URL,
+  PERSONAL_GITHUB_URL,
 } from 'utils/constants'
 import styles from 'styles/about.module.css'
 
@@ -50,7 +50,7 @@ const About = () => (
           <>
             {' '}
             <a
-              href={PERSONAL_GITHUB_REPO_URL}
+              href={PERSONAL_GITHUB_URL}
               target="_blank"
               rel="noreferrer"
               className={styles.projectLink}
@@ -99,7 +99,7 @@ const About = () => (
           <>
             {' '}
             <a
-              href={AI_HACKATHON_LINK}
+              href={AI_HACKATHON_URL}
               target="_blank"
               rel="noreferrer"
               className={styles.projectLink}
@@ -117,7 +117,7 @@ const About = () => (
           <>
             {' '}
             <a
-              href={AI_ADVENTURE_WRLD_GITHUB_LINK}
+              href={AI_ADVENTURE_WRLD_GITHUB_URL}
               target="_blank"
               rel="noreferrer"
               className={styles.projectLink}

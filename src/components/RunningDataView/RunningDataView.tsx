@@ -2,10 +2,10 @@
 import * as d3 from 'd3'
 
 import { LineGraph, RunningStats, ScatterGraph } from 'components'
-import { RunDataType } from 'types'
+import { RunData } from 'types'
 
 interface RunningDataViewProps {
-  runData: RunDataType[]
+  runData: RunData[]
 }
 
 export const RunningDataView = ({ runData }: RunningDataViewProps) => {
