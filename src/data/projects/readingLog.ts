@@ -9,10 +9,7 @@ const readingLog: Project = {
     `The graphical user interface (GUI) was developed using the JavaFX library and features a search bar to filter through the stored books, making it easy for users to navigate their collection. This project highlights my skills in database management, Java development, and building intuitive user interfaces.`,
   ],
   projectPageURI: '/projects/reading-log',
-  screenshotURIs: [
-    '/images/projects/reading-log.jpg',
-    '/images/projects/reading-log-move.png',
-  ],
+  screenshotURIs: ['/images/projects/reading-log.jpg', '/images/projects/reading-log-move.png'],
   mainLanguage: 'Java',
   links: [
     {

@@ -4,30 +4,22 @@ export const getAverageDurationString = (averageDurationInSeconds: number) =>
   `Average run time: ${secondsToDhms(averageDurationInSeconds)}`
 
 export const getAverageDistanceString = (averageDistanceInMeters: number) => {
-  const averageDistanceInKm =
-    averageDistanceInMeters === 0 ? 0 : averageDistanceInMeters / 1000
+  const averageDistanceInKm = averageDistanceInMeters === 0 ? 0 : averageDistanceInMeters / 1000
   return `Average distance: ${averageDistanceInKm.toFixed(2)}km / ${kmToMiles(
     averageDistanceInKm
   ).toFixed(2)}mi`
 }
 
-export const getTotalDistanceString = (
-  totalDistanceInMeters: number
-): string => {
+export const getTotalDistanceString = (totalDistanceInMeters: number): string => {
   const totalDistanceInKm = totalDistanceInMeters / 1000
   return `Total distance: ${totalDistanceInKm.toFixed(2)}km / ${kmToMiles(
     totalDistanceInKm
   ).toFixed(2)}mi`
 }
 
-export const getFurthestDistanceString = (
-  furthestDistanceInMeters: number
-): string => {
-  const distanceInKm =
-    furthestDistanceInMeters === 0 ? 0 : furthestDistanceInMeters / 1000
-  return `Furthest distance: ${distanceInKm.toFixed(2)}km / ${kmToMiles(
-    distanceInKm
-  ).toFixed(2)}mi`
+export const getFurthestDistanceString = (furthestDistanceInMeters: number): string => {
+  const distanceInKm = furthestDistanceInMeters === 0 ? 0 : furthestDistanceInMeters / 1000
+  return `Furthest distance: ${distanceInKm.toFixed(2)}km / ${kmToMiles(distanceInKm).toFixed(2)}mi`
 }
 
 export const getTotalDurationString = (totalDuration: number) =>

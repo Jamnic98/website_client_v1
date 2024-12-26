@@ -1,12 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 
-import {
-  PageHeader,
-  ProjectDescriptions,
-  ProjectLinks,
-  ProjectGallery,
-} from 'components'
+import { PageHeader, ProjectDescriptions, ProjectLinks, ProjectGallery } from 'components'
 import projects_data from 'data/projects'
 import styles from 'styles/project.module.css'
 

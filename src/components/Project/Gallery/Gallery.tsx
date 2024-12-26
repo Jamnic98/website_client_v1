@@ -6,9 +6,7 @@ interface ProjectGalleryProps {
   screenshotURIs: string[]
 }
 
-export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
-  screenshotURIs,
-}) => (
+export const ProjectGallery: React.FC<ProjectGalleryProps> = ({ screenshotURIs }) => (
   <>
     {screenshotURIs.map((screenshotURI, index) => (
       <Image

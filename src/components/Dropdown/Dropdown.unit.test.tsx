@@ -3,11 +3,7 @@ import { render, screen } from '@testing-library/react'
 import { Dropdown } from './Dropdown'
 
 type testObject = { letter: string }
-const testArray: testObject[] = [
-  { letter: 'a' },
-  { letter: 'b' },
-  { letter: 'c' },
-]
+const testArray: testObject[] = [{ letter: 'a' }, { letter: 'b' }, { letter: 'c' }]
 
 describe('Dropdown', () => {
   // draw Dropdown component
@@ -15,9 +11,7 @@ describe('Dropdown', () => {
     <Dropdown
       isOpen={false}
       items={testArray}
-      render={(item: testObject) => (
-        <div data-testid="dropdown-item">{item.letter}</div>
-      )}
+      render={(item: testObject) => <div data-testid="dropdown-item">{item.letter}</div>}
     />
   )
 

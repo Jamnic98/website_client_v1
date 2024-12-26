@@ -125,11 +125,7 @@ export const LineGraph: React.FC<LineGraphProps> = ({
       .append('text')
       .attr(
         'transform',
-        'translate(' +
-          width / 2 +
-          ' ,' +
-          (height + margins.top + xAxisObj.labelOffset) +
-          ')'
+        'translate(' + width / 2 + ' ,' + (height + margins.top + xAxisObj.labelOffset) + ')'
       )
       .style('text-anchor', 'middle')
       .style('font', '0.4em arial')

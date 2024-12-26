@@ -11,10 +11,7 @@ const touchTyping: Project = {
     `This project demonstrates my ability to design experimental applications, work with data collection and analysis, and combine front-end development with back-end data processing.`,
   ],
   projectPageURI: '/projects/touch-typing',
-  screenshotURIs: [
-    '/images/projects/touch-typing.png',
-    '/images/projects/touch-typing-graph.png',
-  ],
+  screenshotURIs: ['/images/projects/touch-typing.png', '/images/projects/touch-typing-graph.png'],
   mainLanguage: 'JavaScript',
   links: [
     {

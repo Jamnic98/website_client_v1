@@ -10,10 +10,7 @@ export interface NavLogoProps {
   linkURL?: string
 }
 
-export const NavLogo: React.FC<NavLogoProps> = ({
-  handleClick,
-  linkURL = '/',
-}) => {
+export const NavLogo: React.FC<NavLogoProps> = ({ handleClick, linkURL = '/' }) => {
   const width = useWidth()
   return (
     <Link

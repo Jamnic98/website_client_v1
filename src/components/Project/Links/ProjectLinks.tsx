@@ -27,11 +27,7 @@ export const ProjectLinks: React.FC<ProjectLinksProps> = ({ links }) => (
         )
       } else if (link.type === LinkType.INTERNAL) {
         return (
-          <Link
-            className={classNames(styles.projectLink, styles.link)}
-            href={link.URL}
-            key={index}
-          >
+          <Link className={classNames(styles.projectLink, styles.link)} href={link.URL} key={index}>
             {link.label} <CgInternal />
           </Link>
         )

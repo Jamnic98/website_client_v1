@@ -15,11 +15,7 @@ export const Explorer: React.FC<ExplorerProps> = ({ title, data }) => (
     <hr className="subRule" />
     <div>
       {data.map((d, index) => (
-        <Link
-          className={styles.window}
-          href={d.projectPageURI || ''}
-          key={index}
-        >
+        <Link className={styles.window} href={d.projectPageURI || ''} key={index}>
           <h4 className={styles.windowTitle}>{d.title}</h4>
           {d.summary}
         </Link>

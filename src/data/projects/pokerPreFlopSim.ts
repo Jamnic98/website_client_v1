@@ -3,8 +3,7 @@ import { LinkType, Project } from 'types'
 const pokerPreFlopSim: Project = {
   id: 'poker-pre-flop-sim',
   title: 'Poker Pre-flop Simulator',
-  summary:
-    'Runs pre-flop simulations and calculates win rates for starting hands.',
+  summary: 'Runs pre-flop simulations and calculates win rates for starting hands.',
   paragraphs: [
     `This project is a poker simulation tool designed to run pre-flop poker simulations and analyse the performance of different starting hands. It uses a Monte Carlo-style approach to simulate a large number of poker hands, dealing cards, and evaluating hands through the pre-flop, flop, turn, and river stages. The primary goal is to determine the win rates of various starting hands across multiple simulations, providing valuable insights for strategic decision-making in poker.`,
     `The simulation is built to run efficiently even with a large number of iterations, using parallel processing to handle multiple simulations at once. It chunks the results into manageable pieces, ensuring that memory usage remains optimised. After the simulations are complete, the tool aggregates the results and calculates the win rates for each unique starting hand, displaying the data through clear visual graphs that help users easily interpret the outcomes.`,

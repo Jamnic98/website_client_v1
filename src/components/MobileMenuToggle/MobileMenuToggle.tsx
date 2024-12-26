@@ -8,15 +8,8 @@ export interface MobileMenuToggleProps {
   isOpen: boolean
 }
 
-export const MobileMenuToggle: React.FC<MobileMenuToggleProps> = ({
-  handleClick,
-  isOpen,
-}) => (
-  <span
-    onClick={handleClick}
-    className={styles.menuIcon}
-    aria-label="mobile menu toggle"
-  >
+export const MobileMenuToggle: React.FC<MobileMenuToggleProps> = ({ handleClick, isOpen }) => (
+  <span onClick={handleClick} className={styles.menuIcon} aria-label="mobile menu toggle">
     {isOpen ? <FaTimes /> : <FaBars />}
   </span>
 )

@@ -35,17 +35,16 @@ export default function Page({ runData }: HomePageProps) {
         <section className={styles.homeDescription}>
           <p>Hello and welcome to my portfolio website!</p>
           <p>
-            This site was built entirely from scratch using NextJS, Python, and
-            MongoDB. Initially, I used React for the frontend and NodeJs for the
-            backend but recently transitioned to my current stack. Here, you
-            will find a range of my programming projects, primarily in Python
-            and JavaScript/TypeScript, along with daily updates of my running
-            data, which is fetched using Strava&apos;s API.
+            This site was built entirely from scratch using NextJS, Python, and MongoDB. Initially,
+            I used React for the frontend and NodeJs for the backend but recently transitioned to my
+            current stack. Here, you will find a range of my programming projects, primarily in
+            Python and JavaScript/TypeScript, along with daily updates of my running data, which is
+            fetched using Strava&apos;s API.
           </p>
           <p>
-            This is an ongoing project where I handle everything from frontend
-            and backend development to DevOps processes and deployments,
-            ensuring the site remains dynamic and functional.
+            This is an ongoing project where I handle everything from frontend and backend
+            development to DevOps processes and deployments, ensuring the site remains dynamic and
+            functional.
           </p>
         </section>
         <section>
@@ -56,8 +55,7 @@ export default function Page({ runData }: HomePageProps) {
         </section>
         <section>
           <h3 style={{ marginBottom: 0 }}>
-            {new Date().toLocaleString('default', { month: 'long' })} Running
-            Stats
+            {new Date().toLocaleString('default', { month: 'long' })} Running Stats
           </h3>
           <hr className="subRule" />
           <div style={{ width: 'max-content' }}>

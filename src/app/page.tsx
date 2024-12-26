@@ -19,9 +19,7 @@ const getData = async () => {
     date.setUTCHours(0, 0, 0, 0)
     const timestamp = date.getTime()
     // fetch data
-    const URL =
-      (process.env.NEXT_PUBLIC_SERVER_URL as string) +
-      `/runs?after=${timestamp}`
+    const URL = (process.env.NEXT_PUBLIC_SERVER_URL as string) + `/runs?after=${timestamp}`
     const response = await fetch(URL, { next: { revalidate: 3600 } })
     if (!response.ok) {
       // This will activate the closest `error.js` Error Boundary

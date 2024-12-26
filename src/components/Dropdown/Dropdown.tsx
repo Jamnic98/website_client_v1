@@ -9,16 +9,9 @@ export interface DropdownProps {
   render: (item: any) => ReactNode
 }
 
-export const Dropdown: React.FC<DropdownProps> = ({
-  isOpen,
-  render,
-  items,
-}) => (
+export const Dropdown: React.FC<DropdownProps> = ({ isOpen, render, items }) => (
   <div
-    className={classNames(
-      styles.dropdown,
-      isOpen ? styles.open : styles.closed
-    )}
+    className={classNames(styles.dropdown, isOpen ? styles.open : styles.closed)}
     data-testid="application-dropdown"
   >
     {items.map((item, index) => (

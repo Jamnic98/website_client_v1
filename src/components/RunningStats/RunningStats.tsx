@@ -17,9 +17,7 @@ interface RunningStatsProps {
 export const RunningStats: React.FC<RunningStatsProps> = ({ runData }) => {
   // distance
   const distanceList = runData.map((runData: RunData) => runData.distance)
-  const furthestDistanceInMeters = distanceList.length
-    ? Math.max(...distanceList)
-    : 0
+  const furthestDistanceInMeters = distanceList.length ? Math.max(...distanceList) : 0
   const totalDistanceInMeters = distanceList.length
     ? distanceList.reduce((a, b) => reduceSumFunc(a, b))
     : 0
@@ -41,9 +39,7 @@ export const RunningStats: React.FC<RunningStatsProps> = ({ runData }) => {
       <li>
         <span>
           {getAverageDistanceString(
-            distanceList.length
-              ? totalDistanceInMeters / distanceList.length
-              : 0
+            distanceList.length ? totalDistanceInMeters / distanceList.length : 0
           )}
         </span>
       </li>
@@ -53,9 +49,7 @@ export const RunningStats: React.FC<RunningStatsProps> = ({ runData }) => {
       <li>
         <span>
           {getAverageDurationString(
-            durationList.length
-              ? totalDurationInSeconds / durationList.length
-              : 0
+            durationList.length ? totalDurationInSeconds / durationList.length : 0
           )}
         </span>
       </li>

@@ -11,8 +11,6 @@ describe('test PageHeader component', () => {
     render(<PageHeader title={testTitle} description={testDescription} />)
     const header = screen.getByTestId('application-pageHeader')
     expect(header.getElementsByTagName('h1')[0]).toHaveTextContent(testTitle)
-    expect(header.getElementsByTagName('p')[0]).toHaveTextContent(
-      testDescription
-    )
+    expect(header.getElementsByTagName('p')[0]).toHaveTextContent(testDescription)
   })
 })

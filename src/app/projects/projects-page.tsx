@@ -18,8 +18,7 @@ export default function Page() {
 
   // Filter the projects based on the selected language
   const filteredProjects = projects.filter(
-    (projectData: Project) =>
-      language === '' || projectData.mainLanguage === language
+    (projectData: Project) => language === '' || projectData.mainLanguage === language
   )
 
   return (
@@ -31,10 +30,7 @@ export default function Page() {
       <article>
         <section>
           Filter by language:{' '}
-          <select
-            className={styles.select}
-            onChange={(e) => setLanguage(e.target.value)}
-          >
+          <select className={styles.select} onChange={(e) => setLanguage(e.target.value)}>
             {languages.map((mainLanguage: string, index) => (
               <option className={styles.selectOption} key={index}>
                 {mainLanguage}

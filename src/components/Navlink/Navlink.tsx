@@ -13,10 +13,7 @@ interface NavlinkProps {
   onClick: () => void
 }
 
-export const Navlink: React.FC<NavlinkProps> = ({
-  navlinkObj,
-  onClick: handleClick,
-}) => {
+export const Navlink: React.FC<NavlinkProps> = ({ navlinkObj, onClick: handleClick }) => {
   const [isActive, setIsActive] = useState(false)
   const { label, url, children } = navlinkObj
   const screenWidth = useWidth() || MOBILE_SCREEN_WIDTH
@@ -33,10 +30,7 @@ export const Navlink: React.FC<NavlinkProps> = ({
             {label}
             <Caret isFlipped={isActive} />
           </Link>
-          <div
-            className={styles.dropdownContainer}
-            data-testid="dropdownContainer"
-          >
+          <div className={styles.dropdownContainer} data-testid="dropdownContainer">
             <Dropdown
               isOpen={isActive}
               items={children}

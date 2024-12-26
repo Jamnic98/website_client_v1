@@ -64,24 +64,21 @@ const About = () => (
       <section>
         <h2>Coding Experience</h2>
         <p>
-          TypeScript and Python are the langauges I excell with, having used
-          them both commercially and personally to build performant and scalable
-          full-stack web applications, with tools like React, Node.js and Flask.
-          During my 2.5 years at Qudo, I gained exposure to DevOps tools such as
-          Docker, Ansible, and Git CI/CD pipelines.
+          TypeScript and Python are the langauges I excell with, having used them both commercially
+          and personally to build performant and scalable full-stack web applications, with tools
+          like React, Node.js and Flask. During my 2.5 years at Qudo, I gained exposure to DevOps
+          tools such as Docker, Ansible, and Git CI/CD pipelines.
         </p>
         <p>
-          As Lead AI developer at GeniusLead, I led a small team of junior team
-          members to build bespoke voice applications for Alexa and Google Hub
-          devices. I was also responisble for my building my own projects,
-          deploying them to AWS Lambda, the Alexa Store and Google Cloud
+          As Lead AI developer at GeniusLead, I led a small team of junior team members to build
+          bespoke voice applications for Alexa and Google Hub devices. I was also responisble for my
+          building my own projects, deploying them to AWS Lambda, the Alexa Store and Google Cloud
           Platform.
         </p>
         <p>
-          I have also completed a number of online courses, including an
-          Advanced Python course, an Intermediate Machine Learning course and a
-          Python for Data Science course. I enjoy coding in my free time and
-          have completed a number of projects in various languages. Take a look
+          I have also completed a number of online courses, including an Advanced Python course, an
+          Intermediate Machine Learning course and a Python for Data Science course. I enjoy coding
+          in my free time and have completed a number of projects in various languages. Take a look
           at some of the personal
           <>
             {' '}
@@ -107,13 +104,12 @@ const About = () => (
               AI Hackathon
             </a>{' '}
           </>
-          event in London. The event ran for 3 days, and 600+ applicants joined
-          to compete for a total cash pool of £20,000.
+          event in London. The event ran for 3 days, and 600+ applicants joined to compete for a
+          total cash pool of £20,000.
         </p>
         <p>
-          Alongside two other developers, we secured 1st place for the
-          &quot;Most promising AI x Crypto Build&quot; bounty, with an AI
-          generated, text-based game generator called
+          Alongside two other developers, we secured 1st place for the &quot;Most promising AI x
+          Crypto Build&quot; bounty, with an AI generated, text-based game generator called
           <>
             {' '}
             <a
@@ -125,20 +121,18 @@ const About = () => (
               AI Adventure World.
             </a>{' '}
           </>
-          It was a lot of fun and will be looking for more hackathons to join in
-          the future!
+          It was a lot of fun and will be looking for more hackathons to join in the future!
         </p>
       </section>
       <section>
         <h2>Running and Marathon</h2>
         <p>
-          Since late 2020, I have developed a regular running routine, aspiring
-          to one day complete an ultramarathon (&#8805;50km).
+          Since late 2020, I have developed a regular running routine, aspiring to one day complete
+          an ultramarathon (&#8805;50km).
         </p>
         <p>
-          On the 22nd of October 2023, I ran the Battersea Park Marathon and
-          raised £275 for The Alzheimer&apos;s Society! To explore my running
-          stats, click{' '}
+          On the 22nd of October 2023, I ran the Battersea Park Marathon and raised £275 for The
+          Alzheimer&apos;s Society! To explore my running stats, click{' '}
           <Link className={styles.projectLink} href="/logs/running">
             here
           </Link>

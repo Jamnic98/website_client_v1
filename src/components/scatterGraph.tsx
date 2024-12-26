@@ -24,11 +24,7 @@ d3.selection.prototype.moveToFront = function () {
   })
 }
 
-export const ScatterGraph: React.FC<ScatterGraphProps> = ({
-  data,
-  xAxisObj,
-  yAxisObj,
-}) => {
+export const ScatterGraph: React.FC<ScatterGraphProps> = ({ data, xAxisObj, yAxisObj }) => {
   const ref = useRef(null)
 
   const margins = { top: 30, right: 30, bottom: 30, left: 30 }
@@ -116,10 +112,7 @@ export const ScatterGraph: React.FC<ScatterGraphProps> = ({
     // text label for the x axis
     svgElement
       .append('text')
-      .attr(
-        'transform',
-        'translate(' + width / 2 + ' ,' + (height + margins.top) + ')'
-      )
+      .attr('transform', 'translate(' + width / 2 + ' ,' + (height + margins.top) + ')')
       .style('text-anchor', 'middle')
       .style('font', '0.4em arial')
       .text(xAxisObj.label)

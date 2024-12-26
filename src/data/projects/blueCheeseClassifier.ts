@@ -33,15 +33,7 @@ const blueCheeseClassifier: Project = {
       type: LinkType.EXTERNAL,
     },
   ],
-  techStack: [
-    'Python',
-    'Keras',
-    'TensorFlow',
-    'OpenCV',
-    'Matplotlib',
-    'NumPy',
-    'scikit-learn',
-  ],
+  techStack: ['Python', 'Keras', 'TensorFlow', 'OpenCV', 'Matplotlib', 'NumPy', 'scikit-learn'],
 }
 
 export default blueCheeseClassifier
