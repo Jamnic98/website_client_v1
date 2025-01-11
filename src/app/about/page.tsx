@@ -34,7 +34,8 @@ const About = () => (
       <section className={styles.description}>
         <h2>About Me</h2>
         <p>
-          A Full-Stack Software Engineer, based in London. Connect with me on
+          I am a Full-Stack Software Developer, based in London. Connect with me
+          on
           <>
             {' '}
             <a
